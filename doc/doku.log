@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.18)  14 JAN 2014 17:34
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.18)  14 JAN 2014 18:11
 entering extended mode
  %&-line parsing enabled.
 **doku.tex
@@ -323,84 +323,105 @@ File: sidosryhmakaavio.png Graphic file (type png)
 File: kayttotapaukset.png Graphic file (type png)
 
 <use kayttotapaukset.png>
-Overfull \hbox (0.94455pt too wide) in paragraph at lines 9--39
+Overfull \hbox (0.94455pt too wide) in paragraph at lines 9--41
 \OT1/cmr/m/n/12 jo-ta k[]aytt[]aj[]alleen v[]aline, jol-la pit[]a[]a kir-jaa om
 is-tamis-taan eri k[]asity[]olangoista,
  []
 
 
-Overfull \hbox (0.32234pt too wide) in paragraph at lines 9--39
+Overfull \hbox (0.32234pt too wide) in paragraph at lines 9--41
 \OT1/cmr/m/n/12 taa lan-gan, tai p[]aivitt[]a[]a sen m[]a[]ar[]an k[]aytetty[]a
 []an jo-takin lankaa. J[]arjestelm[]an
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9--39
+Underfull \hbox (badness 10000) in paragraph at lines 9--41
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9--39
+Overfull \hbox (35.95949pt too wide) in paragraph at lines 9--41
+\OT1/cmr/m/n/12 J[]arjestelm[]a k[]aytt[]a[]a PostgreSQL-tietokantaa, se to-teu
+tetaan php-ohjelmointikielell[]a,
+ []
+
+
+Overfull \hbox (28.42204pt too wide) in paragraph at lines 9--41
+\OT1/cmr/m/n/12 ja se py[]orii Ti-eto-jenk[]asittelytieteen laitok-sen users-pa
+lvelimella Apache-palvelimen
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--41
 
  []
 
 
-Overfull \hbox (62.85364pt too wide) in paragraph at lines 9--39
+Underfull \hbox (badness 10000) in paragraph at lines 9--41
+
+ []
+
+
+Overfull \hbox (62.85364pt too wide) in paragraph at lines 9--41
 \OT1/cmr/m/n/12 Rekister[]oityminen: K[]aytt[]aj[]a luo en-simm[]aisell[]a k[]a
 ytt[]okerralla it-selleen k[]aytt[]aj[]atunnuksen
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9--39
+Underfull \hbox (badness 10000) in paragraph at lines 9--41
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9--39
+Underfull \hbox (badness 10000) in paragraph at lines 9--41
 
  []
 
 
-Overfull \hbox (13.43887pt too wide) in paragraph at lines 9--39
+Overfull \hbox (13.43887pt too wide) in paragraph at lines 9--41
 \OT1/cmr/m/n/12 Langan pois-tami-nen: K[]aytt[]aj[]a pois-taa ti-etokan-nas-ta 
 lan-gan, jon-ka on k[]aytt[]anyt
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9--39
+Underfull \hbox (badness 10000) in paragraph at lines 9--41
 
  []
 
 
-Overfull \hbox (5.0834pt too wide) in paragraph at lines 9--39
+Overfull \hbox (5.0834pt too wide) in paragraph at lines 9--41
 \OT1/cmr/m/n/12 Langan m[]a[]ar[]an p[]aivitt[]aminen: K[]aytt[]aj[]a p[]aivitt
 []a[]a lan-gan m[]a[]ar[]an k[]aytetty[]a[]an
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9--39
+Underfull \hbox (badness 10000) in paragraph at lines 9--41
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9--39
+Underfull \hbox (badness 10000) in paragraph at lines 9--41
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9--39
+Underfull \hbox (badness 10000) in paragraph at lines 9--41
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9--39
+Underfull \hbox (badness 10000) in paragraph at lines 9--41
 
  []
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2 <./sidosryhmakaavio.png
- (PNG copy)>] [3 <./kayttotapaukset.png (PNG copy)>] (./doku.aux) ) 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[2] [3 <./sidosryhmakaavio.png (PNG copy)>] [4 <./kayttotapaukset.png (PNG copy
+)>] (./doku.aux) ) 
 Here is how much of TeX's memory you used:
  1437 strings out of 495061
  17066 string characters out of 1182621
@@ -409,13 +430,12 @@ Here is how much of TeX's memory you used:
  5457 words of font info for 20 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  25i,7n,24p,839b,204s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/
-texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-texli
-ve/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/typ
-e1/public/amsfonts/cm/cmr17.pfb>
-Output written on doku.pdf (3 pages, 124970 bytes).
+</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx
+12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
+/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on doku.pdf (4 pages, 126276 bytes).
 PDF statistics:
- 26 PDF objects out of 1000 (max. 8388607)
+ 29 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
