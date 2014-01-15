@@ -40,7 +40,7 @@ create table yarn (
 
 /* Omistussuhteet */
 create table owns (
-       owns_id int not null unique auto_increment,
+       owns_id serial not null unique,
        owner int not null,
        yarn int not null,
        amount int,
