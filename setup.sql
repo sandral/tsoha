@@ -4,8 +4,8 @@ drop table manu;
 drop table yarn;
 drop table owns;
 */
-create table user (
-       user_id int not null unique auto_increment,
+create table users (
+       user_id serial not null unique,
        username char(40) not null,
        password char(64) not null,
        primary key(user_id)
@@ -13,21 +13,21 @@ create table user (
 
 /* Attribuutit */
 create table attr (
-       attr_id int not null unique auto_increment,
+       attr_id serial not null unique,
        attrname char(40),
        primary key(attr_id)
        );
 
 /* Valmistajat */
 create table manu (
-       manu_id int not null unique auto_increment,
+       manu_id serial not null unique,
        manuname char(40),
        primary key(manu_id)
        );
 
 /* Langat */
 create table yarn (
-       yarn_id int not null unique auto_increment,
+       yarn_id serial not null unique,
        yarnname char(40),
        yarnmanu int,
        nsr int,
@@ -45,6 +45,6 @@ create table owns (
        yarn int not null,
        amount int,
        primary key(owns_id),
-       foreign key(owner) references user(user_id) on delete cascade,
+       foreign key(owner) references users(user_id) on delete cascade,
        foreign key(yarn) references yarn(yarn_id) on delete cascade
        );
