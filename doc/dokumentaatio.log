@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.18)  14 JAN 2014 18:11
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.18)  15 JAN 2014 18:58
 entering extended mode
  %&-line parsing enabled.
-**doku.tex
-(./doku.tex
+**dokumentaatio.tex
+(./dokumentaatio.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
 yphenation, loaded.
@@ -282,8 +282,9 @@ File: pdftex.def 2010/03/12 v0.04p Graphics/color for pdfTeX
 ))
 \Gin@req@height=\dimen104
 \Gin@req@width=\dimen105
-) (./doku.aux)
-\openout1 = `doku.aux'.
+)
+(./dokumentaatio.aux)
+\openout1 = `dokumentaatio.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
@@ -297,8 +298,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
-
-(/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
+ (/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count89
 \scratchdimen=\dimen106
@@ -421,19 +421,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--41
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [2] [3 <./sidosryhmakaavio.png (PNG copy)>] [4 <./kayttotapaukset.png (PNG copy
-)>] (./doku.aux) ) 
+)>] (./dokumentaatio.aux) ) 
 Here is how much of TeX's memory you used:
  1437 strings out of 495061
- 17066 string characters out of 1182621
+ 17147 string characters out of 1182621
  74489 words of memory out of 3000000
  4642 multiletter control sequences out of 15000+50000
  5457 words of font info for 20 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 25i,7n,24p,839b,204s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx
-12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
-/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on doku.pdf (4 pages, 126276 bytes).
+ 25i,7n,24p,848b,204s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texmf-texlive/fonts/type1/public/amsfont
+s/cm/cmbx12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.
+pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on dokumentaatio.pdf (4 pages, 126501 bytes).
 PDF statistics:
  29 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
