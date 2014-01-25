@@ -9,13 +9,10 @@
 </head>
 <body>
 <h1>Lankatietokanta</h1>
+<p>Tervehdys!</p>
+<a href="aloitussivu.html">Kirjaudu ulos</a>
 <a href="muokkaussivu.html">Lisää lankoja</a>
 <a href="hakusivu.html">Hae lankoja</a>
 <a href="omattiedot.html">Omat tiedot</a>
-<a href="aloitussivu.html">Kirjaudu ulos</a>
-<br>
-<h4>Tervehdys, Nelli Neuloja!</h4>
-<br>
-Nellin langat aakkosjärjestyksessä.
 </body>
 </html>

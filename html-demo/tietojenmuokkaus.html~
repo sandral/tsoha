@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+<head>
+<title>Muokkaa tietoja</title>
+</head>
+<body>
+<h1>Muokkaa tietojasi</h1>
+<form name="tiedot" action="tahan_sivu.php" method="post">
+
+</form>
+</body>
+</html>
+

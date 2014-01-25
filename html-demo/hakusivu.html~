@@ -1,19 +1,23 @@
 <!doctype html>
 <html>
 <head>
+<title>Hae lankoja</title>
 <link href="../css/bootstrap.css" rel="stylesheet">
 <link href="../css/bootstrap-theme.css" rel="stylesheet">
 <link href="../css/main.css" rel="stylesheet">
-<title>Lisää lankoja</title>
 <meta charset="utf-8" />
 </head>
 <body>
-<h1>Lisää lanka</h1>
+<h1>Hae lankoja</h1>
 <a href="etusivu.html">Etusivulle</a>
-<a href="hakusivu.html">Hae lankoja</a>
-<a href="omattiedot.html">Omat tiedot</a>
-<a href="aloitussivu.html">Kirjaudu ulos</a> 
-<form name="lisays" action="tahan_sivu.php" method="post">
+<a href="muokkaussivu.html">Lisää lankoja</a>
+<a href="hakusivu.html">Hae lankoja</a>     
+<a href="omattiedot.html">Omat tiedot</a> 
+<a href="aloitussivu.html">Kirjaudu ulos</a>                                  
+<br><br>
+Valitse yksi tai useampi hakuehto:
+<br><br>
+<form name="haku" action="tahan_sivu.php" method="post">
 Lanka:
 <select name="Lanka">
 <option value="7veljesta">7 veljestä</option>
@@ -21,7 +25,6 @@ Lanka:
 <option value="sisu">Sisu</option>
 <option value="merinosilkdk">Merino Silk DK</option>
 </select>
-<br>
 Valmistaja:
 <select name="Valmistaja">
 <option value="novita">Novita</option>
@@ -30,8 +33,8 @@ Valmistaja:
 <option value="sublime">Sublime</option>
 </select>
 <br>
-Puikkokoko<br>
-pienin: 
+Puikkokoko
+pienin:
 <select name="puikotpienin">
 <option value"">1,5</option>
 <option value"">2,0</option>
@@ -49,7 +52,7 @@ pienin:
 <option value"">8,0</option>
 <option value"">8,5</option>
 </select>
-suurin: 
+suurin:
 <select name="puikotpienin">
 <option value"">1,5</option>
 <option value"">2,0</option>
@@ -68,35 +71,28 @@ suurin:
 <option value"">8,5</option>
 </select>
 <br>
-m/100g: <input type="text" name="luku">
 <br>
-Määrä (g): <input type="text" name="maara">
+Attribuutit:<br>
+Värit:
 <br>
-Valitse attribuutit:<br><br>
-Värit<br>
-<input type="checkbox" name="punainen" value="Punainen"> Punainen<br>
+<input type="checkbox" name="punainen" value="punainen"> Punainen<br>
 <input type="checkbox" name="sininen" value="sininen"> Sininen<br>
 <input type="checkbox" name="vihrea" value="vihrea"> Vihreä<br>
-<input type="checkbox" name="keltainen" value="Keltainen"> Keltainen<br>
-
+<input type="checkbox" name="keltainen" value="keltainen"> Keltainen<br>
 <br>
-
-Materiaalit
-<br>
-<input type="checkbox" name="villa" value="Villa"> Villa<br>
+Materiaalit:<br>
+<input type="checkbox" name="villa" value="villa"> Villa<br>
 <input type="checkbox" name="silkki" value="silkki"> Silkki<br>
 <input type="checkbox" name="mohair" value="mohair"> Mohair<br>
 <input type="checkbox" name="alpakka" value="alpakka"> Alpakka<br>
-<input type="checkbox" name="puuvilla" value="puuvilla"> Puuvilla<br>
+<input type="checkbox" name="puuvilla" value="puuvilla"> Puuvilla<br> 
 <br>
-
-Erityistä
-<br>
-<input type="checkbox" name="alskdj" value="superwash"> Superwash<br>
-<input type="checkbox" name="alskdj" value="huopuu"> Huopuu<br>
-<input type="checkbox" name="alskdj" value="kasvivärjätty"> Kasvivärjätty<br>
-<input type="checkbox" name="alskdj" value="hahtuvalanka"> Hahtuvalanka<br>
-
+Muut:<br>
+<input type="checkbox" name="huopuva" value="huopuva"> Huopuva<br>
+<input type="checkbox" name="superwash" value="superwash"> Superwash<br>
+<input type="checkbox" name="kasvivarjatty" value="kasvivarjatty"> Kasvivarjatty<br>
+<input type="checkbox" name="hahtuvaa" value="hahtuvaa"> Hahtuvaa<br>
+<input type="checkbox" name="nauhalanka" value="nauhalanka"> Nauhalanka<br>
 </form>
 </body>
 </html>
