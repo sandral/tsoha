@@ -10,9 +10,14 @@
 <body>
 <h1>Lisää lanka</h1>
 <a href="etusivu.html">Etusivulle</a>
+<a href="muokkaussivu.html">Lisää lanka</a>
 <a href="hakusivu.html">Hae lankoja</a>
 <a href="omattiedot.html">Omat tiedot</a>
 <a href="aloitussivu.html">Kirjaudu ulos</a> 
+<br>
+<br>
+Jos langan tiedot löytyvät jo tietokannasta, täytä ainoastaan määrä.<br>
+<br>
 <form name="lisays" action="tahan_sivu.php" method="post">
 Lanka:
 <select name="Lanka">
@@ -92,11 +97,12 @@ Materiaalit
 
 Erityistä
 <br>
-<input type="checkbox" name="alskdj" value="superwash"> Superwash<br>
-<input type="checkbox" name="alskdj" value="huopuu"> Huopuu<br>
-<input type="checkbox" name="alskdj" value="kasvivärjätty"> Kasvivärjätty<br>
-<input type="checkbox" name="alskdj" value="hahtuvalanka"> Hahtuvalanka<br>
-
+<input type="checkbox" name="superwash" value="superwash"> Superwash<br>
+<input type="checkbox" name="huopuva" value="huopuva"> Huopuva<br>
+<input type="checkbox" name="kasvivarjatty" value="kasvivarjatty"> Kasvivärjätty<br>
+<input type="checkbox" name="hahtuvalanka" value="hahtuvalanka"> Hahtuvalanka<br>
+<br>
+<input type="submit" value="Lähetä">
 </form>
 </body>
 </html>
