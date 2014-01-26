@@ -14,3 +14,8 @@ select yarn_id, attr_id from yarn, attr where
 (yarnname='Alpaca' and attrname in ('alpakka', 'valkoinen')) or
 (yarnname='Alpakka' and attrname in ('alpakka', 'punainen')) or
 (yarnname='Cora' and attrname in ('merinovilla', 'akryyli', 'lila'));
+
+INSERT INTO owns (owner, yarn, amount)
+(select user_id, yarn_id, 300 from users, yarn where username='Pentti' and yarnname='Alpakka')
+union (select user_id, yarn_id, 350 from users, yarn where username='Pentti' and yarnname='Cora')
+union (select user_id, yarn_id, 200 from users, yarn where username='Anneli' and yarnname='Alpakka');
