@@ -15,6 +15,7 @@ $users = User::getUsers();
 
 foreach ($users as $user) {
 	echo $user->getUsername();
+	echo '<br>'."\n";
 }
 
 ?>
