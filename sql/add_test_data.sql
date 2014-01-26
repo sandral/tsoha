@@ -2,10 +2,10 @@ INSERT INTO users (username, password, isadmin) values ('Pentti', 'merinovillaho
 
 INSERT INTO manu (manuname) values ('Drops'),('TeeTee'),('Linie');
 
-INSERT INTO yarn (yarnname, yarnmanu, nsrmin, nsrmax, lpg)
-(select 'Alpaca', manu_id, 30, 35, 420 from manu where manuname='Drops')
-union (select 'Alpakka', manu_id, 50, 60, 240 from manu where manuname='TeeTee')
-union (select 'Cora', manu_id, 40, 50, 170 from manu where manuname='Linie');
+INSERT INTO yarn (yarn_id, yarnname, yarnmanu, nsrmin, nsrmax, lpg)
+(select 5, 'Alpaca', manu_id, 30, 35, 420 from manu where manuname='Drops')
+union (select 3, 'Alpakka', manu_id, 50, 60, 240 from manu where manuname='TeeTee')
+union (select 2, 'Cora', manu_id, 40, 50, 170 from manu where manuname='Linie');
 
 INSERT INTO attr (attrname) values ('merinovilla'),('akryyli'),('alpakka'),('valkoinen'),('punainen'),('lila');
 
