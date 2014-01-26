@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.18)  26 JAN 2014 13:13
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.18)  26 JAN 2014 22:45
 entering extended mode
  %&-line parsing enabled.
 **dokumentaatio.tex
@@ -283,153 +283,225 @@ File: pdftex.def 2010/03/12 v0.04p Graphics/color for pdfTeX
 \Gin@req@height=\dimen104
 \Gin@req@width=\dimen105
 )
-(./dokumentaatio.aux)
+(/usr/share/texmf-texlive/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count89
+\float@exts=\toks17
+\float@box=\box26
+\@float@everytoks=\toks18
+\@floatcapt=\box27
+) (./dokumentaatio.aux)
 \openout1 = `dokumentaatio.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
- (/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+
+(/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count89
+\scratchcounter=\count90
 \scratchdimen=\dimen106
-\scratchbox=\box26
-\nofMPsegments=\count90
-\nofMParguments=\count91
-\everyMPshowfont=\toks17
-\MPscratchCnt=\count92
+\scratchbox=\box28
+\nofMPsegments=\count91
+\nofMParguments=\count92
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count93
 \MPscratchDim=\dimen107
-\MPnumerator=\count93
-\everyMPtoPDFconversion=\toks18
+\MPnumerator=\count94
+\everyMPtoPDFconversion=\toks20
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 8.
+(Font)              <14.4> on input line 9.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 8.
+(Font)              <7> on input line 9.
  <sidosryhmakaavio.png, id=1, 712.6625pt x 515.9275pt>
 File: sidosryhmakaavio.png Graphic file (type png)
 
 <use sidosryhmakaavio.png>
-<kayttotapaukset.png, id=2, 659.46375pt x 585.18625pt>
-File: kayttotapaukset.png Graphic file (type png)
-
-<use kayttotapaukset.png>
-Overfull \hbox (0.32234pt too wide) in paragraph at lines 10--42
+Overfull \hbox (0.32234pt too wide) in paragraph at lines 11--38
 \OT1/cmr/m/n/12 taa lan-gan, tai p[]aivitt[]a[]a sen m[]a[]ar[]an k[]aytetty[]a
 []an jo-takin lankaa. J[]arjestelm[]an
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 10--42
+Underfull \hbox (badness 10000) in paragraph at lines 11--38
 
  []
 
 
-Overfull \hbox (35.95949pt too wide) in paragraph at lines 10--42
+Overfull \hbox (35.95949pt too wide) in paragraph at lines 11--38
 \OT1/cmr/m/n/12 J[]arjestelm[]a k[]aytt[]a[]a PostgreSQL-tietokantaa, se to-teu
 tetaan php-ohjelmointikielell[]a,
  []
 
 
-Overfull \hbox (28.42204pt too wide) in paragraph at lines 10--42
+Overfull \hbox (28.42204pt too wide) in paragraph at lines 11--38
 \OT1/cmr/m/n/12 ja se py[]orii Ti-eto-jenk[]asittelytieteen laitok-sen users-pa
 lvelimella Apache-palvelimen
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 10--42
+Underfull \hbox (badness 10000) in paragraph at lines 11--38
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 10--42
+Underfull \hbox (badness 10000) in paragraph at lines 11--38
 
  []
 
 
-Overfull \hbox (62.85364pt too wide) in paragraph at lines 10--42
+Overfull \hbox (62.85364pt too wide) in paragraph at lines 11--38
 \OT1/cmr/m/n/12 Rekister[]oityminen: K[]aytt[]aj[]a luo en-simm[]aisell[]a k[]a
 ytt[]okerralla it-selleen k[]aytt[]aj[]atunnuksen
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 10--42
+Underfull \hbox (badness 10000) in paragraph at lines 11--38
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 10--42
+Underfull \hbox (badness 10000) in paragraph at lines 11--38
 
  []
 
 
-Overfull \hbox (13.43887pt too wide) in paragraph at lines 10--42
+Overfull \hbox (13.43887pt too wide) in paragraph at lines 11--38
 \OT1/cmr/m/n/12 Langan pois-tami-nen: K[]aytt[]aj[]a pois-taa ti-etokan-nas-ta 
 lan-gan, jon-ka on k[]aytt[]anyt
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 10--42
+Underfull \hbox (badness 10000) in paragraph at lines 11--38
 
  []
 
 
-Overfull \hbox (5.0834pt too wide) in paragraph at lines 10--42
+Overfull \hbox (5.0834pt too wide) in paragraph at lines 11--38
 \OT1/cmr/m/n/12 Langan m[]a[]ar[]an p[]aivitt[]aminen: K[]aytt[]aj[]a p[]aivitt
 []a[]a lan-gan m[]a[]ar[]an k[]aytetty[]a[]an
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 10--42
+Underfull \hbox (badness 10000) in paragraph at lines 11--38
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 10--42
+Underfull \hbox (badness 10000) in paragraph at lines 11--38
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 10--42
+Underfull \hbox (badness 10000) in paragraph at lines 11--38
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 10--42
+Underfull \hbox (badness 10000) in paragraph at lines 11--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--38
 
  []
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+<kayttotapaukset.png, id=9, 659.46375pt x 585.18625pt>
+File: kayttotapaukset.png Graphic file (type png)
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+<use kayttotapaukset.png> [2] [3 <./sidosryhmakaavio.png (PNG copy)>]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 46.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 46.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 46.
 
-[2] [3 <./sidosryhmakaavio.png (PNG copy)>] [4 <./kayttotapaukset.png (PNG copy
-)>] (./dokumentaatio.aux) ) 
+Overfull \hbox (22.5711pt too wide) in paragraph at lines 45--104
+[] \OT1/cmr/m/n/12 Lan-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--104
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--104
+
+ []
+
+
+Overfull \hbox (0.8991pt too wide) in paragraph at lines 45--104
+[] \OT1/cmr/m/n/12 Ti-etokan-
+ []
+
+
+Overfull \hbox (7.3417pt too wide) in paragraph at lines 45--104
+\OT1/cmr/m/n/12 nan k[]aytt[]aj[]a val-it-see rek-ister[]oityess[]a[]an jonkin 
+k[]aytt[]aj[]atunnuksen ja salasanan.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--104
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--104
+
+ []
+
+
+Overfull \hbox (14.51146pt too wide) in paragraph at lines 45--104
+[] \OT1/cmr/m/n/12 Lan-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--104
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--104
+
+ []
+
+
+Overfull \hbox (11.47815pt too wide) in paragraph at lines 45--104
+[] \OT1/cmr/m/n/12 Ti-
+ []
+
+[4 <./kayttotapaukset.png (PNG copy)>] [5] (./dokumentaatio.aux) ) 
 Here is how much of TeX's memory you used:
- 1439 strings out of 495061
- 17182 string characters out of 1182621
- 74479 words of memory out of 3000000
- 4644 multiletter control sequences out of 15000+50000
- 6063 words of font info for 22 fonts, out of 3000000 for 9000
+ 1516 strings out of 495061
+ 18126 string characters out of 1182621
+ 76647 words of memory out of 3000000
+ 4711 multiletter control sequences out of 15000+50000
+ 8501 words of font info for 30 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 25i,7n,24p,848b,204s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf-texlive/fonts/type1/public/amsfont
-s/cm/cmbx12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.
-pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on dokumentaatio.pdf (4 pages, 128032 bytes).
+ 25i,7n,24p,848b,198s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/t
+exmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-texliv
+e/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type
+1/public/amsfonts/cm/cmr17.pfb>
+Output written on dokumentaatio.pdf (5 pages, 132852 bytes).
 PDF statistics:
- 29 PDF objects out of 1000 (max. 8388607)
+ 32 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -2,6 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[finnish]{babel}
 \usepackage{graphicx}
+\usepackage{float}
 \title{Aineopintojen harjoitustyö: Tietokantasovellus\\Dokumentaatio}
 \author{Sandra Luhtaniemi}
 \begin{document}
@@ -31,15 +32,73 @@ Haku ominaisuuden perusteella: Käyttäjä hakee tietokannasta kaikki jollakin o
 \\ \ \\
 Omien tietojen muuttaminen: Käyttäjä muuttaa omia tietojaan, esimerkiksi salasanaansa tai nimeään.
 \\ \ \\
-\begin{figure}[!h]
+\begin{figure}[H]
 \includegraphics[scale=0.5]{sidosryhmakaavio.png}
 \caption{Sidosryhmäkaavio}
 \end{figure}
-\begin{figure}
+\begin{figure}[H]
 \includegraphics[scale=0.5]{kayttotapaukset.png}
 \caption{Käyttötapauskaavio}
 \end{figure}
 
 \section{Käyttöliittymän suunnittelu}
-
+Tietokohde: Yarn\\
+\begin{tabular}[H]{|c|c|c|}
+\hline
+Attribuutti & Arvojoukko & Kuvailu \\
+\hline
+yarnname & Merkkijono & Langan kauppanimi \\
+\hline
+yarnmanu & Kokonaisluku & Langan valmistajan id-luku\\
+\hline
+nsrmin & Kokonaisluku & Puikkosuosituksen alaraja kerrottuna 10:llä \\
+\hline
+nsrmax & Kokonaisluku & puikkosuosituksen yläraja kerrottuna 10:llä \\
+\hline
+lpg & Kokonaisluku & Sadan gramman sisältämä metrimäärä \\
+\hline  
+\end{tabular}
+Lanka, jolla on jokin puikkosuositus, eli valmistajan antama suositus siitä minkä kokoisilla puikoilla sitä kannattaa neuloa. Puikkosuosituksella on yleensä alaraja ja yläraja, sillä käsiala voi vaihdella neulojasta riippuen. Langalle on ilmoitettu myös metrimäärä, joka sisältyy sataan grammaan, sillä sen avulla voi arvioida langan riittoisuutta.
+\ \\ \ \\
+Tietokohde: manu\\
+\begin{tabular}{|c|c|c|}
+\hline
+Attribuutti & Arvojoukko & Kuvailu \\
+\hline
+manuname & Merkkijono & Valmistajan nimi \\
+\hline
+\end{tabular}
+Langan valmistanut yritys.
+\ \\ \ \\
+Tietokohde:users\\
+\begin{tabular}{|c|c|c|}
+\hline
+Attribuutti & Arvojoukko & Kuvailu \\
+\hline
+username & Merkkijono & Käyttäjän valitsema käyttäjätunnus\\
+\hline
+password & Merkkijono & Käyttäjän valitsema salasana\\
+\hline   
+\end{tabular}
+Tietokannan käyttäjä valitsee rekisteröityessään jonkin käyttäjätunnuksen ja salasanan. 
+\ \\ \ \\
+Tietokohde:attr\\
+\begin{tabular}{|c|c|c|}
+\hline
+Attribuutti & Arvojoukko & Kuvailu \\
+\hline
+attrname & Merkkijono & langan ominaisuus, esim. väri tai materiaali\\
+\hline   
+\end{tabular}
+Langoilla on erilaisia ominaisuuksia, esimerkiksi väri, materiaali tai vaikkapa huopuvuus tai väriin liityvä erikoisominaisuus, kuten liukuvärjäys. Langalla voi olla useita attribuutteja, ja sama attribuutti voi liittyä useaan eri lankaan. 
+\ \\ \ \\
+Tietokohde: owns\\
+\begin{tabular}{|c|c|c|}
+\hline
+Attribuutti & Arvojoukko & Kuvailu \\
+\hline
+amount & kokonaisluku & Kayttajan omistama määrä kyseistä lankaa\\
+\hline  
+\end{tabular}
+Tietokanta voi sisältää monia eri lankoja, mutta käyttäjällä ei välttämättä ole näitä kaikkia tai eri käyttäjillä on lankoja eri määrä. 
 \end{document}
