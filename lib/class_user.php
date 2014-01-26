@@ -11,7 +11,10 @@ class User {
     $this->username = $username;
     $this->password = $password;
   }
-  /* Tähän gettereitä ja settereitä */
+
+  public function getUsername() {
+  return $this->username;
+}
 
 
   public static function getUsers() {
