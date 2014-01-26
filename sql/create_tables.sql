@@ -23,7 +23,7 @@ create table yarnattr (
        yarn int,
        attr int,
        foreign key(yarn) references(yarn_id),
-       foreign key(attr) references(attr_id),
+       foreign key(attr) references(attr_id)
        );
 
 /* Valmistajat */
