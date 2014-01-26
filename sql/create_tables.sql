@@ -19,13 +19,6 @@ create table attr (
        primary key(attr_id)
        );
 
-create table yarnattr (
-       yarn int,
-       attr int,
-       foreign key(yarn) references yarn(yarn_id),
-       foreign key(attr) references attr(attr_id)
-       );
-
 /* Valmistajat */
 create table manu (
        manu_id serial not null unique,
@@ -45,6 +38,14 @@ create table yarn (
        primary key(yarn_id),
        foreign key(yarnmanu) references manu(manu_id)
        );
+
+create table yarnattr (
+       yarn int,
+       attr int,
+       foreign key(yarn) references yarn(yarn_id),
+       foreign key(attr) references attr(attr_id)
+       );
+
 
 /* Omistussuhteet */
 create table owns (
