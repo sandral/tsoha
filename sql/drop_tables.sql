@@ -1,5 +1,5 @@
-drop table users;
 drop table attr;
-drop table manu;
-drop table yarn;
 drop table owns;
+drop table users;
+drop table yarn;
+drop table manu;
