@@ -26,6 +26,8 @@ class User {
 	 $kayttaja = new User($tulos->user_id, $tulos->username, $tulos->password);
 	 $tulokset[] = $kayttaja;
 	 }
+
+	 return $tulokset;
   }
 
 }
