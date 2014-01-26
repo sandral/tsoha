@@ -19,6 +19,13 @@ create table attr (
        primary key(attr_id)
        );
 
+create table yarnattr (
+       yarn int,
+       attr int,
+       foreign key(yarn references(yarn_id),
+       foreign key(attr) references(attr_id),
+       );
+
 /* Valmistajat */
 create table manu (
        manu_id serial not null unique,
