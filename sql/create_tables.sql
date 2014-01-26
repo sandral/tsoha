@@ -1,4 +1,9 @@
-
+/*drop table user;
+drop table attr;
+drop table manu;
+drop table yarn;
+drop table owns;
+*/
 create table users (
        user_id serial not null unique,
        username char(40) not null,
@@ -26,8 +31,7 @@ create table yarn (
        yarn_id serial not null unique,
        yarnname char(40),
        yarnmanu int,
-       nsrmin int,
-       nsrmax int,
+       nsr int,
        description char(200),
        lpg int,
        primary key(yarn_id),
