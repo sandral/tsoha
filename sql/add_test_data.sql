@@ -18,4 +18,5 @@ select yarn_id, attr_id from yarn, attr where
 INSERT INTO owns (owner, yarn, amount)
 (select user_id, yarn_id, 300 from users, yarn where username='Pentti' and yarnname='Alpakka')
 union (select user_id, yarn_id, 350 from users, yarn where username='Pentti' and yarnname='Cora')
-union (select user_id, yarn_id, 200 from users, yarn where username='Anneli' and yarnname='Alpakka');
+union (select user_id, yarn_id, 200 from users, yarn where username='Anneli' and yarnname='Alpakka')
+union (select user_id, yarn_id, 50 from users, yarn where username='Anneli' and yarnname='Alpaca');
