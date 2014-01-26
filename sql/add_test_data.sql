@@ -7,9 +7,13 @@ values ('Alpaca', 30, 35, 420),('Alpakka', 50, 60, 240),('Cora', 40, 50, 170);
 */
 
 INSERT INTO yarn (yarnname, yarnmanu, nsrmin, nsrmax, lpg)
-select 'Alpaca', manu_id, 30, 35, 420 from manu where manuname='Drops';
+select 'Alpaca', manu_id, 30, 35, 420 from manu where manuname='Drops'
+select 'Alpaca2', manu_id, 30, 35, 420 from manu where manuname='Drops';
 
-
+/*
+INSERT INTO yarn (yarnname, yarnmanu, nsrmin, nsrmax, lpg)
+select 'Alpaca
+*/
 
 INSERT INTO attr (attrname) values ('merinovilla'),('akryyli'),('alpakka'),('valkoinen'),('punainen'),('lila');
  
