@@ -7,4 +7,4 @@ INSERT INTO manu (manuname) values ('Drops'),('TeeTee'),('Linie');
 INSERT INTO attr (attrname) values ('merinovilla'),('akryyli'),('alpakka'),('valkoinen'),('punainen'),('lila');
  
 INSERT INTO yarnattr (yarn, attr)
-select (yarn_id, attr_id) from yarn, attr;
+select yarn_id, attr_id from yarn, attr;
