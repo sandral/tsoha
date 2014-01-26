@@ -1,3 +1,4 @@
+drop table yarnattr;
 drop table attr;
 drop table owns;
 drop table users;
