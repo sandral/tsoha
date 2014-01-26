@@ -13,7 +13,7 @@ $users = User::getUsers();
 <?php
 
 foreach ($users as $user) {
-  echo $user->username;
+  echo 'asd';//$user->username;
   echo '<br>\n';
 }
 
