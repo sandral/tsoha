@@ -14,8 +14,7 @@ $users = User::getUsers();
 <?php
 
 foreach ($users as $user) {
-	echo $user->getUsername();
-	echo '<br>'."\n";
+	echo trim($user->getUsername())."<br>\n";
 }
 
 ?>
