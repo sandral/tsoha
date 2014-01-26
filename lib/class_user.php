@@ -1,5 +1,4 @@
 <?php
-require_once('lib/tietokantayhteys.php');
 
 class User {
   

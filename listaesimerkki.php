@@ -1,5 +1,6 @@
 <?php
 
+require_once('lib/tietokantayhteys.php');
 require_once('lib/class_user.php');
 
 $users = User::getUsers();
@@ -13,8 +14,7 @@ $users = User::getUsers();
 <?php
 
 foreach ($users as $user) {
-  echo 'asd';//$user->username;
-  echo '<br>\n';
+	echo 'KAKKA';
 }
 
 ?>
