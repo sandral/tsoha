@@ -8,7 +8,8 @@ values ('Alpaca', 30, 35, 420),('Alpakka', 50, 60, 240),('Cora', 40, 50, 170);
 
 INSERT INTO yarn (yarnname, yarnmanu, nsrmin, nsrmax, lpg)
 (select 'Alpaca', manu_id, 30, 35, 420 from manu where manuname='Drops')
-union (select 'Alpaca2', manu_id, 30, 35, 420 from manu where manuname='Drops');
+union (select 'Alpakka', manu_id, 50, 60, 240 from manu where manuname='TeeTee')
+union (select 'Cora', manu_id, 40, 50, 170 from manu where manuname='Linie');
 
 /*
 INSERT INTO yarn (yarnname, yarnmanu, nsrmin, nsrmax, lpg)
