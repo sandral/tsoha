@@ -2,7 +2,7 @@
 
 require_once 'lib/showview.php';
 
-if (empty($_POST['user']) || empty($_POST['pwd'])) {
+if (empty($_POST['user']) && empty($_POST['pwd'])) {
    showView("views/login.php");
    exit();
 }
@@ -19,7 +19,5 @@ if ($user == "sandra" && $pwd == "kakka") {
 'user' => $user,
 'error' => 'Väärä salasana ja/tai käyttäjätunnus.'
 ));
-   
-     
- exit();
+exit();
 }
