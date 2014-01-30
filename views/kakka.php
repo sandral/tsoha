@@ -1,1 +1,1 @@
-echo "Kakka on ".$kakka;
+echo "Kakka on $kakka";

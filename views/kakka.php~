@@ -1,0 +1,1 @@
+echo "Kakka on ".$kakka;
