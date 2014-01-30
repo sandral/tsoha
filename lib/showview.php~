@@ -1,6 +1,7 @@
 <?php
   
-  function naytaNakyma($sivu) {
-    require 'views/pohja.php';
-    exit();
+  function showView($sivu, $data = array()) {
+    $data = (object)$data;
+    require '../views/template.php';
+    die();
   }
