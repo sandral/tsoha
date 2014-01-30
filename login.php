@@ -1,2 +1,4 @@
-<?php 
-  require 'views/login.php';
+<?php
+
+require_once 'lib/showview.php';
+showView("login.php");

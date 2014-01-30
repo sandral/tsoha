@@ -1,13 +1,3 @@
-<!doctype html>
-<html>
-<head>
-<title>Langat</title>
-<meta charset="utf-8" />
-<link href="../css/bootstrap.css" rel="stylesheet">
-<link href="../css/bootstrap-theme.css" rel="stylesheet">
-<link href="../css/main.css" rel="stylesheet">
-</head>
-<body>
 <h1>Lankatietokanta</h1>
 <form name="input" action="etusivu.php" method="post">
 <table>
@@ -23,5 +13,3 @@
 </table>
 </form>
 <a href="lomake.html">Rekisteröidy käyttäjäksi </a>
-</body>
-</html>
