@@ -8,7 +8,7 @@
 <body>
 <?php
 if (isset($data->error)){
-echo '<div class="error">'.($data->error).'</div>';
+echo '<div class="alert alert-danger">'.($data->error).'</div>';
 }
 ?>
 <div id="content">
