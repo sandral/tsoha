@@ -14,7 +14,11 @@ if ($user == "sandra" && $pwd == "kakka") {
    header('Location: etusivu.php');
    exit();
 } else {
-   showView("views/login.php", array('user' => $user));
+   showView("views/login.php", array
+(
+'user' => $user,
+'error' => 'Väärä salasana ja/tai käyttäjätunnus.'
+));
    
      
  exit();
