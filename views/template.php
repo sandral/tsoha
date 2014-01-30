@@ -4,7 +4,7 @@
 </head>
 <body>
 <div id="content">
-
+<?php require $sivu; ?>
 </div>
 </body>
 </html>
