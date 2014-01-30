@@ -1,2 +1,2 @@
 <?php
-echo "Kakka on $kakka";
+echo "Kakka on ".$data->kakka;
