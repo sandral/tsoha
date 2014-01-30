@@ -12,6 +12,10 @@ $pwd = $_POST['pwd'];
 
 if ($user == "sandra" && $pwd == "kakka") {
    header('Location: etusivu.php');
+   exit();
 } else {
-   showView("views/login.php");
+   showView("views/login.php", array('user' => $user));
+   
+     
+ exit();
 }
