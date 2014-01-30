@@ -9,7 +9,7 @@
 </head>
 <body>
 <h1>Lankatietokanta</h1>
-<form name="input" action="sivu_johon_lahetetaan.php" method="post">
+<form name="input" action="etusivu.php" method="post">
 <table>
 <tr>
 <td>Käyttäjä:</td><td><input type="text" name="user"></td>
