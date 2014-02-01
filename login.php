@@ -1,6 +1,6 @@
 <?php
 
-require_once 'lib/showview.php';
+require_once 'lib/lib.php';
 require_once 'lib/class_user.php';
 
 if (empty($_POST['user']) && empty($_POST['pwd'])) {
@@ -11,10 +11,11 @@ if (empty($_POST['user']) && empty($_POST['pwd'])) {
 $user = $_POST['user'];
 $pwd = $_POST['pwd'];
 
-$asd = User::getUserByUsername($user, $pwd);
+$objUser = User::getUserByUsername($user, $pwd);
 
-if (!is_null($asd)) {
-   header('Location: etusivu.php');
+if (!is_null($objUser)) {
+   $_SESSION['user'] = $objUser;
+   header('Location: home.php');
    exit();
 } else {
    showView("views/login.php", array
