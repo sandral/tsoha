@@ -10,9 +10,9 @@ if (empty($_POST['user']) && empty($_POST['pwd'])) {
 
 $user = $_POST['user'];
 $pwd = $_POST['pwd'];
-echo 'asd';
+
 $asd = User::getUserByUsername($user, $pwd);
-echo 123;
+
 echo $asd->username;
 
 if (!is_null($asd)) {
