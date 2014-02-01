@@ -15,7 +15,7 @@ class User {
   }
 
   public function getUsername() {
-    return $username;
+    return $this->username;
   }
 
   public static function getUserByUsername($user, $password) {
