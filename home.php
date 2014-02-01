@@ -11,4 +11,4 @@ echo "Not logged!";
 }
 
 echo '<br><br>';
-echo '<a href="logout.php"> Logout </a>'
+echo '<a href="logout.php"> Logout </a>';
