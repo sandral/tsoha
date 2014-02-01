@@ -18,6 +18,10 @@ class User {
     return $this->username;
   }
 
+  public function fun(){
+  	 return 1234;
+}
+
   public static function getUserByUsername($user, $password) {
     $sql = "SELECT user_id, username, password from users where username = ? AND password = ? LIMIT 1";
     $query = getTietokantayhteys()->prepare($sql);
