@@ -5,8 +5,7 @@ require_once 'lib/class_user.php';
 
 if (logged()){
 echo "Kirjautunut:";
-echo var_export($_SESSION['user']);
-echo loggedUser();
+echo var_export(loggedUser());
 } else {
 echo "Not logged!";
 }
