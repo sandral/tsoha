@@ -15,8 +15,8 @@ class User {
   }
 
   public function getUsername() {
-  return $this->username;
-}
+    return $this->username;
+  }
 
   public static function getUserByUsername($user, $password) {
     $sql = "SELECT user_id, username, password from users where username = ? AND password = ? LIMIT 1";

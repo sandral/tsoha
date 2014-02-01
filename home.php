@@ -5,7 +5,7 @@ require_once 'lib/class_user.php';
 
 if (logged()){
 echo "Kirjautunut:";
-echo loggedUser()->getUsername();
+echo loggedUser();
 } else {
 echo "Not logged!";
 }
