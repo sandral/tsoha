@@ -1,6 +1,7 @@
 <?php
 
 require_once 'lib/showview.php';
+require_once 'lib/class_user.php';
 
 if (empty($_POST['user']) && empty($_POST['pwd'])) {
    showView("views/login.php");
@@ -10,7 +11,7 @@ if (empty($_POST['user']) && empty($_POST['pwd'])) {
 $user = $_POST['user'];
 $pwd = $_POST['pwd'];
 
-if ($user == "sandra" && $pwd == "kakka") {
+if (!is_null(User::getUserByUsername($user, $pwd))) {
    header('Location: etusivu.php');
    exit();
 } else {

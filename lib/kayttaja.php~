@@ -1,6 +1,6 @@
 <?php
 class Kayttaja {
-  
+
   private $user_id;
   private $username;
   private $password;
@@ -11,5 +11,29 @@ class Kayttaja {
     $this->password = $password;
   }
 
-  /* Tähän gettereitä ja settereitä */
+   public static Kissa haeKissa(int id) throws Exception {
+    Connection yhteys = null;
+    PreparedStatement kysely = null;
+    ResultSet tulokset = null;
+
+    try {
+      String sql = "SELECT * FROM kissat WHERE id = ?";
+      yhteys = Tietokanta.getConnection();
+      kysely = yhteys.getKysely(sql);
+      kysely.setInteger(1, id);
+      tulokset = kysely.executeQuery();
+
+      if (tulokset.next()) {
+        return new Kissa(tulokset);
+      } else {
+        return null;
+      }
+
+    } finally {
+      try { tulokset.close(); } catch (Exception e) {  }
+      try { kysely.close(); } catch (Exception e) {  }
+      try { yhteys.close(); } catch (Exception e) {  }
+    }
+
+  }  
 }

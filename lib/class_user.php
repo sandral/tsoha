@@ -16,6 +16,19 @@ class User {
   return $this->username;
 }
 
+  public static function getUserByUsername($user, $password) {
+    $sql = "SELECT user_id, username, password from users where username = ? AND password = ? LIMIT 1";
+    $query = getTietokantayhteys()->prepare($sql);
+    $query->execute(array($user, $password));
+
+    $result = $query->fetchObject();
+    if ($result == null) {
+      return null;
+    } else {
+      $user = new User($result->user_id, $result->username, $result->password);
+      return $user;
+    }
+}
 
   public static function getUsers() {
 
