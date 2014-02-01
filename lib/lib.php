@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 
 function logged() {
@@ -18,5 +19,4 @@ function showView($sivu, $data = array()) {
     require 'views/template.php';
     die();
 } 
-
 
