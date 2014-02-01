@@ -7,7 +7,7 @@ if (logged()){
 echo "Kirjautunut:";
 $us = loggedUser();
 echo var_export($us);
-echo $us->getUsername();
+echo $us->username;
 echo loggedUser()->getUsername();
 } else {
 echo "Not logged!";
