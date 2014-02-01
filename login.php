@@ -11,7 +11,10 @@ if (empty($_POST['user']) && empty($_POST['pwd'])) {
 $user = $_POST['user'];
 $pwd = $_POST['pwd'];
 
-if (!is_null(User::getUserByUsername($user, $pwd))) {
+$asd = User::getUserByUsername($user, $pwd);
+echo $asd->username;
+
+if (!is_null($asd)) {
    header('Location: etusivu.php');
    exit();
 } else {
