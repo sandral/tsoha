@@ -5,8 +5,10 @@ require_once 'lib/class_user.php';
 
 if (logged()){
 echo "Kirjautunut:";
-echo var_export(loggedUser()->getUsername());
-echo 12;
+$us = loggedUser();
+echo var_export($us);
+echo $us->getUsername();
+echo loggedUser()->getUsername();
 } else {
 echo "Not logged!";
 }
