@@ -9,3 +9,6 @@ echo loggedUser()->getUsername();
 } else {
 echo "Not logged!";
 }
+
+echo '<br><br>';
+echo '<a href="logout.php"> Logout </a>'

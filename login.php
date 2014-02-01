@@ -14,7 +14,7 @@ $pwd = $_POST['pwd'];
 $objUser = User::getUserByUsername($user, $pwd);
 
 if (!is_null($objUser)) {
-   $_SESSION['user'] = $objUser;
+   login($objUser);
    header('Location: home.php');
    exit();
 } else {

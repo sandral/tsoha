@@ -14,6 +14,15 @@ function loggedUser() {
     }
 }
 
+function login($user) {
+    $_SESSION['user'] = $user;
+}
+
+function logout() {
+    unset($_SESSION['user']);
+}
+
+
 function showView($sivu, $data = array()) {
     $data = (object)$data;
     require 'views/template.php';
