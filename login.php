@@ -13,8 +13,6 @@ $pwd = $_POST['pwd'];
 
 $asd = User::getUserByUsername($user, $pwd);
 
-echo $asd->username;
-
 if (!is_null($asd)) {
    header('Location: etusivu.php');
    exit();
