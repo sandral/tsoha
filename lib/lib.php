@@ -7,12 +7,7 @@ function logged() {
 }
 
 function loggedUser() {
-    if (isset($_SESSION['user'])) {
-        return $_SESSION['user'];
-    } else {
-        return 'kakka';
-    }
-    return 'asd';
+    return $_SESSION['user'];
 }
 
 function login($user) {
