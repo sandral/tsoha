@@ -8,7 +8,8 @@ if (logged()){
 
 showView('views/home.php', array
 (
-'user' => $loggedUser
+'user' => $loggedUser,
+'asd' => 'asdf'
 )
 );
 
