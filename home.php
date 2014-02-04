@@ -4,7 +4,7 @@ require_once 'lib/class_user.php';
 require_once 'lib/lib.php';
 
 if (logged()){
-  $loggedUser = 45;
+  $loggedUser = loggedUser();
 
 showView('views/home.php', array
 (
