@@ -3,7 +3,7 @@
 <?php
 foreach ($data->owns as $own) {
 echo 12;
-
+  echo $own->getAmount();
 }
 ?>
 
