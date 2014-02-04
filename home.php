@@ -8,7 +8,7 @@ if (logged()){
 
   showView('views/home.php', array
 (
-'user' => $loggedUser
+'user' => $loggedUser->getUsername()
 ));
 
 
