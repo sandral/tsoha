@@ -5,13 +5,12 @@ require_once 'lib/lib.php';
 
 if (logged()){
   $loggedUser = loggedUser();
+  $loggedUser = 'asdf';
 
-showView('views/home.php', array
+  showView('views/home.php', array
 (
-'user' => $loggedUser,
-'asd' => 'asdf'
-)
-);
+'user' => $loggedUser
+));
 
 
 } else {
