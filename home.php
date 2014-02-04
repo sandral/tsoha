@@ -9,7 +9,8 @@ if (logged()){
 
   showView('views/home.php', array
 (
-'user' => $loggedUser->getUsername()
+'user' => $loggedUser->getUsername(),
+'owns' => $loggedUser->getOwned()
 ));
 
 
