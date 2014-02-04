@@ -20,9 +20,9 @@ class User {
   }
 
   public function getOwned() {
-    $sql = "SELECT yarn, amount FROM owns WHERE owner = 1";
+    $sql = "SELECT yarn, amount FROM owns WHERE owner = ?";
     $query = getTietokantayhteys()->prepare($sql);
-    $query->execute($this->user_id);
+    $query->execute(array($this->user_id));
 
     $ret = array();
     $ret[] = new Owns(123,234,345);
