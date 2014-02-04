@@ -12,6 +12,7 @@ function loggedUser() {
     } else {
         return 'kakka';
     }
+    return 'asd';
 }
 
 function login($user) {
