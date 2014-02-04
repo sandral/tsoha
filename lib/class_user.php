@@ -18,9 +18,19 @@ class User {
     return $this->username;
   }
 
-  public function fun(){
-  	 return 1234;
-}
+  public static function getOwned() {
+    $sql = "SELECT owns.yarn, owns.amount FROM owns WHERE owns.owner = ?";
+    $query = getTietokantayhteys()->prepare($sql);
+    $query->execute($this->user_id);
+
+    $ret = array();
+	 foreach($query->fetchAll(PDO::FETCH_OBJ) as $tulos) {
+	     $ret[] = new Owns($this->user_id, $tulos->yarn, $tulos->amount);
+	 }
+
+    return $ret;
+
+  }  
 
   public static function getUserByUsername($user, $password) {
     $sql = "SELECT user_id, username, password from users where username = ? AND password = ? LIMIT 1";
