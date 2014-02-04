@@ -25,6 +25,7 @@ class User {
     $query->execute($this->user_id);
 
     $ret = array();
+    $ret[] = new Owns(123,234,345);
 	 foreach($query->fetchAll(PDO::FETCH_OBJ) as $tulos) {
 	     $ret[] = new Owns($this->user_id, $tulos->yarn, $tulos->amount);
 	 }
