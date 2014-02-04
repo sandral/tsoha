@@ -7,7 +7,8 @@ if (logged()){
 echo "Kirjautunut:";
 echo loggedUser()->getUsername();
 } else {
-echo "Not logged!";
+header('Location: login.php');
+exit();
 }
 
 echo '<br><br>';
