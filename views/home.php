@@ -1,3 +1,3 @@
-<h1>Tervetuloa!</h1>
+<h1>Tervetuloa, <?php echo $user ?>!</h1>
 
 <a href="logout.php">Kirjaudu ulos</a>
