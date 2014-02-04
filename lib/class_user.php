@@ -18,7 +18,7 @@ class User {
     return $this->username;
   }
 
-  public static function getOwned() {
+  public function getOwned() {
     $sql = "SELECT owns.yarn, owns.amount FROM owns WHERE owns.owner = ?";
     $query = getTietokantayhteys()->prepare($sql);
     $query->execute($this->user_id);
