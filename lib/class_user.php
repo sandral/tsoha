@@ -1,5 +1,6 @@
 <?php
 
+require_once 'lib/class_owns.php';
 require_once 'lib/tietokantayhteys.php';
 
 class User {
