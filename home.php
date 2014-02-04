@@ -5,7 +5,7 @@ require_once 'lib/lib.php';
 
 if (logged()){
   showView("views/home.php", array(
-'user' => loggedUser()
+'user' => 4
 ));
 } else {
   header('Location: login.php');
