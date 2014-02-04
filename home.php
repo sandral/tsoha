@@ -5,7 +5,6 @@ require_once 'lib/lib.php';
 
 if (logged()){
   $loggedUser = loggedUser();
-  $loggedUser = 'asdf'.$loggedUser;
 
   showView('views/home.php', array
 (
