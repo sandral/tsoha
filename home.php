@@ -5,7 +5,7 @@ require_once 'lib/lib.php';
 
 if (logged()){
   $loggedUser = loggedUser();
-  echo $loggedUser;
+  echo 1;
   showView("views/home.php", array(
 'user' => $loggedUser
 ));
