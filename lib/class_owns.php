@@ -18,7 +18,7 @@ class Owns {
     return $this->amount;
   }
  
- public funtion getYarn() {
+ public function getYarn() {
    return $this->yarn();
   }
  
