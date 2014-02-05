@@ -2,7 +2,7 @@
 
 <?php
 foreach ($data->owns as $own) {
-  echo $own->getAmount();
+  echo $own->getAmount()." ";
  }
 ?>
 
