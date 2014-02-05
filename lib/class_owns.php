@@ -17,5 +17,9 @@ class Owns {
   public function getAmount() {
     return $this->amount;
   }
+
+  public function getYarn() {
+    return $this->yarn;
+  }
  
 }
