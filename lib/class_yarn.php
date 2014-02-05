@@ -23,7 +23,7 @@ class Yarn {
   }
 
   public function getYarnname() {
-    return $this->yarnname;
+   	  return $this->yarnname;
   }
 
   public static function getYarnById($id) {
