@@ -3,7 +3,7 @@
 <?php
 foreach ($data->owns as $own) {
   echo $own->getAmount();
-  echo $own->geYarn();
+  echo $own->getYarn();
 }
 ?>
 
