@@ -5,5 +5,5 @@ foreach ($data->owns as $own) {
   echo $own->getAmount()." ";
  }
 ?>
-
+<br>
 <a href="logout.php">Kirjaudu ulos</a>
