@@ -13,5 +13,13 @@ class Owns {
     $this->yarn = $yarn;
     $this->amount = $amount;
   }
+
+  public function getAmount() {
+    return $this->amount;
+  }
+
+  public function getYarn() {
+    return $this->yarn;
+  }
  
- }
+}
