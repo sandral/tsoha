@@ -1,6 +1,7 @@
 <?php
 
 require_once 'lib/class_owns.php';
+require_once 'lib/class_yarn.php';
 require_once 'lib/tietokantayhteys.php';
 
 class User {
@@ -20,13 +21,15 @@ class User {
   }
 
   public function getOwned() {
-    $sql = "SELECT yarn, amount FROM owns WHERE owner = ?";
+
+    $sql = "SELECT yarn.yarn_id, yarn.yarnname, yarn.yarnmanu, yarn.nsrmin, yarn.nsrmax, yarn.description, yarn.lpg, owns.amount FROM owns JOIN yarn ON owns.yarn = yarn.yarn_id WHERE owns.owner = ?";
     $query = getTietokantayhteys()->prepare($sql);
     $query->execute(array($this->user_id));
 
     $ret = array();
-    foreach($query->fetchAll(PDO::FETCH_OBJ) as $tulos) {
-      $ret[] = new Owns($this->user_id, $tulos->yarn, $tulos->amount);
+    foreach($query->fetchAll(PDO::FETCH_OBJ) as $res) {
+      $yarn = new Yarn($res->yarn_id, $res->yarnname, $res->yarnmanu, $res->nsrmin, $res->nsrmax, $res->description, $res->lpg);
+      $ret[] = array('yarn' => $yarn, 'amount' => $res->amount);
     }
 
     return $ret;

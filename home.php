@@ -7,10 +7,12 @@ require_once 'lib/lib.php';
 if (logged()){
   $loggedUser = loggedUser();
 
+  $owns = $loggedUser->getOwned();
+
   showView('views/home.php', array
 (
 'user' => $loggedUser->getUsername(),
-'owns' => $loggedUser->getOwned()
+'owns' => $owns
 ));
 
 
