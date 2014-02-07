@@ -32,6 +32,7 @@ class Yarn {
     $query->execute($id);
 
     $res = $query->fetchObject();
+    echo $res->yarnname;
     return new Yarn($res->yarn_id, $res->yarnname, $res->yarnmanu, $res->nsrmin, $res->nsrmax, $res->description, $res->lpg);
   }
 
