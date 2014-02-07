@@ -28,7 +28,6 @@ class User {
 
     $ret = array();
     foreach($query->fetchAll(PDO::FETCH_OBJ) as $res) {
-    echo 1;
       $yarn = new Yarn($res->yarn_id, $res->yarnname, $res->yarnmanu, $res->nsrmin, $res->nsrmax, $res->description, $res->lpg);
       $ret[] = array('yarn' => $yarn, 'amount' => $res->amount);
     }
