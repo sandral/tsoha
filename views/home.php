@@ -4,7 +4,7 @@
 <?php
 foreach ($data->owns as $own) {
 echo '<tr>';
-echo '<td>'.$owns->yarn->getYarnname().'</td><td>'.$owns->amount.'</td>';
+echo '<td>'.$own->yarn->getYarnname().'</td><td>'.$own->amount.'</td>';
 echo '</tr>';
  }
 ?>
