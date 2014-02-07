@@ -2,7 +2,7 @@
 
 <?php
 foreach ($data->owns as $own) {
-  echo $own->getAmount()." ";
+  echo Yarn::getYarnById($own->getYarn())." Lukumäärä:".$own->getAmount()."<br> ";
  }
 ?>
 <br>
