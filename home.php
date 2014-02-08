@@ -7,13 +7,9 @@ if (logged()){
   $loggedUser = loggedUser();
 
   $owns = $loggedUser->getOwned();
+  echo 1;
 
-  showView('views/home.php', array
-(
-'user' => $loggedUser->getUsername(),
-'owns' => $owns
-));
-
+  showView('views/home.php', array('user' => $loggedUser->getUsername(), 'owns' => $owns));
 
 } else {
   header('Location: login.php');
