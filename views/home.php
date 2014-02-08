@@ -6,7 +6,7 @@ Omat lankasi:<br>
 foreach ($data->owns as $own) {
 echo '<tr>';
 echo '<td>';
-echo '<a href="yarn.php?yarn_id='.$own['yarn']->getId().'">'
+echo '<a href="yarn.php?yarn_id='.$own['yarn']->getId().'">';
 echo $own['yarn']->getYarnname().'</td><td>'.$own['amount'];
 echo '</a>';
 echo '</td>';
