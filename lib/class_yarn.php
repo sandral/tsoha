@@ -14,8 +14,8 @@ class Yarn {
     $this->yarn_id = $yarn_id;
     $this->yarnname = $yarnname;
     $this->yarnmanu = $yarnmanu;
-    $this->nsrmin = $nsrmin;
-    $this->nsrmax = $nsrmax;
+    $this->nsrmin = $nsrmin*0.1;
+    $this->nsrmax = $nsrmax*0.1;
     $this->description = $description;
     $this->lpg = $lpg;
   }
