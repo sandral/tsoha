@@ -54,4 +54,10 @@ class Yarn {
     $query->execute(array($yarn_id)); 	 
   }
 
+  public function updateYarn($yarn_id, $yarnname, $yarnmanu, $nsrmin, $nsrmax, lpg, description) {
+    $sql = "UPDATE yarn SET (yarnname, yarnmanu, nsrmin, nsrmax, lpg, description) = (?, ?, ?, ?, ?, ?)"
+    $query = getTietokantayhteys()->prepare($sql);
+    $query->execute(array($yarnname, $yarnmanu, $nsrmin, $nsrmax, $lpg, $description));
+  }
+
 }
