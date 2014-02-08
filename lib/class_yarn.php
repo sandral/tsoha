@@ -42,10 +42,10 @@ class Yarn {
     }
   }
 
-  public function addYarn($yarnname, $yarnmanu) {
-    $sql = "INSERT INTO yarn (yarn_id, yarnname, yarnmanu, nsrmin, nsrmax, lpg)";
+  public function addYarn($yarnname, $yarnmanu, $nsrmin, $nsrmax, $lpg, $description) {
+    $sql = "INSERT INTO yarn (yarn_id, yarnname, yarnmanu, nsrmin, nsrmax, lpg, description) VALUES (?, ?, ?, ?, ?, ?, ?)";
     $query = getTietokantayhteys()->prepare($sql);
-    $query->execute(array($yarnname, $yarnmanu)); 	  
+    $query->execute(array($yarnname, $yarnmanu, $nsrmin, $nsrmax, $lpg, $description));
   }
 
   public function deleteYarn($yarn_id) {
