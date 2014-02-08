@@ -19,10 +19,6 @@
 <a href="#" onclick="document.getElementById('updateform').submit();">Muokkaa</a>
 <a href="yarn.php?yarn_id=<?php echo trim($data->yarn->getId()); ?>&delete=1">Poista</a>
 </form>
-<form action="yarn.php" method="POST" id="deleteform">
-<input type="hidden" name="action" value="delete">
-<input type="hidden" name="yarn_id" value="<?php echo $data->yarn->getId(); ?>">
-</form>
 
 <br>
 <a href="home.php">Etusivu</a>

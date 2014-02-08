@@ -34,8 +34,8 @@ if (isset($_POST['yarn_id'])){
 
       if ($_GET['delete']==1) {
          echo 'Oletko varma, että haluat poistaa langan?<br>';
-	 echo '<a href="yarn.php?yarn_id='.<?php echo $yarn->getId(); ?>.'&delete=2"> Kyllä </a>';
-	 echo '<a href="yarn.php?yarn_id='.<?php echo $yarn->getId(); ?>.'"> En </a>';
+	 echo '<a href="yarn.php?yarn_id='.$yarn->getId().'&delete=2"> Kyllä </a>';
+	 echo '<a href="yarn.php?yarn_id='.$yarn->getId().'"> En </a>';
       } else if ($_GET['delete']==2) {
          echo 'Lanka leikisti poistettu!';
       } else {
