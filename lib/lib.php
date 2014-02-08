@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-require_once 'lib/connection.php';
+require_once 'connection.php';
 
 function logged() {
     return isset($_SESSION['user']);
