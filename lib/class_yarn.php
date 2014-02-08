@@ -11,13 +11,13 @@ class Yarn {
   private $lpg;
 
   public function __construct($yarn_id, $yarnname, $yarnmanu, $nsrmin, $nsrmax, $description, $lpg) {
-    $this->yarn_id = $yarn_id;
-    $this->yarnname = $yarnname;
-    $this->yarnmanu = $yarnmanu;
-    $this->nsrmin = $nsrmin*0.1;
-    $this->nsrmax = $nsrmax*0.1;
-    $this->description = $description;
-    $this->lpg = $lpg;
+    $this->yarn_id = trim($yarn_id);
+    $this->yarnname = trim($yarnname);
+    $this->yarnmanu = trim($yarnmanu);
+    $this->nsrmin = trim($nsrmin*0.1);
+    $this->nsrmax = trim($nsrmax*0.1);
+    $this->description = trim($description);
+    $this->lpg = trim($lpg);
   }
 
   public function getId() { return $this->yarn_id; }
@@ -45,7 +45,7 @@ class Yarn {
   public static function addYarn($yarnname, $yarnmanu, $nsrmin, $nsrmax, $lpg, $description) {
     $sql = "INSERT INTO yarn (yarn_id, yarnname, yarnmanu, nsrmin, nsrmax, lpg, description) VALUES (?, ?, ?, ?, ?, ?, ?)";
     $query = getTietokantayhteys()->prepare($sql);
-    $query->execute(array($yarnname, $yarnmanu, 10*$nsrmin, 10*$nsrmax, $lpg, $description));
+    $query->execute(array(trim($yarnname), trim($yarnmanu), trim(10*$nsrmin), trim(10*$nsrmax), trim($lpg), trim($description)));
   }
 
   public static function deleteYarn($yarn_id) {
@@ -57,7 +57,7 @@ class Yarn {
   public static function updateYarn($yarn_id, $yarnname, $yarnmanu, $nsrmin, $nsrmax, $lpg, $description) {
     $sql = "UPDATE yarn SET (yarnname, yarnmanu, nsrmin, nsrmax, lpg, description) = (?, ?, ?, ?, ?, ?) WHERE yarn_id = ?";
     $query = getTietokantayhteys()->prepare($sql);
-    $query->execute(array($yarnname, $yarnmanu, 10*$nsrmin, 10*$nsrmax, $lpg, $description, $yarn_id));
+    $query->execute(array(trim($yarnname), trim($yarnmanu), trim(10*$nsrmin), trim(10*$nsrmax), trim($lpg), trim($description), $yarn_id));
   }
 
 }
