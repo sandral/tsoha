@@ -1,9 +1,17 @@
 <?php
 
 session_start();
+require_once 'connection.php';
 
 function logged() {
     return isset($_SESSION['user']);
+}
+
+function checkLogged() {
+    if (!logged()) {
+        header('Location: login.php');
+	exit();
+    }
 }
 
 function loggedUser() {

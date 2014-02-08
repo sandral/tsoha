@@ -1,5 +1,6 @@
 <h1>Tervetuloa, <?php echo trim($data->user); ?>!</h1>
 
+Omat lankasi:<br>
 <table>
 <?php
 foreach ($data->owns as $own) {

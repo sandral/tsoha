@@ -1,8 +1,7 @@
 <?php
 
-require_once 'lib/class_owns.php';
-require_once 'lib/class_user.php';
 require_once 'lib/lib.php';
+require_once 'lib/classes.php';
 
 if (logged()){
   $loggedUser = loggedUser();

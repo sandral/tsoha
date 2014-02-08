@@ -1,8 +1,5 @@
 <?php
 
-require_once 'lib/tietokantayhteys.php';
-require_once 'lib/class_yarn.php';
-
 class Owns {
   
   private $owner;

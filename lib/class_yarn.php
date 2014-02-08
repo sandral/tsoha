@@ -1,7 +1,5 @@
 <?php
 
-require_once 'lib/tietokantayhteys.php';
-
 class Yarn {
   
   private $yarn_id;

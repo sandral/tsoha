@@ -1,9 +1,5 @@
 <?php
 
-require_once 'lib/class_owns.php';
-require_once 'lib/class_yarn.php';
-require_once 'lib/tietokantayhteys.php';
-
 class User {
   
   private $user_id;

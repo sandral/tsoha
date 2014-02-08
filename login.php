@@ -1,7 +1,7 @@
 <?php
 
-require_once 'lib/class_user.php';
 require_once 'lib/lib.php';
+require_once 'lib/classes.php';
 
 if (empty($_POST['user']) && empty($_POST['pwd'])) {
    showView("views/login.php");

@@ -1,0 +1,23 @@
+<?php
+
+require_once 'lib/lib.php';
+require_once 'lib/classes.php';
+
+checkLogged();
+
+if (!isset($_GET['yarn_id'])){
+   header('Location: home.php');
+   exit();
+}
+
+$loggedUser = loggedUser();
+
+$yarn_id = $_GET['yarn_id'];
+
+$owns = Yarn::getYarnById($yarn_id);
+
+showView('views/home.php', array
+(
+'user' => $loggedUser->getUsername(),
+'owns' => $owns
+));
