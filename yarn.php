@@ -11,8 +11,9 @@ if (!isset($_GET['yarn_id'])){
    exit();
 }
 
-$yarn_id = $_GET['yarn_id'];
+$yarn_id = (int)$_GET['yarn_id'];
 $yarn = Yarn::getYarnById($yarn_id);
+$manu = 'Sandra koodaa luokan ja katotaan sit.';
 
 if (is_null($yarn)) {
    header('Location: home.php');
@@ -22,5 +23,6 @@ if (is_null($yarn)) {
 showView('views/yarn.php', array
 (
 'user' => $loggedUser->getUsername(),
-'yarn' => $yarn
+'yarn' => $yarn,
+'manu' => $manu
 ));
