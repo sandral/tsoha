@@ -13,7 +13,7 @@ if (!isset($_GET['yarn_id'])){
 
 $yarn_id = (int)$_GET['yarn_id'];
 $yarn = Yarn::getYarnById($yarn_id);
-$manu = 'Sandra koodaa luokan ja katotaan sit.';
+$manu = Manu::getManuById($yarn->getYarnmanu());
 
 if (is_null($yarn)) {
    header('Location: home.php');
