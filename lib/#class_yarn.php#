@@ -55,7 +55,7 @@ class Yarn {
   }
 
   public function updateYarn($yarn_id, $yarnname) {
-
+    $sql = ""
   }
 
 }
