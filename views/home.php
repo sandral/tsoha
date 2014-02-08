@@ -5,7 +5,11 @@ Omat lankasi:<br>
 <?php
 foreach ($data->owns as $own) {
 echo '<tr>';
-echo '<td>'.$own['yarn']->getYarnname().'</td><td>'.$own['amount'].'</td>';
+echo '<td>';
+echo '<a href="yarn.php?yarn_id='.$own['yarn']->getId().'">'
+echo $own['yarn']->getYarnname().'</td><td>'.$own['amount'];
+echo '</a>';
+echo '</td>';
 echo '</tr>';
  }
 ?>

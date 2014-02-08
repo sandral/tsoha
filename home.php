@@ -2,9 +2,6 @@
 
 require_once 'lib/lib.php';
 
-echo 1;
-echo var_export($_SESSION);
-echo 2;
 if (logged()){
   $loggedUser = loggedUser();
 

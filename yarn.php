@@ -1,7 +1,6 @@
 <?php
 
 require_once 'lib/lib.php';
-require_once 'lib/classes.php';
 
 checkLogged();
 
@@ -15,7 +14,7 @@ if (!isset($_GET['yarn_id'])){
 $yarn_id = $_GET['yarn_id'];
 $yarn = Yarn::getYarnById($yarn_id);
 
-if ($yarn == NULL) {
+if (is_null($yarn)) {
    header('Location: home.php');
    exit();
 }
