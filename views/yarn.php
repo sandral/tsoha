@@ -16,7 +16,8 @@
 <tr><td>Pituus (100g):</td><td> <input type="text" name="lpg" value="<?php echo $data->yarn->getLpg();?>"></td></tr>
 <tr><td>Kuvaus:</td><td>        <input type="text" name="description" value="<?php echo $data->yarn->getDescription();?>"></td></tr>
 </table>
-<input type="submit" value="Muokkaa"></form>
+<a onclick="form.submit()">asdf</a>
+</form>
 <form action="yarn.php" method="POST">
 <input type="hidden" name="action" value="delete">
 <input type="hidden" name="yarn_id" value="<?php echo $data->yarn->getId(); ?>">
