@@ -20,13 +20,14 @@ class Yarn {
     $this->lpg = $lpg;
   }
 
-  public function getYarnname() {
-   	  return $this->yarnname;
-  }
+  public function getId() { return $this->yarn_id; }
+  public function getYarnname() { return $this->yarnname; }
+  public function getNsrmin() { return $this->nsrmin; }
+  public function getNsrmax() { return $this->nsrmax; }
+  public function getLpg() { return $this->lpg; }
+  public function getDescription() { return $this->description; }
+  public function getYarnmanu() { return $this->yarnmanu; }
 
-  public function getId() {
-    return $this->yarn_id;
-  }
 
   public static function getYarnById($id) {
     $sql = "SELECT * FROM yarn WHERE yarn_id = ? LIMIT 1";
