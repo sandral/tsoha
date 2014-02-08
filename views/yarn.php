@@ -1,7 +1,7 @@
 <h1>Muokkaa langan tietoja</h1>
 
 <form action="yarn.php" method="POST">
-<input type="hidden" name="action" value="edit">
+<input type="hidden" name="action" value="update">
 <input type="hidden" name="yarn_id" value="<?php echo $data->yarn->getId(); ?>">
 <table>
 <tr><td>Nimi:</td><td>          <input type="text" name="yarnname" value="<?php echo htmlspecialchars($data->yarn->getYarnname());?>"></td></tr>
