@@ -2,6 +2,11 @@
 
 require_once 'lib/lib.php';
 
+if (logged()){
+  header('Location: home.php');
+  exit();
+}
+
 if (empty($_POST['user']) && empty($_POST['pwd'])) {
    showView("views/login.php");
    exit();
