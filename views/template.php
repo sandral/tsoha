@@ -10,6 +10,10 @@
 if (isset($data->error)){
 echo '<div class="alert alert-danger">'.($data->error).'</div>';
 }
+if (isset($data->message)){
+echo '<div class="alert alert-success">'.($data->message).'</div>';
+}
+
 ?>
 <div id="content">
 <?php require $sivu; ?>

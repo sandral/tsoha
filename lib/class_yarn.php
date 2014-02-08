@@ -42,22 +42,22 @@ class Yarn {
     }
   }
 
-  public function addYarn($yarnname, $yarnmanu, $nsrmin, $nsrmax, $lpg, $description) {
+  public static function addYarn($yarnname, $yarnmanu, $nsrmin, $nsrmax, $lpg, $description) {
     $sql = "INSERT INTO yarn (yarn_id, yarnname, yarnmanu, nsrmin, nsrmax, lpg, description) VALUES (?, ?, ?, ?, ?, ?, ?)";
     $query = getTietokantayhteys()->prepare($sql);
     $query->execute(array($yarnname, $yarnmanu, $nsrmin, $nsrmax, $lpg, $description));
   }
 
-  public function deleteYarn($yarn_id) {
+  public static function deleteYarn($yarn_id) {
     $sql = "DELETE FROM yarn WHERE yarn_id = ?";
     $query = getTietokantayhteys()->prepare($sql);
     $query->execute(array($yarn_id)); 	 
   }
 
-  public function updateYarn($yarn_id, $yarnname, $yarnmanu, $nsrmin, $nsrmax, lpg, description) {
+  public static function updateYarn($yarn_id, $yarnname, $yarnmanu, $nsrmin, $nsrmax, $lpg, $description) {
     $sql = "UPDATE yarn SET (yarnname, yarnmanu, nsrmin, nsrmax, lpg, description) = (?, ?, ?, ?, ?, ?) WHERE yarn_id = ?"
     $query = getTietokantayhteys()->prepare($sql);
-    $query->execute(array($yarnname, $yarnmanu, $nsrmin, $nsrmax, $lpg, $description));
+    $query->execute(array($yarnname, $yarnmanu, $nsrmin, $nsrmax, $lpg, $description, $yarn_id));
   }
 
 }
