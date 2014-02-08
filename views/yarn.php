@@ -11,4 +11,6 @@
 </form>
 
 <br>
+<a href="home.php">Etusivu</a>
+<br><br>
 <a href="logout.php">Kirjaudu ulos</a>
