@@ -1,7 +1,8 @@
 <?php
 
-session_start();
 require_once 'connection.php';
+require_once 'classes.php';
+session_start();
 
 function logged() {
     return isset($_SESSION['user']);
