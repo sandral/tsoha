@@ -34,3 +34,6 @@ function showView($sivu, $data = array()) {
     die();
 } 
 
+function showNsrfield($nsrfieldname, $nsrfieldselected){
+  require 'views/nsrfield.php';
+}

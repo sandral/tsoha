@@ -47,7 +47,7 @@ class Yarn {
   }
 
   public function deleteYarn($yarn_id) {
-    $sql =  	 
+    $sql = "DELETE FROM yarn WHERE yarn_id" 	 
   }
 
 }
