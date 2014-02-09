@@ -18,6 +18,5 @@ if (isset($_POST['action']) && $_POST['action']=='insert'){
    redirect('home.php');
 
 } else {
-  echo 3;
    showView('views/addyarn.php', array('user' => $loggedUser->getUsername()), 'Lisää lanka');
 }
