@@ -18,7 +18,7 @@ class User {
 
   public function getOwned() {
 
-    $sql = "SELECT yarn.yarn_id, yarn.yarnname, yarn.yarnmanu, yarn.nsrmin, yarn.nsrmax, yarn.description, yarn.lpg, owns.amount FROM owns JOIN yarn ON owns.yarn = yarn.yarn_id WHERE owns.owner = ?";
+    $sql = "SELECT yarn.yarn_id, yarn.yarnname, yarn.yarnmanu, yarn.nsrmin, yarn.nsrmax, yarn.description, yarn.lpg, owns.amount FROM owns JOIN yarn ON owns.yarn = yarn.yarn_id WHERE owns.owner = ? ORDER BY yarn.yarnname ASC";
     $query = getTietokantayhteys()->prepare($sql);
     $query->execute(array($this->user_id));
 
