@@ -41,7 +41,7 @@ if (isset($_POST['yarn_id'])){
          echo 'Lanka leikisti poistettu!';
       } else {
          $manu = Manu::getManuById($yarn->getYarnmanu());
-         showView('views/yarn.php', array('user' => $loggedUser->getUsername(), 'yarn' => $yarn, 'manu' => $manu), 'Langan tiedot');
+         showView('views/yarn.php', array('user' => $loggedUser->getUsername(), 'yarn' => $yarn, 'manu' => $manu));
       }
 
    } else {

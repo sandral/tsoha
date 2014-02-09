@@ -1,12 +1,16 @@
 <!DOCTYPE HTML>
 <html>
-<head><title>Otsikko</title>
+<head><title>Lankatietokanta | <?php echo $title; ?></title>
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/bootstrap-theme.css" rel="stylesheet">
 <link href="css/main.css" rel="stylesheet">
 </head>
 <body>
 <?php
+echo '<h1>'.$title.'</h1>';
+
+showMenu();
+
 if (isset($data->error)){
 echo '<div class="alert alert-danger">'.($data->error).'</div>';
 }
