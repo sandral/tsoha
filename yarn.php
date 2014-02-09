@@ -41,7 +41,13 @@ if (isset($_POST['yarn_id'])){
                        )
                  );
       } else if ($_GET['delete']==2) {
-         echo 'Lanka leikisti poistettu!';
+        Yarn::deleteYarn($yarn->getId());
+        showView('views/question.php',
+                 array('question' => 'Lanka poistettu!',
+                       'choices' => array(array('Jatka', 'home.php')
+                                         )
+                      )
+                );
       } else {
          $manu = Manu::getManuById($yarn->getYarnmanu());
          showView('views/yarn.php', array('user' => $loggedUser->getUsername(), 'yarn' => $yarn, 'manu' => $manu), 'Langan tiedot');

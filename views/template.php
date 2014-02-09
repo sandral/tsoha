@@ -7,9 +7,8 @@
 </head>
 <body>
 <?php echo '<h1>'.$title.'</h1>'; ?>
-<br>
 <?php showMenu(); ?>
-<br>
+<br><br>
 <?php
 if (isset($data->error)){
 echo '<div class="alert alert-danger">'.($data->error).'</div>';
