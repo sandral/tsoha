@@ -14,9 +14,7 @@ if (isset($_POST['action']) && $_POST['action']=='insert'){
    $lpg = (int) $_POST['lpg'];
    $description = $_POST['description'];
 
-   echo 1;
    Yarn::addYarn($yarnname, $yarnmanu, $nsrmin, $nsrmax, $lpg, $description);
-   echo 2;
    redirect('home.php');
 
 } else {
