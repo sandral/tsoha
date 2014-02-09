@@ -6,8 +6,7 @@ session_start();
 
 function checkLogged() {
     if (!logged()) {
-        header('Location: login.php');
-	exit();
+        redirect('login.php');
     }
 }
 
@@ -31,6 +30,6 @@ function redirect($sivu) {
 
 function showMenu() {
   if (logged()) {
-    require 'views/menu.php'; }
+    require 'views/menu.php';
   }
 }
