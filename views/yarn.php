@@ -17,8 +17,3 @@
 <a href="#" onclick="document.getElementById('updateform').submit();">Muokkaa</a>
 <a href="yarn.php?yarn_id=<?php echo trim($data->yarn->getId()); ?>&delete=1">Poista</a>
 </form>
-
-<br>
-<a href="home.php">Etusivu</a>
-<br><br>
-<a href="logout.php">Kirjaudu ulos</a>

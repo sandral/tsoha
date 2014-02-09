@@ -6,11 +6,11 @@
 <link href="css/main.css" rel="stylesheet">
 </head>
 <body>
+<?php echo '<h1>'.$title.'</h1>'; ?>
+<br>
+<?php showMenu(); ?>
+<br>
 <?php
-echo '<h1>'.$title.'</h1>';
-
-showMenu();
-
 if (isset($data->error)){
 echo '<div class="alert alert-danger">'.($data->error).'</div>';
 }

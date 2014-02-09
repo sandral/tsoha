@@ -7,9 +7,8 @@ if (logged()){
 
   $owns = $loggedUser->getOwned();
 
-  showView('views/home.php', array('user' => $loggedUser->getUsername(), 'owns' => $owns), 'Tervetuloa, '.trim($data->user).'!');
+  showView('views/home.php', array('user' => $loggedUser->getUsername(), 'owns' => $owns), 'Tervetuloa, '.trim($loggedUser->getUsername()).'!');
 
 } else {
-  header('Location: login.php');
-  exit();
+  redirect('login.php');
 }

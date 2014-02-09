@@ -29,4 +29,8 @@ function redirect($sivu) {
   exit();
 }
 
-function showMenu() { require 'views/menu.php'; }
+function showMenu() {
+  if (logged()) {
+    require 'views/menu.php'; }
+  }
+}
