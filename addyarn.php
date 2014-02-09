@@ -8,10 +8,10 @@ $loggedUser = loggedUser();
 
 if (isset($_POST['action']) && $_POST['action']=='insert'){
    $yarnname = $_POST['yarnname'];
-   $yarnmanu = (int)$_POST['yarnmanu'];
-   $nsrmin = $_POST['nsrmin'];
-   $nsrmax = $_POST['nsrmax'];
-   $lpg = $_POST['lpg'];
+   $yarnmanu = (int) $_POST['yarnmanu'];
+   $nsrmin = (int) $_POST['nsrmin'];
+   $nsrmax = (int) $_POST['nsrmax'];
+   $lpg = (int) $_POST['lpg'];
    $description = $_POST['description'];
 
    echo 1;
