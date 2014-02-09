@@ -1,0 +1,6 @@
+<?php
+  require 'lib/kayttaja.php';
+$yhteys = getTietokantayhteys();
+$sql = "SELECT user_id,username, password from users";
+$kysely = getTietokantayhteys()->prepare($sql); 
+$kysely->execute();

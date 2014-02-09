@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+<link href="../css/bootstrap.css" rel="stylesheet">
+<link href="../css/bootstrap-theme.css" rel="stylesheet">
+<link href="../css/main.css" rel="stylesheet">
+<title>Lisää lankoja</title>
+<meta charset="utf-8" />
+</head>
+<body>
+<h1>Lisää lanka</h1>
+<a href="etusivu.html">Etusivulle</a>
+<a href="hakusivu.html">Hae lankoja</a>
+<a href="omattiedot.html">Omat tiedot</a>
+<a href="aloitussivu.html">Kirjaudu ulos</a>
+<br>
+</body>
+</html>

@@ -1,0 +1,8 @@
+<select name="<?php echo $nsrfieldname; ?>">
+<?php
+$list = array(1,2,3,4);
+foreach ($list as $value) {
+  echo '<option value="'.$value.'">'.$value.'</option>';
+}
+?>
+</select>

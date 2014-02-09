@@ -1,0 +1,1 @@
+<a href="home.php">Etusivu</a> | <a href="logout.php">Kirjaudu ulos</a>
