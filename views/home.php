@@ -15,4 +15,5 @@ echo '</td></tr>';
  }
 ?>
 </table>
-<br>
+<br><br>
+<a href="addyarn.php">Lisää lanka</a>
