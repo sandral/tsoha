@@ -1,4 +1,4 @@
-<form action="yarn.php&yarn_id=<?php echo $data->yarn->getId(); ?>" method="POST" id="updateform">
+<form action="yarn.php?yarn_id=<?php echo $data->yarn->getId(); ?>" method="POST" id="updateform">
 <input type="hidden" name="action" value="update">
 <input type="hidden" name="yarn_id" value="<?php echo $data->yarn->getId(); ?>">
 <table>
