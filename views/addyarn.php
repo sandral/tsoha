@@ -4,8 +4,7 @@
 <tr><td>Nimi:</td><td>          <input type="text" name="yarnname"></td></tr>
 <tr><td>Valmistaja:</td><td>    <select name="yarnmanu">
 
-<option value="<?php echo htmlspecialchars($data->manu->getId());?>">
-<?php echo htmlspecialchars($data->manu->getManuname());?>
+<option value="">
 </option>
 
 </select></td></tr>
