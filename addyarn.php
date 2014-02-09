@@ -16,8 +16,8 @@ if (isset($_POST['action']) && $_POST['action']=='insert'){
 
    echo $yarnname.$yarnmanu.$nsrmin.$nsrmax.$lpg.$description;
 
-   Yarn::addYarn($yarnname, $yarnmanu, $nsrmin, $nsrmax, $lpg, $description);
-   redirect('home.php');
+/*   Yarn::addYarn($yarnname, $yarnmanu, $nsrmin, $nsrmax, $lpg, $description);
+   redirect('home.php');*/
 
 } else {
    showView('views/addyarn.php', array('user' => $loggedUser->getUsername()), 'Lisää lanka');
