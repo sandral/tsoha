@@ -51,7 +51,7 @@ class Yarn {
   public static function deleteYarn($yarn_id) {
     $sql = "DELETE FROM yarn WHERE yarn_id = ?";
     $query = getTietokantayhteys()->prepare($sql);
-    $query->execute(array($yarn_id)); 	 
+    $query->execute(array($yarn_id));
   }
 
   public static function updateYarn($yarn_id, $yarnname, $yarnmanu, $nsrmin, $nsrmax, $lpg, $description) {

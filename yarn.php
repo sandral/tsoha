@@ -41,7 +41,9 @@ if (isset($_POST['yarn_id'])){
                        )
                  );
       } else if ($_GET['delete']==2) {
+        echo 1;
         Yarn::deleteYarn($yarn->getId());
+	echo 2;
         showView('views/question.php',
                  array('question' => 'Lanka poistettu!',
                        'choices' => array(array('Jatka', 'home.php')
