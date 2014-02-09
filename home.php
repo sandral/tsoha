@@ -7,7 +7,7 @@ if (logged()){
 
   $owns = $loggedUser->getOwned();
 
-  showView('views/home.php', array('user' => $loggedUser->getUsername(), 'owns' => $owns));
+  showView('views/home.php', array('user' => $loggedUser->getUsername(), 'owns' => $owns), 'Tervetuloa, '.trim($data->user).'!');
 
 } else {
   header('Location: login.php');
