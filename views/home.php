@@ -1,4 +1,4 @@
-Omat lankasi:<br>
+<?php /*Omat lankasi:<br>*/ ?>
 <table>
 <tr><th>Nimi</th><th>Valmistaja</th><th>Puikkosuositus</th><th>Pituus/100g</th><th>Kuvaus</th></tr><td></td>
 <?php
