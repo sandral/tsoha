@@ -1,5 +1,3 @@
-<h1>Muokkaa langan tietoja</h1>
-
 <form action="yarn.php" method="POST" id="updateform">
 <input type="hidden" name="action" value="update">
 <input type="hidden" name="yarn_id" value="<?php echo $data->yarn->getId(); ?>">

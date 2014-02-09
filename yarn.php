@@ -1,4 +1,4 @@
-fds<?php
+<?php
 
 require_once 'lib/lib.php';
 
@@ -29,8 +29,7 @@ if (isset($_POST['yarn_id'])){
       $yarn = Yarn::getYarnById($yarn_id);
 
       if (is_null($yarn)) {
-         header('Location: home.php');
-         exit();
+         redirect('home.php');
       }
 
       if ($_GET['delete']==1) {
@@ -45,7 +44,6 @@ if (isset($_POST['yarn_id'])){
       }
 
    } else {
-      header('Location: home.php');
-      exit();
+      redirect('home.php');
    }
 }
