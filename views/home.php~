@@ -1,18 +1,18 @@
-<h1>Lankatietokanta</h1>
-<form name="input" action="login.php" method="post">
-<table>
-<tr>
-<td>Käyttäjä:</td><td><input type="text" name="user" value="
+<table class="table">
+<tr><th>Nimi</th><th>Valmistaja</th><th>Puikkosuositus</th><th>Pituus/100g</th><th>Kuvaus</th><td></td></tr>
 <?php
-echo $data->user;
+foreach ($data->yarnlist as $own) {
+echo '<tr>';
+echo '<td>'.($own['yarn']->getYarnname()).'</td>';
+echo '<td>'.($own['manu']->getManuname()).'</td>';
+echo '<td>'.($own['yarn']->getNsrmin()).' - '.($own['yarn']->getNsrmax()).'</td>';
+echo '<td>'.($own['yarn']->getLpg()).' m</td>';
+echo '<td>'.($own['yarn']->getDescription()).'</td>';
+echo '<td>';
+echo '<a href="yarn.php?yarn_id='.$own['yarn']->getId().'">Muokkaa</a>';
+echo '</td></tr>';
+ }
 ?>
-"></td>
-</tr>
-<tr>
-<td>Salasana:</td><td><input type="password" name="pwd"></td>
-</tr>
-<tr>
-<td><input type="submit" value="Kirjaudu"></td><td></td>
-</tr>
 </table>
-</form>
+<br>
+<a href="addyarn.php">Lisää lanka</a>

@@ -16,6 +16,14 @@ function login($user) { $_SESSION['user'] = $user; }
 function logout() { unset($_SESSION['user']); }
 
 function showView($sivu, $data = array(), $title = '&lt;otsikko&gt;') {
+  if (isset($_SESSION['error'])) {
+    $data['error'] = $_SESSION['error'];
+    unset($_SESSION['error']);
+  }
+  if (isset($_SESSION['message'])) {
+    $data['message'] = $_SESSION['message'];
+    unset($_SESSION['message']);
+  }
     $data = (object)$data;
     require 'views/template.php';
     exit();
@@ -33,4 +41,8 @@ function showMenu() {
   if (logged()) {
     require 'views/menu.php';
   }
+}
+
+function showNavbar() {
+  require 'views/navbar.php';
 }

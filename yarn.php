@@ -39,7 +39,7 @@ if (isset($_POST['yarn_id'])){
                         'choices' => array(array('Kyllä', 'yarn.php?yarn_id='.$yarn->getId().'&delete=2'),
                                            array('En', 'yarn.php?yarn_id='.$yarn->getId())
                                           )
-                       )
+                       ), 'Langan poisto'
                  );
       } else if ($_GET['delete']==2) {
         Yarn::deleteYarn($yarn->getId());

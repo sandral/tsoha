@@ -1,4 +1,4 @@
-<form name="input" action="login.php" method="post" id="loginform">
+<form name="input" action="login.php" method="post">
 <table>
 <tr>
 <td>Käyttäjä:</td><td><input type="text" name="user" value="
@@ -11,5 +11,5 @@ echo $data->user;
 <td>Salasana:</td><td><input type="password" name="pwd"></td>
 </tr>
 </table><br>
+<input type="submit" value="Kirjaudu">
 </form>
-<a href="#" onclick="document.getElementById('loginform').submit();" class="btn btn-default">Kirjaudu sisään</a>

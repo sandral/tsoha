@@ -4,22 +4,27 @@
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/bootstrap-theme.css" rel="stylesheet">
 <link href="css/main.css" rel="stylesheet">
+<meta charset="utf-8">
 </head>
 <body>
-<?php echo '<h1>'.$title.'</h1>'; ?>
-<?php showMenu(); ?>
-<br><br>
+<div  style="width:700px; margin-left:auto; margin-right:auto;">
+<?php showNavbar(); ?>
+<div class="panel panel-default">
+<div class="panel-body">
 <?php
 if (isset($data->error)){
-echo '<div class="alert alert-danger">'.($data->error).'</div>';
+  echo '<div class="alert alert-danger">'.($data->error).'</div>';
 }
 if (isset($data->message)){
-echo '<div class="alert alert-success">'.($data->message).'</div>';
+  echo '<div class="alert alert-success">'.($data->message).'</div>';
 }
-
 ?>
-<div id="content">
+
+<?php echo '<h3>'.$title.'</h3>'; ?>
+<br>
 <?php require $sivu; ?>
+</div>
+</div>
 </div>
 </body>
 </html>

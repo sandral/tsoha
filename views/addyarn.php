@@ -9,5 +9,6 @@
 <tr><td>Pituus (100g):</td><td> <input type="text" name="lpg"></td></tr>
 <tr><td>Kuvaus:</td><td>        <input type="text" name="description"></td></tr>
 </table>
-<a href="#" onclick="document.getElementById('insertform').submit();">Lisää lanka</a>
 </form>
+<br>
+<a href="#" onclick="document.getElementById('insertform').submit();" class="btn btn-default">Lisää lanka</a>

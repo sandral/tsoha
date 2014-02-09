@@ -19,11 +19,13 @@ $objUser = User::getUserByUsername($user, $pwd);
 
 if (!is_null($objUser)) {
    login($objUser);
-   redirect('home.php');
+   header('Location: home.php');
+   exit();
 } else {
    showView("views/login.php", array(
       'user' => $user,
       'error' => 'Väärä salasana ja/tai käyttäjätunnus.'
       ),
       'Kirjaudu sisään');
+exit();
 }
