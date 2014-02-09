@@ -21,7 +21,7 @@ function showView($sivu, $data = array(), $title = '&lt;otsikko&gt;') {
     exit();
 } 
 
-function showNsrfield($nsrfieldname, $nsrfieldselected){ require 'views/nsrfield.php'; }
+function showNsrfield($nsrfieldname, $nsrfieldselected = -1){ require 'views/nsrfield.php'; }
 
 function redirect($sivu) {
   header('Location: '.$sivu);
