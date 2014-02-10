@@ -75,7 +75,12 @@ class Yarn {
   public static function addYarn($yarnname, $yarnmanu, $nsrmin, $nsrmax, $lpg, $description) {
     $sql = "INSERT INTO yarn (yarnname, yarnmanu, nsrmin, nsrmax, lpg, description) VALUES (?, ?, ?, ?, ?, ?)";
     $query = getTietokantayhteys()->prepare($sql);
-    $query->execute(array(trim($yarnname), trim($yarnmanu), trim(10*$nsrmin), trim(10*$nsrmax), trim($lpg), trim($description)));
+    if (trim($lpg) == '') {
+      $lpg = NULL;
+    } else {
+      $lpg = (int) $lpg;
+    }
+    $query->execute(array(trim($yarnname), (int) $yarnmanu, 10* (int) $nsrmin), 10* (int)$nsrmax, $lpg, trim($description)));
   }
 
   public static function deleteYarn($yarn_id) {

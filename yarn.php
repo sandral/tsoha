@@ -12,7 +12,6 @@ if ($_GET['action'] == 'insert') {
   $title = 'Muokkaa lankaa';
 }
 
-
 if (isset($_POST['filled'])) {
   $yarnname = trim($_POST['yarnname']);
   $yarnmanu = $_POST['yarnmanu'];
