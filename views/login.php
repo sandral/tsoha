@@ -1,3 +1,4 @@
+<div class="container" style="width:500px;">
 <form name="input" action="login.php" method="post" id="loginform">
 
 <div class="input-group">
@@ -12,3 +13,4 @@
 <br>
 </form>
 <a href="#" onclick="document.getElementById('loginform').submit();" class="btn btn-default">Kirjaudu sisään</a>
+</div>
