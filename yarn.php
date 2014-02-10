@@ -75,8 +75,19 @@ if ($_GET['action'] == 'modify' && isset($_GET['yarn_id'])){
   }
 
   $yarnmanu = $yarn->getYarnmanu() == null ? -1 : $yarn->getYarnmanu();
+  echo $yarnmanu;
 
-  showView('views/yarn.php', array('action' => 'modify', 'yarnname' => $yarn->getYarnname(), 'yarnmanu' => $manu), $title);
+  showView('views/yarn.php', array(
+    'action' => 'modify',
+    'yarn_id' => $yarn_id,
+    'yarnname' => $yarn->getYarnname(),
+    'yarnmanu' => $yarnmanu,
+    'nsrmin' => $yarn->getNsrmin(),
+    'nsrmax' => $yarn->getNsrmax(),
+    'lpg' => $yarn->getLpg(),
+    'description' => $yarn->getDescription()
+    ), $title);
+
 } else if ($_GET['action'] == 'insert') {
   showView('views/yarn.php', array('action'=>'insert'), $title);
 } else if ($_GET['action'] == 'delete' && isset($_GET['yarn_id'])) {
