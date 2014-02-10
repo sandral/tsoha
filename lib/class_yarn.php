@@ -28,7 +28,6 @@ class Yarn {
   public function getDescription() { return $this->description; }
   public function getYarnmanu() { return $this->yarnmanu; }
 
-
   public static function getYarnById($id) {
     $sql = "SELECT * FROM yarn WHERE yarn_id = ? LIMIT 1";
     $query = getTietokantayhteys()->prepare($sql);
@@ -80,7 +79,7 @@ class Yarn {
     } else {
       $lpg = (int) $lpg;
     }
-    $query->execute(array(trim($yarnname), (int) $yarnmanu, 10* (int) $nsrmin), 10* (int)$nsrmax, $lpg, trim($description)));
+    $query->execute(array(trim($yarnname), (int) $yarnmanu, 10* (int) $nsrmin, 10* (int) $nsrmax, $lpg, trim($description)));
   }
 
   public static function deleteYarn($yarn_id) {

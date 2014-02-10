@@ -1,9 +1,7 @@
 <?php
-echo 1;
+
 require_once 'connection.php';
-echo 2;
 require_once 'classes.php';
-echo 3;
 session_start();
 
 function checkLogged() {
