@@ -22,8 +22,8 @@ if (isset($data->yarnname)){
 
 <tr><td>Valmistaja:</td><td>
 <?php
-if (isset($data->manu)) {
-  showManufield('yarnmanu',$data->manu);
+if (isset($data->yarnmanu)) {
+  showManufield('yarnmanu', $data->yarnmanu);
 } else {
   showManufield('yarnmanu');
 }
