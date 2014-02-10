@@ -1,6 +1,6 @@
 <form action="yarn.php<?php
 if ($data->action == 'modify') {
-  echo '?action=modify&yarn_id='.$data->yarn->getId();
+  echo '?action=modify&yarn_id='.$data->yarn_id;
 }
 if ($data->action == 'insert') {
   echo '?action=insert';
@@ -10,21 +10,20 @@ if ($data->action == 'insert') {
 <input type="hidden" name="filled" value="1">
 <?php
 if ($data->action == 'modify') {
-  echo '<input type="hidden" name="yarn_id" value="'.$data->yarn->getId().'">';
+  echo '<input type="hidden" name="yarn_id" value="'.$data->yarn_id.'">';
 }
 ?>
 <table>
 <tr><td>Nimi:</td><td><input type="text" name="yarnname" value="<?php
-if (isset($data->yarn)){
-  echo htmlspecialchars($data->yarn->getYarnname());
+if (isset($data->yarnname)){
+  echo htmlspecialchars($data->yarnname);
 }
 ?>"></td></tr>
-
 
 <tr><td>Valmistaja:</td><td>
 <?php
 if (isset($data->manu)) {
-  showManufield('yarnmanu',$data->manu->getId());
+  showManufield('yarnmanu',$data->manu);
 } else {
   showManufield('yarnmanu');
 }
@@ -33,14 +32,14 @@ if (isset($data->manu)) {
 
 
 <tr><td>Puikkosuositus:</td><td><?php
-if (isset($data->yarn)) {
-  showNsrfield('nsrmin',$data->yarn->getNsrmin());
+if (isset($data->nsrmin)) {
+  showNsrfield('nsrmin',$data->nsrmin);
 } else {
   showNsrfield('nsrmin');
 }
 ?> - <?php
-if (isset($data->yarn)) {
-  showNsrfield('nsrmax', $data->yarn->getNsrmax());
+if (isset($data->nsrmax)) {
+  showNsrfield('nsrmax', $data->nsrmax);
 } else {
   showNsrfield('nsrmax');
 }
@@ -48,13 +47,13 @@ if (isset($data->yarn)) {
 
 
 <tr><td>Pituus (100g):</td><td> <input type="text" name="lpg" value="<?php
-if (isset($data->yarn)) {
-  echo $data->yarn->getLpg();
+if (isset($data->lpg)) {
+  echo htmlspecialchars($data->lpg);
 }
 ?>"></td></tr>
 <tr><td>Kuvaus:</td><td><input type="text" name="description" value="<?php
-if (isset($data->yarn)) {
-  echo $data->yarn->getDescription();
+if (isset($data->description)) {
+  echo htmlspecialchars($data->description);
 }
 ?>"></td></tr>
 </table>
