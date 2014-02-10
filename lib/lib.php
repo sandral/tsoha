@@ -46,3 +46,11 @@ function showMenu() {
 function showNavbar() {
   require 'views/navbar.php';
 }
+
+function showMessage($message) {
+  $_SESSION['message'] = $message;
+}
+
+function showError($message) {
+  $_SESSION['error'] = $message;
+}

@@ -6,13 +6,41 @@ checkLogged();
 
 $loggedUser = loggedUser();
 
+if ($_GET['action'] == 'insert') {
+  $title = 'Lisää lanka';
+} else {
+  $title = 'Muokkaa lankaa';
+}
+
+
 if (isset($_POST['filled'])) {
-  $yarnname = $_POST['yarnname'];
-  $yarnmanu = (int) $_POST['yarnmanu'];
+  $yarnname = trim($_POST['yarnname']);
+  $yarnmanu = $_POST['yarnmanu'];
   $nsrmin = $_POST['nsrmin'];
   $nsrmax = $_POST['nsrmax'];
-  $lpg = (int) $_POST['lpg'];
-  $description = $_POST['description'];
+  $lpg = $_POST['lpg'];
+  $description = trim($_POST['description']);
+  
+  $errorhappened = false;
+
+  if ($yarnname == '') {
+    showError('Langan nimi ei voi olla tyhjä.');
+    $errorhappened = true;
+  }
+
+  if ($errorhappened) {
+    showView('views/yarn.php', array(
+      'action' => $_GET['action'],
+      'yarnname' => $yarnname,
+      'yarnmanu' => $yarnmanu,
+      'nsrmin' => $nsrmin,
+      'nsrmax' => $nsrmax,
+      'lpg' => $lpg,
+      'description' => $description),
+      $title
+      );
+  }
+
 
   if ($_GET['action'] == 'insert') {
     Yarn::addYarn($yarnname, $yarnmanu, $nsrmin, $nsrmax, $lpg, $description);
@@ -35,9 +63,9 @@ if ($_GET['action'] == 'modify' && isset($_GET['yarn_id'])){
   }
 
   $manu = Manu::getManuById($yarn->getYarnmanu());
-  showView('views/yarn.php', array('action' => 'modify', 'yarn' => $yarn, 'manu' => $manu), 'Langan tiedot');
+  showView('views/yarn.php', array('action' => 'modify', 'yarn' => $yarn, 'manu' => $manu), $title);
 } else if ($_GET['action'] == 'insert') {
-  showView('views/yarn.php', array('action'=>'insert'), 'Lisää lanka');
+  showView('views/yarn.php', array('action'=>'insert'), $title);
 } else if ($_GET['action'] == 'delete' && isset($_GET['yarn_id'])) {
   $yarn_id = (int)$_GET['yarn_id'];
   $yarn = Yarn::getYarnById($yarn_id);
