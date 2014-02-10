@@ -7,7 +7,7 @@
 <meta charset="utf-8">
 </head>
 <body>
-<div  style="width:800px; margin-left:auto; margin-right:auto;">
+<div class="container" style="width:800px;">
 <?php showNavbar(); ?>
 <div class="panel panel-default">
 <div class="panel-body">
