@@ -24,7 +24,7 @@ if (isset($_POST['filled'])) {
   $errorhappened = false;
 
   if ($yarnname == '') {
-    showError('Langan nimi ei voi olla tyhjä.');
+     showError('Langan nimi ei voi olla tyhjä.');
     $errorhappened = true;
   }
 
