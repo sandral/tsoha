@@ -14,11 +14,13 @@ if ($data->action == 'modify') {
 }
 ?>
 <table>
-<tr><td>Nimi:</td><td>          <input type="text" name="yarnname" value="<?php
+<tr><td>Nimi:</td><td><input type="text" name="yarnname" value="<?php
 if (isset($data->yarn)){
   echo htmlspecialchars($data->yarn->getYarnname());
 }
 ?>"></td></tr>
+
+
 <tr><td>Valmistaja:</td><td>
 <?php
 if (isset($data->manu)) {
@@ -28,6 +30,8 @@ if (isset($data->manu)) {
 }
 ?>
 </td></tr>
+
+
 <tr><td>Puikkosuositus:</td><td><?php
 if (isset($data->yarn)) {
   showNsrfield('nsrmin',$data->yarn->getNsrmin());
@@ -41,6 +45,8 @@ if (isset($data->yarn)) {
   showNsrfield('nsrmax');
 }
 ?></td></tr>
+
+
 <tr><td>Pituus (100g):</td><td> <input type="text" name="lpg" value="<?php
 if (isset($data->yarn)) {
   echo $data->yarn->getLpg();
@@ -51,15 +57,19 @@ if (isset($data->yarn)) {
   echo $data->yarn->getDescription();
 }
 ?>"></td></tr>
-</table></form>
+</table>
+
 <br>
-<a href="#" onclick="document.getElementById('yarnform').submit();" class="btn btn-default">
-<?php
+
+<input type="submit" value="<?php
+
 if ($data->action == 'modify') {
   echo 'Muokkaa';
 } else {
   echo 'Lisää lanka';
 }
-?>
-</a>
+
+?>" class="btn btn-default">
+</form>
+
 <a href="home.php" class="btn btn-default">Takaisin</a>

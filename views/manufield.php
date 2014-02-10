@@ -1,5 +1,7 @@
 <select name="<?php echo $manufieldname;?>">
 
+<option value="-1"></option>
+
 <?php
 $manus = Manu::listManus();
 foreach ($manus as $manu) {
