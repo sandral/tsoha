@@ -91,7 +91,7 @@ if ($_GET['action'] == 'modify' && isset($_GET['yarn_id'])){
   $yarn = Yarn::getYarnById($yarn_id);
 
   Yarn::deleteYarn($yarn->getId());
-  $_SESSION['message'] = 'Lanka poistettu.';
+  showMessage('Lanka poistettu.');
   redirect('home.php');
 }
 
