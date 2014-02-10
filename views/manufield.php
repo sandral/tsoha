@@ -1,6 +1,10 @@
 <select name="<?php echo $manufieldname;?>">
 
-<option value="-1"></option>
+<option value="-1"<?php
+if ($manufieldselected == -1){
+    echo ' selected';
+  }
+?>></option>
 
 <?php
 $manus = Manu::listManus();
@@ -9,7 +13,7 @@ foreach ($manus as $manu) {
   if ($manufieldselected == $manu->getId()){
     echo ' selected';
   }
-  echo '>'.$manu->getManuname().'</option>';
+  echo '>'.htmlspecialchars($manu->getManuname()).'</option>';
 }
 ?>
 

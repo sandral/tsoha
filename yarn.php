@@ -19,7 +19,7 @@ if (isset($_POST['filled'])) {
   $nsrmax = $_POST['nsrmax'];
   $lpg = $_POST['lpg'];
   $description = trim($_POST['description']);
-  
+
   $errorhappened = false;
 
   if ($yarnname == '') {
@@ -50,6 +50,7 @@ if (isset($_POST['filled'])) {
       );
   }
 
+  if ($yarnmanu == -1) { $yarnmanu = NULL; }
 
   if ($_GET['action'] == 'insert') {
     Yarn::addYarn($yarnname, $yarnmanu, $nsrmin, $nsrmax, $lpg, $description);
