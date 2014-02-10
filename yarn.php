@@ -75,7 +75,6 @@ if ($_GET['action'] == 'modify' && isset($_GET['yarn_id'])){
   }
 
   $yarnmanu = $yarn->getYarnmanu() == null ? -1 : $yarn->getYarnmanu();
-  echo $yarnmanu;
 
   showView('views/yarn.php', array(
     'action' => 'modify',
