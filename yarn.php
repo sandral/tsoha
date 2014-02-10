@@ -33,7 +33,7 @@ if (isset($_POST['filled'])) {
     $errorhappened = true;
   }
 
-  if ($lpg != '' && (!is_numeric($lpg) || (is_numeric($lpg) && !is_int($lpg)))) {
+  if ($lpg != '' && (!is_numeric($lpg) || $lpg != (int) $lpg)) {
     showError('Pituuden tulee olla kokonaisluku.');
     $errorhappened = true;
   }
