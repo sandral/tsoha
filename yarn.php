@@ -32,7 +32,7 @@ if (isset($_POST['filled'])) {
     showError('Tarkista puikkosuositukset.');
     $errorhappened = true;
   }
-
+var_export($lpg);
   if ($lpg != '' && !is_int($lpg)) {
     showError('Pituuden tulee olla kokonaisluku.');
     $errorhappened = true;
