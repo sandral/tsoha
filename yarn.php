@@ -33,6 +33,7 @@ if (isset($_POST['filled'])) {
     $errorhappened = true;
   }
 var_export($lpg);
+echo is_int('5');
   if ($lpg != '' && !is_int($lpg)) {
     showError('Pituuden tulee olla kokonaisluku.');
     $errorhappened = true;
