@@ -4,7 +4,12 @@
 foreach ($data->yarnlist as $own) {
 echo '<tr>';
 echo '<td>'.($own['yarn']->getYarnname()).'</td>';
-echo '<td>'.($own['manu']->getManuname()).'</td>';
+if ($own['manu'] == NULL) {
+  echo '<td> </td>';
+} else {
+  echo '<td>'.($own['manu']->getManuname()).'</td>';
+}
+
 echo '<td>'.($own['yarn']->getNsrmin()).' - '.($own['yarn']->getNsrmax()).'</td>';
 echo '<td>'.($own['yarn']->getLpg()).' m</td>';
 echo '<td>'.($own['yarn']->getDescription()).'</td>';
