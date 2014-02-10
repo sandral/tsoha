@@ -79,7 +79,7 @@ class Yarn {
     } else {
       $lpg = (int) $lpg;
     }
-    $query->execute(array(trim($yarnname), (int) $yarnmanu, 10* (int) $nsrmin, 10* (int) $nsrmax, $lpg, trim($description)));
+    $query->execute(array(trim($yarnname), (int) $yarnmanu, (int) 10*$nsrmin, (int) 10*$nsrmax, $lpg, trim($description)));
   }
 
   public static function deleteYarn($yarn_id) {
