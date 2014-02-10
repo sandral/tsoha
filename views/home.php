@@ -11,7 +11,12 @@ if ($own['manu'] == NULL) {
 }
 
 echo '<td>'.($own['yarn']->getNsrmin()).' - '.($own['yarn']->getNsrmax()).'</td>';
-echo '<td>'.($own['yarn']->getLpg()).' m</td>';
+if ($own['yarn'] == null) {
+  echo '<td> </td>';
+} else {
+  echo '<td>'.($own['yarn']->getLpg()).' m</td>';
+}
+
 echo '<td>'.($own['yarn']->getDescription()).'</td>';
 echo '<td><a href="yarn.php?action=modify&yarn_id='.$own['yarn']->getId().'">Muokkaa</a></td>';
 echo '<td><a href="yarn.php?action=delete&yarn_id='.$own['yarn']->getId().'">Poista</a></td>';
