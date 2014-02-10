@@ -13,6 +13,7 @@ if ($_GET['action'] == 'insert') {
 }
 
 if (isset($_POST['filled'])) {
+
   $yarnname = trim($_POST['yarnname']);
   $yarnmanu = $_POST['yarnmanu'];
   $nsrmin = $_POST['nsrmin'];
@@ -54,9 +55,12 @@ if (isset($_POST['filled'])) {
   if (trim($lpg) == '') { $lpg = NULL; } else { $lpg = (int) $lpg; }
 
   if ($_GET['action'] == 'insert') {
+
     Yarn::addYarn($yarnname, $yarnmanu, $nsrmin, $nsrmax, $lpg, $description);
     showMessage('Lanka lisätty.');
+
   } else if ($_GET['action'] == 'modify') {
+
     $yarn_id = (int)$_POST['yarn_id'];
     Yarn::updateYarn($yarn_id, $yarnname, $yarnmanu, $nsrmin, $nsrmax, $lpg, $description);
     showMessage('Lanka päivitetty.');
