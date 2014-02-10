@@ -53,8 +53,6 @@ if (isset($_POST['filled'])) {
   if ($yarnmanu == -1) { $yarnmanu = NULL; } else { $yarnmanu = (int) $yarnmanu; }
   if (trim($lpg) == '') { $lpg = NULL; } else { $lpg = (int) $lpg; }
 
-
-
   if ($_GET['action'] == 'insert') {
     Yarn::addYarn($yarnname, $yarnmanu, $nsrmin, $nsrmax, $lpg, $description);
     showMessage('Lanka lisätty.');

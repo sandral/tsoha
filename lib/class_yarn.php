@@ -56,14 +56,14 @@ class Yarn {
   }
 
   public static function listYarnsWithManus() {
-    $sql = 'SELECT * FROM yarn JOIN manu ON yarn.yarnmanu = manu.manu_id ORDER BY yarnname ASC';
+    $sql = 'SELECT * FROM yarn LEFT JOIN manu ON yarn.yarnmanu = manu.manu_id ORDER BY yarnname ASC';
     $query = getTietokantayhteys()->prepare($sql);
     $query->execute(array());
 
     $ret = array();
     foreach($query->fetchAll(PDO::FETCH_OBJ) as $res) {
       $yarn = new Yarn($res->yarn_id, $res->yarnname, $res->yarnmanu, $res->nsrmin, $res->nsrmax, $res->description, $res->lpg);
-      $manu = new Manu($res->manu_id, $res->manuname);
+      $manu = $res->manu_id == NULL ? NULL : new Manu($res->manu_id, $res->manuname);
       $ret[] = array('yarn' => $yarn, 'manu' => $manu);
     }
 
