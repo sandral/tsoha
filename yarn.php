@@ -66,6 +66,7 @@ if (isset($_POST['filled'])) {
 }
 
 if ($_GET['action'] == 'modify' && isset($_GET['yarn_id'])){
+
   $yarn_id = (int)$_GET['yarn_id'];
   $yarn = Yarn::getYarnById($yarn_id);
 
@@ -73,8 +74,9 @@ if ($_GET['action'] == 'modify' && isset($_GET['yarn_id'])){
     redirect('home.php');
   }
 
-  $manu = Manu::getManuById($yarn->getYarnmanu());
-  showView('views/yarn.php', array('action' => 'modify', 'yarn' => $yarn, 'manu' => $manu), $title);
+  $yarnmanu = $yarn->getYarnmanu() == null ? -1 : $yarn->getYarnmanu();
+
+  showView('views/yarn.php', array('action' => 'modify', 'yarnname' => $yarn->getYarnname(), 'yarnmanu' => $manu), $title);
 } else if ($_GET['action'] == 'insert') {
   showView('views/yarn.php', array('action'=>'insert'), $title);
 } else if ($_GET['action'] == 'delete' && isset($_GET['yarn_id'])) {
