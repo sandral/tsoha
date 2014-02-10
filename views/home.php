@@ -11,7 +11,7 @@ if ($own['manu'] == NULL) {
 }
 
 echo '<td>'.($own['yarn']->getNsrmin()).' - '.($own['yarn']->getNsrmax()).'</td>';
-if ($own['yarn'] == null) {
+if ($own['yarn']->getLpg() == null) {
   echo '<td> </td>';
 } else {
   echo '<td>'.($own['yarn']->getLpg()).' m</td>';
