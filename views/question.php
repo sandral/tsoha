@@ -1,5 +1,5 @@
 <?php
-echo $data->question;
+echo htmlspecialchars($data->question);
 ?>
 <br><br>
 <?php

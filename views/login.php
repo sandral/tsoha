@@ -3,7 +3,7 @@
 
 <div class="input-group">
   <span class="input-group-addon">Käyttäjänimi</span>
-  <input type="text" class="form-control" name="user" value="<?php echo $data->user; ?>">
+  <input type="text" class="form-control" name="user" value="<?php echo htmlspecialchars($data->user); ?>">
 </div>
 <br>
 <div class="input-group">
