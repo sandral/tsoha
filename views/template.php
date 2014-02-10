@@ -23,6 +23,7 @@ if (isset($data->message)){
 <?php echo '<h3>'.$title.'</h3>'; ?>
 <br>
 <?php require $sivu; ?>
+<br>
 </div>
 </div>
 </div>

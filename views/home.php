@@ -10,7 +10,8 @@ echo '<td>'.($own['yarn']->getLpg()).' m</td>';
 echo '<td>'.($own['yarn']->getDescription()).'</td>';
 echo '<td><a href="yarn.php?action=modify&yarn_id='.$own['yarn']->getId().'">Muokkaa</a></td>';
 echo '<td><a href="yarn.php?action=delete&yarn_id='.$own['yarn']->getId().'">Poista</a></td>';
-echo '</tr>';
+echo '</tr>
+';
  }
 ?>
 </table>

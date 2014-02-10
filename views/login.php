@@ -12,6 +12,6 @@
 </div>
 <br>
 </form>
+<input type="submit" class="btn btn-default" value="Kirjaudu sisään">
 <a href="#" onclick="document.getElementById('loginform').submit();" class="btn btn-default">Kirjaudu sisään</a>
 </div>
-<br>
