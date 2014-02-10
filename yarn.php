@@ -1,7 +1,7 @@
 <?php
-
+echo 1;
 require_once 'lib/lib.php';
-
+echo 2;
 checkLogged();
 
 $loggedUser = loggedUser();
