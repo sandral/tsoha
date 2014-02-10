@@ -20,10 +20,12 @@ function showView($sivu, $data = array(), $title = '&lt;otsikko&gt;') {
     $data['error'] = $_SESSION['error'];
     unset($_SESSION['error']);
   }
+
   if (isset($_SESSION['message'])) {
     $data['message'] = $_SESSION['message'];
     unset($_SESSION['message']);
   }
+
     $data = (object)$data;
     require 'views/template.php';
     exit();
@@ -48,9 +50,15 @@ function showNavbar() {
 }
 
 function showMessage($message) {
-  $_SESSION['message'] = $message;
+  if (!isset($_SESSION['message'])) {
+    $_SESSION['message'] = array();
+  }
+  $_SESSION['message'][] = $message;
 }
 
 function showError($message) {
-  $_SESSION['error'] = $message;
+  if (!isset($_SESSION['error'])) {
+    $_SESSION['error'] = array();
+  }
+  $_SESSION['error'][] = $message;
 }

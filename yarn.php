@@ -28,6 +28,11 @@ if (isset($_POST['filled'])) {
     $errorhappened = true;
   }
 
+  if ($nsrmin <= $nsrmax) {
+    showError('Tarkista puikkosuositukset.');
+    $errorhappened = true;
+  }
+
   if ($errorhappened) {
     showView('views/yarn.php', array(
       'action' => $_GET['action'],

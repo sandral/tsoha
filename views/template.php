@@ -13,10 +13,14 @@
 <div class="panel-body">
 <?php
 if (isset($data->error)){
-  echo '<div class="alert alert-danger">'.($data->error).'</div>';
+  echo '<div class="alert alert-danger">';
+  echo implode("<br>\n",$data->error);
+  echo '</div>';
 }
 if (isset($data->message)){
-  echo '<div class="alert alert-success">'.($data->message).'</div>';
+  echo '<div class="alert alert-success">';
+  echo implode("<br>\n",$data->message);
+  echo '</div>';
 }
 ?>
 
