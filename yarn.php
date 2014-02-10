@@ -30,6 +30,7 @@ if (isset($_POST['filled'])) {
 
   showError('asdf');
   showError('asdf23423');
+echo 1;
 
   if (((int)$nsrmin) <= ((int)$nsrmax)) {
     showError('Tarkista puikkosuositukset.');
