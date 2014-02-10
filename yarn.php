@@ -28,12 +28,13 @@ if (isset($_POST['filled'])) {
     $errorhappened = true;
   }
 
-  showError('asdf');
-  showError('asdf23423');
-echo 1;
-
-  if (((int)$nsrmin) <= ((int)$nsrmax)) {
+  if ($nsrmin > $nsrmax) {
     showError('Tarkista puikkosuositukset.');
+    $errorhappened = true;
+  }
+
+  if (!is_int($lpg)) {
+    showError('Pituuden tulee olla kokonaisluku.');
     $errorhappened = true;
   }
 
@@ -53,11 +54,11 @@ echo 1;
 
   if ($_GET['action'] == 'insert') {
     Yarn::addYarn($yarnname, $yarnmanu, $nsrmin, $nsrmax, $lpg, $description);
-    $_SESSION['message'] = 'Lanka lisätty.';
+    showMessage('Lanka lisätty.');
   } else if ($_GET['action'] == 'modify') {
     $yarn_id = (int)$_POST['yarn_id'];
     Yarn::updateYarn($yarn_id, $yarnname, $yarnmanu, $nsrmin, $nsrmax, $lpg, $description);
-    $_SESSION['message'] = 'Lanka päivitetty.';
+    showMessage('Lanka päivitetty.');
   }
 
   redirect('home.php');
