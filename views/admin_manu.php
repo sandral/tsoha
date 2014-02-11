@@ -23,7 +23,7 @@ if (isset($data->manuname)){
 }
 ?>">
 </div>
-</form>
+
 
 <br>
 
