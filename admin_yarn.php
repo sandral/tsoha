@@ -64,7 +64,7 @@ if (isset($_POST['filled'])) {
     showMessage('Lanka päivitetty.');
   }
 
-  redirect('home.php');
+  redirect('admin_list_yarns.php');
 }
 
 if ($_GET['action'] == 'modify' && isset($_GET['yarn_id'])){
@@ -73,7 +73,7 @@ if ($_GET['action'] == 'modify' && isset($_GET['yarn_id'])){
   $yarn = Yarn::getYarnById($yarn_id);
 
   if (is_null($yarn)) {
-    redirect('home.php');
+    redirect('admin_list_yarns.php');
   }
 
   $yarnmanu = $yarn->getYarnmanu() == null ? -1 : $yarn->getYarnmanu();
@@ -98,7 +98,7 @@ if ($_GET['action'] == 'modify' && isset($_GET['yarn_id'])){
   showView('views/question.php',
                   array('question' => 'Oletko varma, että haluat poistaa langan?',
                         'choices' => array(array('Kyllä', 'admin_yarn.php?action=deleteconfirm&yarn_id='.$yarn->getId()),
-                                           array('En', 'home.php')
+                                           array('En', 'admin_list_yarns.php')
                                           )
                        ), 'Langan poisto');
 
@@ -108,7 +108,7 @@ if ($_GET['action'] == 'modify' && isset($_GET['yarn_id'])){
 
   Yarn::deleteYarn($yarn->getId());
   showMessage('Lanka poistettu.');
-  redirect('home.php');
+  redirect('admin_list_yarns.php');
 }
 
 redirect('admin_yarn.php?action=insert');

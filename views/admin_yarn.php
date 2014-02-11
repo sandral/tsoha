@@ -68,5 +68,5 @@ if ($data->action == 'modify') {
   echo 'Lisää lanka';
 }
 
-?>" class="btn btn-default"> <a href="home.php" class="btn btn-default">Takaisin</a>
+?>" class="btn btn-default"> <a href="admin_list_yarns.php" class="btn btn-default">Takaisin</a>
 </form>
