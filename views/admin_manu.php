@@ -13,13 +13,16 @@ if ($data->action == 'modify') {
   echo '<input type="hidden" name="manu_id" value="'.$data->manu_id.'">';
 }
 ?>
-<table>
-<tr><td>Valmistajan nimi:</td><td><input type="text" name="manuname" value="<?php
+
+<form name="input" action="login.php" method="post" id="loginform">
+<div class="input-group">
+Valmistajan nimi:<input type="text" name="manuname" value="<?php
 if (isset($data->manuname)){
   echo trim(htmlspecialchars($data->manuname));
 }
-?>"></td></tr>
-</table>
+?>">
+</div>
+</form>
 
 <br>
 

@@ -14,20 +14,28 @@ if ($data->action == 'modify') {
 }
 ?>
 <table>
-<tr><td>Nimi:</td><td><input type="text" name="yarnname" value="<?php
+<tr><td>
+<div class="input-group">
+  <span class="input-group-addon">Nimi</span>
+  <input type="text" class="form-control" name="yarnname" value="<?php
 if (isset($data->yarnname)){
   echo htmlspecialchars($data->yarnname);
 }
-?>"></td></tr>
+?>">
+</div>
+</td></tr>
 
-<tr><td>Valmistaja:</td><td>
-<?php
+<tr><td>
+<div class="input-group">
+  <span class="input-group-addon">Valmistaja</span>
+ <?php
 if (isset($data->yarnmanu)) {
   showManufield('yarnmanu', $data->yarnmanu);
 } else {
   showManufield('yarnmanu');
 }
 ?>
+</div>
 </td></tr>
 
 

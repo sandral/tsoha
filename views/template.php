@@ -26,8 +26,6 @@ if (isset($data->message)){
   echo '</div>';
 }
 ?>
-
-<br>
 <?php require $sivu; ?>
 <br>
 </div>
