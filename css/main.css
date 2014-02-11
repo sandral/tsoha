@@ -1,3 +1,7 @@
 body {
   background-color: #dddddd;
 }
+
+a.admin {
+  color: #aa3300;
+}

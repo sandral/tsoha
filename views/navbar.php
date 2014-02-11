@@ -23,7 +23,7 @@ if (logged()){
 <?php
 
 if (admin()) {
-  echo '<li><a href="home.php">Langat</a></li>';
+  echo '<li><a href="home.php" class="admin">Langat</a></li>';
   echo ' | ';
 }
 
