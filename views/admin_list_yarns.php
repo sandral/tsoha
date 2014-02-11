@@ -1,3 +1,4 @@
+<a href="admin_yarn.php?action=insert" class="btn btn-default">Lisää lanka</a><br><br>
 <table class="table">
 <tr><th>Nimi</th><th>Valmistaja</th><th>Puikkosuositus</th><th>Pituus/100g</th><th>Kuvaus</th><td></td><td></td></tr>
 <?php

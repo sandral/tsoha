@@ -14,7 +14,7 @@ if (logged()){
       <ul class="nav navbar-nav">
 <?php
 if (logged()){
-  echo '<li><a href="home.php">Langat</a></li>';
+  echo '<li><a href="home.php">Omat langat</a></li>';
 }
 ?>
       </ul>
