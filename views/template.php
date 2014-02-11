@@ -10,6 +10,9 @@
 <div class="container" style="width:800px;">
 <?php showNavbar(); ?>
 <div class="panel panel-default">
+<div class="panel-heading">
+<?php echo '<h3>'.$title.'</h3>'; ?>
+</div>
 <div class="panel-body">
 <?php
 if (isset($data->error)){
@@ -24,7 +27,6 @@ if (isset($data->message)){
 }
 ?>
 
-<?php echo '<h3>'.$title.'</h3>'; ?>
 <br>
 <?php require $sivu; ?>
 <br>
