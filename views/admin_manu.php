@@ -31,5 +31,5 @@ if ($data->action == 'modify') {
   echo 'Lisää valmistaja';
 }
 
-?>" class="btn btn-default"> <a href="admin_manu.php" class="btn btn-default">Takaisin</a>
+?>" class="btn btn-default"> <a href="admin_list_manus.php" class="btn btn-default">Takaisin</a>
 </form>
