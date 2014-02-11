@@ -14,8 +14,7 @@ if (logged()){
       <ul class="nav navbar-nav">
 <?php
 if (logged()){
-  echo '<li><a href="home.php">Langat</a></li>
-  <li><a href="admin_yarn.php?action=insert">Lisää lanka</a></li>';
+  echo '<li><a href="home.php">Langat</a></li>';
 }
 ?>
       </ul>
