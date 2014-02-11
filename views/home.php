@@ -1,3 +1,8 @@
+ASDFASDFASDF
+
+
+<?php
+/*
 <table class="table">
 <tr><th>Nimi</th><th>Valmistaja</th><th>Puikkosuositus</th><th>Pituus/100g</th><th>Kuvaus</th><td></td><td></td></tr>
 <?php
@@ -25,3 +30,5 @@ echo '</tr>
  }
 ?>
 </table>
+*/
+?>
