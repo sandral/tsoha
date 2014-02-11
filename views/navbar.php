@@ -24,6 +24,7 @@ if (logged()){
 
 if (admin()) {
   echo '<li><a href="admin_home.php">Hallinto</a></li>';
+  echo '<li> | </li>'
 }
 
 if (logged()) {
