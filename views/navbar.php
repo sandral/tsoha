@@ -21,6 +21,12 @@ if (logged()){
       </ul>
       <ul class="nav navbar-nav navbar-right">
 <?php
+
+if (admin()) {
+  echo '<li><a href="home.php">Langat</a></li>';
+  echo ' | ';
+}
+
 if (logged()) {
   echo '<li><a href="logout.php">Kirjaudu ulos</a></li>';
 }
