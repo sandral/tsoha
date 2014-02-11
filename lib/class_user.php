@@ -5,11 +5,13 @@ class User {
   private $user_id;
   private $username;
   private $password;
+  private $admin;
 
-  public function __construct($user_id, $username, $password) {
+  public function __construct($user_id, $username, $password, $admin = 0) {
     $this->user_id = $user_id;
     $this->username = $username;
     $this->password = $password;
+    $this->admin = $admin;
   }
 
   public function getUsername() {
@@ -33,7 +35,7 @@ class User {
   }  
 
   public static function getUserByUsername($user, $password) {
-    $sql = 'SELECT user_id, username, password FROM users WHERE username = ? AND password = ? LIMIT 1';
+    $sql = 'SELECT user_id, username, password, isadmin FROM users WHERE username = ? AND password = ? LIMIT 1';
     $query = getTietokantayhteys()->prepare($sql);
     $query->execute(array($user, $password));
 
@@ -41,25 +43,8 @@ class User {
     if ($result == null) {
       return null;
     } else {
-      $user = new User($result->user_id, $result->username, $result->password);
+      $user = new User($result->user_id, $result->username, $result->password, $result->isadmin);
       return $user;
     }
-}
-
-  public static function getUsers() {
-
-	 $yhteys = getTietokantayhteys();
-	 $sql = "SELECT user_id, username, password from users";
-	 $kysely = getTietokantayhteys()->prepare($sql);
-	 $kysely->execute();
-
-	 $tulokset = array();
-	 foreach($kysely->fetchAll(PDO::FETCH_OBJ) as $tulos) {
-	 $kayttaja = new User($tulos->user_id, $tulos->username, $tulos->password);
-	 $tulokset[] = $kayttaja;
-	 }
-
-	 return $tulokset;
   }
-
 }

@@ -14,6 +14,7 @@ function logged() { return isset($_SESSION['user']); }
 function loggedUser() { return $_SESSION['user']; }
 function login($user) { $_SESSION['user'] = $user; }
 function logout() { unset($_SESSION['user']); }
+function admin() { return logged() && $_SESSION['user']->isAdmin(); }
 
 function showView($sivu, $data = array(), $title = '&lt;otsikko&gt;') {
   if (isset($_SESSION['error'])) {
