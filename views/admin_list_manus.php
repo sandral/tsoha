@@ -1,6 +1,6 @@
 <a href="admin_manu.php?action=insert" class="btn btn-default">Lisää valmistaja</a><br><br>
 <table class="table">
-<tr><th>Nimi</th></tr><td></td><td></td>
+<tr><th>Nimi</th><td></td><td></td></tr>
 <?php
 foreach ($data->list as $e) {
 echo '<tr>';
