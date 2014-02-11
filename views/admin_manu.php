@@ -16,7 +16,7 @@ if ($data->action == 'modify') {
 <table>
 <tr><td>Valmistajan nimi:</td><td><input type="text" name="manuname" value="<?php
 if (isset($data->manuname)){
-  echo htmlspecialchars($data->manuname);
+  echo trim(htmlspecialchars($data->manuname));
 }
 ?>"></td></tr>
 </table>
