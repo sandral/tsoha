@@ -2,7 +2,7 @@
 
 require_once 'lib/lib.php';
 
-checkLogged();
+checkAdmin();
 
 $loggedUser = loggedUser();
 

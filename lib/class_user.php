@@ -18,6 +18,10 @@ class User {
     return $this->username;
   }
 
+  public function isAdmin() {
+    return $this->admin;
+  }
+
   public function getOwned() {
 
     $sql = "SELECT yarn.yarn_id, yarn.yarnname, yarn.yarnmanu, yarn.nsrmin, yarn.nsrmax, yarn.description, yarn.lpg, owns.amount FROM owns JOIN yarn ON owns.yarn = yarn.yarn_id WHERE owns.owner = ? ORDER BY yarn.yarnname ASC";

@@ -10,6 +10,13 @@ function checkLogged() {
     }
 }
 
+function checkAdmin() {
+    if (!admin()) {
+        redirect('home.php');
+    }
+}
+
+
 function logged() { return isset($_SESSION['user']); }
 function loggedUser() { return $_SESSION['user']; }
 function login($user) { $_SESSION['user'] = $user; }
