@@ -2,9 +2,7 @@
 
 require_once 'lib/lib.php';
 
-check();
-
-$loggedUser = loggedUser();
+checkAdmin();
 
 if ($_GET['action'] == 'insert') {
   $title = 'Lisää lanka';
