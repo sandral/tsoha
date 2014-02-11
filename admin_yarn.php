@@ -99,7 +99,7 @@ if ($_GET['action'] == 'modify' && isset($_GET['yarn_id'])){
 
   showView('views/question.php',
                   array('question' => 'Oletko varma, että haluat poistaa langan?',
-                        'choices' => array(array('Kyllä', 'yarn.php?action=deleteconfirm&yarn_id='.$yarn->getId()),
+                        'choices' => array(array('Kyllä', 'admin_yarn.php?action=deleteconfirm&yarn_id='.$yarn->getId()),
                                            array('En', 'home.php')
                                           )
                        ), 'Langan poisto');
