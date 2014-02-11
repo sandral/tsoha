@@ -27,6 +27,26 @@ class Manu {
     return $ret;
   }
 
+    public static function updateManu($manu_id, $manuname) {
+    $sql = "UPDATE manu SET (manuname) = (?) WHERE manu_id = ?";
+    $query = getTietokantayhteys()->prepare($sql);
+    $query->execute(array(trim($manuname), (int) $manu_id));
+  }
+
+    public static function addManu($manuname) {
+    $sql = "INSERT INTO manu (manuname) VALUES (?)";
+    $query = getTietokantayhteys()->prepare($sql);
+    $query->execute(array(trim($manuname)));
+  }
+
+    public static function deleteManu($manu_id) {
+    $sql = "DELETE FROM manu WHERE manu_id = ?";
+    $query = getTietokantayhteys()->prepare($sql);
+    $query->execute(array($manu_id));
+  }
+
+
+
 
   public static function getManuById($id) {
     $sql = "SELECT * FROM manu WHERE manu_id = ? LIMIT 1";
