@@ -18,8 +18,8 @@ if ($own['yarn']->getLpg() == null) {
 }
 
 echo '<td>'.htmlspecialchars($own['yarn']->getDescription()).'</td>';
-echo '<td><a href="yarn.php?action=modify&yarn_id='.$own['yarn']->getId().'">Muokkaa</a></td>';
-echo '<td><a href="yarn.php?action=delete&yarn_id='.$own['yarn']->getId().'">Poista</a></td>';
+echo '<td><a href="admin_yarn.php?action=modify&yarn_id='.$own['yarn']->getId().'">Muokkaa</a></td>';
+echo '<td><a href="admin_yarn.php?action=delete&yarn_id='.$own['yarn']->getId().'">Poista</a></td>';
 echo '</tr>
 ';
  }

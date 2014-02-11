@@ -15,7 +15,7 @@ if (logged()){
 <?php
 if (logged()){
   echo '<li><a href="home.php">Langat</a></li>
-  <li><a href="yarn.php?action=insert">Lisää lanka</a></li>';
+  <li><a href="admin_yarn.php?action=insert">Lisää lanka</a></li>';
 }
 ?>
       </ul>

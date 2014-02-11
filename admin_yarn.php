@@ -39,7 +39,7 @@ if (isset($_POST['filled'])) {
   }
 
   if ($errorhappened) {
-    showView('views/yarn.php', array(
+    showView('views/admin_yarn.php', array(
       'action' => $_GET['action'],
       'yarnname' => $yarnname,
       'yarnmanu' => $yarnmanu,
@@ -80,7 +80,7 @@ if ($_GET['action'] == 'modify' && isset($_GET['yarn_id'])){
 
   $yarnmanu = $yarn->getYarnmanu() == null ? -1 : $yarn->getYarnmanu();
 
-  showView('views/yarn.php', array(
+  showView('views/admin_yarn.php', array(
     'action' => 'modify',
     'yarn_id' => $yarn_id,
     'yarnname' => $yarn->getYarnname(),
@@ -92,7 +92,7 @@ if ($_GET['action'] == 'modify' && isset($_GET['yarn_id'])){
     ), $title);
 
 } else if ($_GET['action'] == 'insert') {
-  showView('views/yarn.php', array('action'=>'insert'), $title);
+  showView('views/admin_yarn.php', array('action'=>'insert'), $title);
 } else if ($_GET['action'] == 'delete' && isset($_GET['yarn_id'])) {
   $yarn_id = (int)$_GET['yarn_id'];
   $yarn = Yarn::getYarnById($yarn_id);
@@ -113,4 +113,4 @@ if ($_GET['action'] == 'modify' && isset($_GET['yarn_id'])){
   redirect('home.php');
 }
 
-redirect('yarn.php?action=insert');
+redirect('admin_yarn.php?action=insert');
