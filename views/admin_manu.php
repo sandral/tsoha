@@ -16,7 +16,8 @@ if ($data->action == 'modify') {
 
 <form name="input" action="login.php" method="post" id="loginform">
 <div class="input-group">
-Valmistajan nimi:<input type="text" name="manuname" value="<?php
+<span class="input-group-addon">Valmistajan nimi</span>
+<input type="text" class="form-control" name="manuname" value="<?php
 if (isset($data->manuname)){
   echo trim(htmlspecialchars($data->manuname));
 }
