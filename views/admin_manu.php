@@ -28,7 +28,7 @@ if (isset($data->manuname)){
 if ($data->action == 'modify') {
   echo 'Muokkaa';
 } else {
-  echo 'Lisää lanka';
+  echo 'Lisää valmistaja';
 }
 
 ?>" class="btn btn-default"> <a href="home.php" class="btn btn-default">Takaisin</a>
