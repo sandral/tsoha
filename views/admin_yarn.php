@@ -1,4 +1,4 @@
-<form action="yarn.php<?php
+<form action="admin_yarn.php<?php
 if ($data->action == 'modify') {
   echo '?action=modify&yarn_id='.$data->yarn_id;
 }
