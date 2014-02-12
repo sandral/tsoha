@@ -37,3 +37,4 @@ if ($data->action == 'modify') {
 
 ?>" class="btn btn-default"> <a href="admin_list_manus.php" class="btn btn-default">Takaisin</a>
 </form>
+
