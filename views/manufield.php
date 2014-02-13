@@ -1,4 +1,4 @@
-<select name="<?php echo $manufieldname;?>">
+<select name="<?php echo $manufieldname;?>" class="form-control">
 
 <option value="-1"<?php
 if ($manufieldselected == -1){

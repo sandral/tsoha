@@ -7,7 +7,7 @@ class Manu {
 
   public function __construct($manu_id, $manuname) {
     $this->manu_id = $manu_id;
-    $this->manuname = $manuname;
+    $this->manuname = trim($manuname);
   }
 
   public function getId() { return $this->manu_id; }

@@ -1,3 +1,4 @@
+<div class="column">
 <form action="admin_manu.php<?php
 if ($data->action == 'modify') {
   echo '?action=modify&manu_id='.$data->manu_id;
@@ -38,3 +39,4 @@ if ($data->action == 'modify') {
 ?>" class="btn btn-default"> <a href="admin_list_manus.php" class="btn btn-default">Takaisin</a>
 </form>
 
+</div>

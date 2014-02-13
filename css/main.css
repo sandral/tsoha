@@ -5,3 +5,20 @@ body {
 a.admin {
   color: #aa3300;
 }
+
+.column {
+  width:360px;
+}
+
+input.btn.btn-lg {
+    padding: 11px 16px;
+}
+input.btn {
+    padding: 8px 12px;
+}
+input.btn.btn-sm {
+    padding: 7px 10px 6px;
+}
+input.btn.btn-xs {
+    padding: 3px 5px 2px;
+}
