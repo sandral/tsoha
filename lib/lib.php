@@ -41,6 +41,7 @@ function showView($sivu, $data = array(), $title = '&lt;otsikko&gt;') {
 
 function showNsrfield($nsrfieldname, $nsrfieldselected = -1){ require 'views/nsrfield.php'; }
 function showManufield($manufieldname, $manufieldselected = -1){ require 'views/manufield.php'; }
+function showYarnfield($yarnfieldname, $yarnfieldselected = -1){ require 'views/yarnfield.php'; }
 
 function redirect($sivu) {
   header('Location: '.$sivu);

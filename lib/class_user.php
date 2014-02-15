@@ -31,6 +31,12 @@ class User {
     return $result->rows > 0;
   }
 
+  public function insertOwns($yarn_id, $amount) {
+    $sql = 'INSERT INTO owns (yarn, owner, amount) VALUES (?, ?, ?)';
+    $query = getTietokantayhteys()->prepare($sql);
+    $query->execute(array($yarn_id, $this->user_id, $amount)); 	 
+  }
+
   public function updateOwns($yarn_id, $amount) {
     $sql = 'UPDATE owns SET (amount) = (?) WHERE yarn = ? AND owner = ?';
     $query = getTietokantayhteys()->prepare($sql);

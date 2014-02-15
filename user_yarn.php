@@ -4,7 +4,32 @@ require_once 'lib/lib.php';
 
 checkLogged();
 
-if ($_GET['action'] == 'modify' && isset($_GET['yarn_id'])) {
+if ($_GET['action'] == 'insert') {
+  if (!isset($_POST['filled'])) {
+    showView('user_yarn_add.php', array('action' => 'insert'), 'Langan lisäys');
+  } else {
+  $error = false;
+
+  $yarn_id = $_POST['yarn'];
+  $amount = $_POST['amount'];
+
+  if (is_numeric($amount) && $amount >= 0) {
+      $amount = (int) $amount;
+    } else {
+      $error = true;
+      showError('Määrän tulee olla positiivinen luku.');
+    }
+  }
+
+  if ($error) {
+    showView('user_yarn_add.php', array('action' => 'insert', 'yarn_id' => $yarn_id), 'Langan lisäys');
+  } else {
+
+    loggedUser()->insertOwns($yarn_id, $amount);
+    redirect('user_list_owns.php');
+
+  }
+} else if ($_GET['action'] == 'modify' && isset($_GET['yarn_id'])) {
   
   $yarn_id = (int)$_GET['yarn_id'];
   if (!loggedUser()->owns($yarn_id)){ redirect('user_list_owns.php'); }
@@ -78,7 +103,6 @@ if ($_GET['action'] == 'modify' && isset($_GET['yarn_id'])) {
 } else {
   redirect('user_yarn.php?action=insert');
 }
-
 
 
 redirect('user_list_owns.php');
