@@ -3,8 +3,15 @@
 
 <table><tr><td>
 <div class="input-group">
-  <span class="input-group-addon">Käyttäjänimi</span>
-  <input type="text" class="form-control" name="user" value="<?php echo htmlspecialchars($data->user); ?>">
+  <span class="input-group-addon">Käyttäjänimi</span>   
+   
+  <input type="text" class="form-control" name="user" value="<?php 
+  if (isset($data->user)) {
+  echo htmlspecialchars($data->user);
+}
+?>">
+
+
 </div>
 </td></tr>
 <tr><td>
