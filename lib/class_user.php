@@ -22,10 +22,25 @@ class User {
     return $this->admin;
   }
 
+  public function owns($yarn_id) {
+    $sql = 'SELECT count(*) as rows FROM owns WHERE yarn = ? AND owner = ?';
+    $query = getTietokantayhteys()->prepare($sql);
+    $query->execute(array($yarn_id, $this->user_id));
+
+    $result = $query->fetchObject();
+    return $result->rows > 0;
+  }
+
   public function updateOwns($yarn_id, $amount) {
     $sql = 'UPDATE owns SET (amount) = (?) WHERE yarn = ? AND owner = ?';
     $query = getTietokantayhteys()->prepare($sql);
     $query->execute(array($amount, $yarn_id, $this->user_id)); 
+  }
+
+  public function deleteOwns($yarn_id) {
+    $sql = 'DELETE FROM owns WHERE yarn = ? AND owner = ?';
+    $query = getTietokantayhteys()->prepare($sql);
+    $query->execute(array($yarn_id, $this->user_id)); 
   }
 
   public function getOwned() {
