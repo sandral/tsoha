@@ -4,39 +4,48 @@ require_once 'lib/lib.php';
 
 checkLogged();
 
-if (!isset($_GET['yarn_id'])) {
-  redirect('user_list_owns.php');
-}
+if ($_GET['action'] == 'modify' && isset($_GET['yarn_id'])) {
+  
+  $yarn_id = (int)$_GET['yarn_id'];
+  if (!loggedUser()->owns($yarn_id)){ redirect('user_list_owns.php'); }
+  $yarn = Yarn::getYarnById($yarn_id);
+  $yarnmanu = $yarn->getYarnmanu() == null ? -1 : $yarn->getYarnmanu();
 
-$yarn_id = (int)$_GET['yarn_id'];
-
-/*
-if (!loggedUser()->owns($yarn_id)){
-  redirect('user_list_owns.php');
-}
-*/
-
-$yarn = Yarn::getYarnById($yarn_id);
-
-if (is_null($yarn)) {
-  redirect('user_list_owns.php');
-}
-
-$yarnmanu = $yarn->getYarnmanu() == null ? -1 : $yarn->getYarnmanu();
-
-if (isset($_POST['filled'])) {
-
-  $amount = $_POST['amount'];
-  $error = false;
-
-  if (is_numeric($amount) && $amount >= 0) {
-    $amount = (int) $amount;
+  if (is_null($yarn)) {
+    redirect('user_list_owns.php');
+  }  
+  
+  if (isset($_POST['filled'])) {
+  
+    $error = false;
+    $amount = $_POST['amount'];
+  
+    if (is_numeric($amount) && $amount >= 0) {
+      $amount = (int) $amount;
+    } else {
+      $error = true;
+      showError('Määrän tulee olla positiivinen luku.');
+    }
+  
+    if ($error) {  
+      showView('views/user_yarn.php', array(
+        'action' => 'modify',
+        'yarn_id' => $yarn_id,
+        'yarnname' => $yarn->getYarnname(),
+        'yarnmanu' => $yarnmanu,
+        'nsrmin' => $yarn->getNsrmin(),
+        'nsrmax' => $yarn->getNsrmax(),
+        'lpg' => $yarn->getLpg(),
+        'description' => $yarn->getDescription(),
+        'amount' => loggedUser()->amount($yarn_id)
+        ), 'Langan tiedot');
+    }
+  
+    loggedUser()->updateOwns($yarn_id, $amount);
+    showMessage('Määrä päivitetty.');
+    redirect('user_list_owns.php');
   } else {
-    $error = true;
-    showError('Määrän tulee olla positiivinen luku.');
-  }
 
-  if ($error) {
     showView('views/user_yarn.php', array(
       'action' => 'modify',
       'yarn_id' => $yarn_id,
@@ -48,31 +57,28 @@ if (isset($_POST['filled'])) {
       'description' => $yarn->getDescription(),
       'amount' => loggedUser()->amount($yarn_id)
       ), 'Langan tiedot');
-
   }
+} else if ($_GET['action'] == 'delete' && isset($_GET['yarn_id'])) {
+  $yarn_id = (int)$_GET['yarn_id'];
 
-  if ($_GET['action'] == 'modify') {
-    loggedUser()->updateOwns($yarn_id, $amount);
-    showMessage('Määrä päivitetty.');
-    redirect('user_list_owns.php');
-  }
+  showView('views/question.php',
+                  array('question' => 'Oletko varma, että haluat poistaa langan kokoelmastasi?',
+                        'choices' => array(array('Kyllä', 'user_yarn.php?action=deleteconfirm&yarn_id='.$yarn_id),
+                                           array('En', 'user_list_owns.php')
+                                          )
+                       ), 'Langan poisto');
 
+} else if ($_GET['action'] == 'deleteconfirm' && isset($_GET['yarn_id'])) {
+  $yarn_id = (int)$_GET['yarn_id'];
+
+  loggedUser()->deleteOwns($yarn_id);
+
+  showMessage('Lanka poistettu kokoelmastasi.');
+  redirect('user_list_owns.php');
+} else {
+  redirect('user_yarn.php?action=insert');
 }
 
-
-
-
-showView('views/user_yarn.php', array(
-    'action' => 'modify',
-    'yarn_id' => $yarn_id,
-    'yarnname' => $yarn->getYarnname(),
-    'yarnmanu' => $yarnmanu,
-    'nsrmin' => $yarn->getNsrmin(),
-    'nsrmax' => $yarn->getNsrmax(),
-    'lpg' => $yarn->getLpg(),
-    'description' => $yarn->getDescription(),
-    'amount' => loggedUser()->amount($yarn_id)
-    ), 'Langan tiedot');
 
 
 redirect('user_list_owns.php');
