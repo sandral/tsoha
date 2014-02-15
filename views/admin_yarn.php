@@ -1,5 +1,3 @@
-<div class="column">
-<table style="width:100%;"><tr><td>
 <form action="admin_yarn.php<?php
 if ($data->action == 'modify') {
   echo '?action=modify&yarn_id='.$data->yarn_id;
@@ -8,27 +6,30 @@ if ($data->action == 'insert') {
   echo '?action=insert';
 }
 
-?>" method="POST" id="yarnform">
+?>" method="POST" id="yarnform" class="form-horizontal" role="form">
 <input type="hidden" name="filled" value="1">
 <?php
 if ($data->action == 'modify') {
   echo '<input type="hidden" name="yarn_id" value="'.$data->yarn_id.'">';
 }
 ?>
-<div class="input-group">
-  <span class="input-group-addon">Nimi</span>
+
+<div class="form-group">
+  <label class="col-sm-3 control-label">Nimi</label>
+  <div class="col-sm-6">
   <input type="text" class="form-control" name="yarnname" value="<?php
 if (isset($data->yarnname)){
   echo htmlspecialchars($data->yarnname);
 }
 ?>">
+  </div>
 </div>
-</td></tr>
 
 
-<tr><td>
-<div class="input-group">
-  <span class="input-group-addon">Valmistaja</span>
+
+<div class="form-group">
+  <label class="col-sm-3 control-label">Valmistaja</label>
+  <div class="col-sm-6">
  <?php
 if (isset($data->yarnmanu)) {
   showManufield('yarnmanu', $data->yarnmanu);
@@ -37,11 +38,13 @@ if (isset($data->yarnmanu)) {
 }
 ?>
 </div>
-</td></tr>
+</div>
 
-<tr><td>
-<div class="input-group">
-<span class="input-group-addon">Puikkosuositus, min</span>
+
+
+<div class="form-group">
+<label class="col-sm-3 control-label">Puikkosuositus</label>
+<div class="col-sm-3">
 <?php
 if (isset($data->nsrmin)) {
   showNsrfield('nsrmin',$data->nsrmin);
@@ -50,43 +53,47 @@ if (isset($data->nsrmin)) {
 }
 ?>
 </div>
-</td></tr>
-
-<tr><td>
-<div class="input-group">
-<span class="input-group-addon">Puikkosuositus, max</span><?php
+<div class="col-sm-3">
+<?php
 if (isset($data->nsrmax)) {
-  showNsrfield('nsrmax', $data->nsrmax);
+  showNsrfield('nsrmax',$data->nsrmax);
 } else {
   showNsrfield('nsrmax');
 }
 ?>
 </div>
-</td></tr>
+</div>
 
-<tr><td>
-<div class="input-group">
-<span class="input-group-addon">Pituus (100g)</span>
+
+
+<div class="form-group">
+<label class="col-sm-3 control-label">Pituus (100g)</label>
+<div class="col-sm-6">
 <input type="text" name="lpg" value="<?php
 if (isset($data->lpg)) {
   echo htmlspecialchars($data->lpg);
 }
 ?>" class="form-control">
 </div>
-</td></tr>
+</div>
 
-<tr><td>
-<div class="input-group">
-<span class="input-group-addon">Kuvaus</span>
+
+
+<div class="form-group">
+<label class="col-sm-3 control-label">Kuvaus</label>
+<div class="col-sm-6">
 <input type="text" name="description" value="<?php
 if (isset($data->description)) {
   echo htmlspecialchars($data->description);
 }
 ?>" class="form-control">
 </div>
-</td></tr>
+</div>
 
-<tr><td>
+
+<div class="form-group">
+<div class="col-sm-3"></div>
+<div class="col-sm-6">
 <div class="btn-group">
 <input type="submit" value="<?php
 
@@ -98,6 +105,6 @@ if ($data->action == 'modify') {
 
 ?>" class="btn btn-default"><a href="admin_list_yarns.php" class="btn btn-default">Takaisin</a>
 </div>
-</td></tr></table>
-</form>
 </div>
+</div>
+</form>
