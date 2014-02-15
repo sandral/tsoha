@@ -22,6 +22,12 @@ class User {
     return $this->admin;
   }
 
+  public function updateOwns($yarn_id, $amount) {
+    $sql = 'UPDATE owns SET (amount) = (?) WHERE yarn = ? AND owner = ?';
+    $query = getTietokantayhteys()->prepare($sql);
+    $query->execute(array($amount, $yarn_id, $this->user_id)); 
+  }
+
   public function getOwned() {
 
     $sql = "SELECT yarn.yarn_id, yarn.yarnname, yarn.yarnmanu, yarn.nsrmin, yarn.nsrmax,

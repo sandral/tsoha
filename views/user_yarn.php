@@ -1,4 +1,6 @@
-<form class="form-horizontal" role="form">
+<form action="user_yarn.php?action=modify&yarn_id=<?php echo ($data->yarn_id); ?>" method="post" class="form-horizontal" role="form">
+
+<input type="hidden" name="filled" value="1">
 
 <div class="form-group">
   <label class="col-sm-3 control-label">Nimi</label>
@@ -48,7 +50,7 @@ if (isset($data->lpg)){
     <label for="amount" class="col-sm-3 control-label">Määrä</label>
     <div class="col-sm-9">
     <div class="input-group">
-      <input type="text" class="form-control" id="amount" value="<?php
+      <input type="text" name="amount" class="form-control" id="amount" value="<?php
 echo $data->amount;
 ?>">
     <span class="input-group-addon">g</span>
