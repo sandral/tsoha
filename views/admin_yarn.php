@@ -14,9 +14,11 @@ if ($data->action == 'modify') {
 }
 ?>
 
+<div class="col-sm-8">
+
 <div class="form-group">
-  <label class="col-sm-3 control-label">Nimi</label>
-  <div class="col-sm-6">
+  <label class="col-sm-4 control-label">Nimi</label>
+  <div class="col-sm-8">
   <input type="text" class="form-control" name="yarnname" value="<?php
 if (isset($data->yarnname)){
   echo htmlspecialchars($data->yarnname);
@@ -28,8 +30,8 @@ if (isset($data->yarnname)){
 
 
 <div class="form-group">
-  <label class="col-sm-3 control-label">Valmistaja</label>
-  <div class="col-sm-6">
+  <label class="col-sm-4 control-label">Valmistaja</label>
+  <div class="col-sm-8">
  <?php
 if (isset($data->yarnmanu)) {
   showManufield('yarnmanu', $data->yarnmanu);
@@ -43,8 +45,8 @@ if (isset($data->yarnmanu)) {
 
 
 <div class="form-group">
-<label class="col-sm-3 control-label">Puikkosuositus</label>
-<div class="col-sm-3">
+<label class="col-sm-4 control-label">Puikkosuositus</label>
+<div class="col-sm-4">
 <?php
 if (isset($data->nsrmin)) {
   showNsrfield('nsrmin',$data->nsrmin);
@@ -53,7 +55,7 @@ if (isset($data->nsrmin)) {
 }
 ?>
 </div>
-<div class="col-sm-3">
+<div class="col-sm-4">
 <?php
 if (isset($data->nsrmax)) {
   showNsrfield('nsrmax',$data->nsrmax);
@@ -67,8 +69,8 @@ if (isset($data->nsrmax)) {
 
 
 <div class="form-group">
-<label class="col-sm-3 control-label">Pituus (100g)</label>
-<div class="col-sm-6">
+<label class="col-sm-4 control-label">Pituus (100g)</label>
+<div class="col-sm-8">
 <input type="text" name="lpg" value="<?php
 if (isset($data->lpg)) {
   echo htmlspecialchars($data->lpg);
@@ -80,8 +82,8 @@ if (isset($data->lpg)) {
 
 
 <div class="form-group">
-<label class="col-sm-3 control-label">Kuvaus</label>
-<div class="col-sm-6">
+<label class="col-sm-4 control-label">Kuvaus</label>
+<div class="col-sm-8">
 <input type="text" name="description" value="<?php
 if (isset($data->description)) {
   echo htmlspecialchars($data->description);
@@ -92,10 +94,10 @@ if (isset($data->description)) {
 
 
 <div class="form-group">
-<div class="col-sm-3"></div>
-<div class="col-sm-6">
-<div class="btn-group">
-<input type="submit" value="<?php
+ <div class="col-sm-4"></div>
+ <div class="col-sm-8">
+  <div class="btn-group">
+  <input type="submit" value="<?php
 
 if ($data->action == 'modify') {
   echo 'Muokkaa';
@@ -104,7 +106,33 @@ if ($data->action == 'modify') {
 }
 
 ?>" class="btn btn-default"><a href="admin_list_yarns.php" class="btn btn-default">Takaisin</a>
+  </div>
+ </div>
 </div>
+
 </div>
+
+<div class="col-sm-4">
+<?php
+foreach($data->attrlist as $attr) {
+  echo '<input type="checkbox" name="attr'.$attr->getId().'" value="selected"';
+  
+  $found = false;
+
+  foreach ($data->yarnattrs as $yarnattr) {
+    if ($yarnattr->getId() == $attr->getId()){
+      $found = true;
+    }
+  }
+
+  if ($found) {
+    echo ' checked';
+  }
+
+  echo '>'.' '.$attr->getAttrname().'<br>';
+}
+?>
+
 </div>
+
 </form>

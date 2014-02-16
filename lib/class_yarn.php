@@ -41,6 +41,32 @@ class Yarn {
     }
   }
 
+  public function setAttributes($attrs) {
+    $sql = 'DELETE FROM yarnattr WHERE yarn = ?';
+    $query = getTietokantayhteys()->prepare($sql);
+    $query->execute(array($this->yarn_id));
+
+    foreach ($attrs as $attr) {
+      $sql = 'INSERT INTO yarnattr (yarn, attr) VALUES (?, ?)';
+      $query = getTietokantayhteys()->prepare($sql);
+      $query->execute(array($this->yarn_id, $attr->getId()));
+    }
+  }  
+
+  public function listAttributes() {
+    $sql = 'SELECT * FROM yarnattr LEFT JOIN attr ON attr.attr_id = yarnattr.attr WHERE yarnattr.yarn = ?';
+    $query = getTietokantayhteys()->prepare($sql);
+    $query->execute(array($this->yarn_id));
+
+    $ret = array();
+    foreach($query->fetchAll(PDO::FETCH_OBJ) as $res) {
+      $attr = new Attr($res->attr_id, $res->attrname);
+      $ret[] = $attr;
+    }
+
+    return $ret;
+  }
+
   public static function listYarns() {
     $sql = 'SELECT * FROM yarn ORDER BY yarnname ASC';
     $query = getTietokantayhteys()->prepare($sql);
@@ -72,9 +98,11 @@ class Yarn {
 
 
   public static function addYarn($yarnname, $yarnmanu, $nsrmin, $nsrmax, $lpg, $description) {
-    $sql = "INSERT INTO yarn (yarnname, yarnmanu, nsrmin, nsrmax, lpg, description) VALUES (?, ?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO yarn (yarnname, yarnmanu, nsrmin, nsrmax, lpg, description) VALUES (?, ?, ?, ?, ?, ?) RETURNING yarn_id";
     $query = getTietokantayhteys()->prepare($sql);
     $query->execute(array(trim($yarnname), $yarnmanu, (int) 10*$nsrmin, (int) 10*$nsrmax, $lpg, trim($description)));
+    $ret = $query->fetchObject();
+    return $ret->yarn_id;
   }
 
   public static function updateYarn($yarn_id, $yarnname, $yarnmanu, $nsrmin, $nsrmax, $lpg, $description) {

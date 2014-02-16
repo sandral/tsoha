@@ -62,7 +62,8 @@ if ($_GET['action'] == 'insert') {
         'nsrmax' => $yarn->getNsrmax(),
         'lpg' => $yarn->getLpg(),
         'description' => $yarn->getDescription(),
-        'amount' => loggedUser()->amount($yarn_id)
+        'amount' => loggedUser()->amount($yarn_id),
+        'attrs' => $yarn->listAttributes()
         ), 'Langan tiedot');
     }
   
@@ -80,7 +81,8 @@ if ($_GET['action'] == 'insert') {
       'nsrmax' => $yarn->getNsrmax(),
       'lpg' => $yarn->getLpg(),
       'description' => $yarn->getDescription(),
-      'amount' => loggedUser()->amount($yarn_id)
+      'amount' => loggedUser()->amount($yarn_id),
+      'attrs' => $yarn->listAttributes()
       ), 'Langan tiedot');
   }
 } else if ($_GET['action'] == 'delete' && isset($_GET['yarn_id'])) {

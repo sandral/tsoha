@@ -12,12 +12,21 @@ if ($_GET['action'] == 'insert') {
 
 if (isset($_POST['filled'])) {
 
+  $yarn_id = $_POST['yarn_id'];
   $yarnname = trim($_POST['yarnname']);
   $yarnmanu = $_POST['yarnmanu'];
   $nsrmin = $_POST['nsrmin'];
   $nsrmax = $_POST['nsrmax'];
   $lpg = $_POST['lpg'];
   $description = trim($_POST['description']);
+
+
+  $attrs = array();
+  foreach (Attr::listAttrs() as $attr) {
+    if (isset($_POST['attr'.$attr->getId()]) && $_POST['attr'.$attr->getId()] == 'selected') {
+      $attrs[] = $attr;
+    }
+  }
 
   $errorhappened = false;
 
@@ -37,14 +46,20 @@ if (isset($_POST['filled'])) {
   }
 
   if ($errorhappened) {
+
+    $allattrs = Attr::listAttrs();
+
     showView('views/admin_yarn.php', array(
       'action' => $_GET['action'],
+      'yarn_id' => $yarn_id,
       'yarnname' => $yarnname,
       'yarnmanu' => $yarnmanu,
       'nsrmin' => $nsrmin,
       'nsrmax' => $nsrmax,
       'lpg' => $lpg,
-      'description' => $description),
+      'description' => $description,
+      'attrlist' => $allattrs,
+      'yarnattrs' => $attrs),
       $title
       );
   }
@@ -54,13 +69,15 @@ if (isset($_POST['filled'])) {
 
   if ($_GET['action'] == 'insert') {
 
-    Yarn::addYarn($yarnname, $yarnmanu, $nsrmin, $nsrmax, $lpg, $description);
+    $new_id = Yarn::addYarn($yarnname, $yarnmanu, $nsrmin, $nsrmax, $lpg, $description);
+    Yarn::getYarnById($new_id)->setAttributes($attrs);
     showMessage('Lanka lisätty.');
 
   } else if ($_GET['action'] == 'modify') {
 
     $yarn_id = (int)$_POST['yarn_id'];
     Yarn::updateYarn($yarn_id, $yarnname, $yarnmanu, $nsrmin, $nsrmax, $lpg, $description);
+    Yarn::getYarnById($yarn_id)->setAttributes($attrs);
     showMessage('Lanka päivitetty.');
   }
 
@@ -78,7 +95,9 @@ if ($_GET['action'] == 'modify' && isset($_GET['yarn_id'])){
 
   $yarnmanu = $yarn->getYarnmanu() == null ? -1 : $yarn->getYarnmanu();
 
-  showView('views/admin_yarn.php', array(
+  $yarnattrs = $yarn->listAttributes();
+
+   showView('views/admin_yarn.php', array(
     'action' => 'modify',
     'yarn_id' => $yarn_id,
     'yarnname' => $yarn->getYarnname(),
@@ -86,11 +105,13 @@ if ($_GET['action'] == 'modify' && isset($_GET['yarn_id'])){
     'nsrmin' => $yarn->getNsrmin(),
     'nsrmax' => $yarn->getNsrmax(),
     'lpg' => $yarn->getLpg(),
-    'description' => $yarn->getDescription()
+    'description' => $yarn->getDescription(),
+    'attrlist' => Attr::listAttrs(),
+    'yarnattrs' => $yarnattrs
     ), $title);
 
 } else if ($_GET['action'] == 'insert') {
-  showView('views/admin_yarn.php', array('action'=>'insert'), $title);
+  showView('views/admin_yarn.php', array('action'=>'insert', 'attrlist' => Attr::listAttrs()), $title);
 } else if ($_GET['action'] == 'delete' && isset($_GET['yarn_id'])) {
   $yarn_id = (int)$_GET['yarn_id'];
   $yarn = Yarn::getYarnById($yarn_id);
