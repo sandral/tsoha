@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.18)  9 FEB 2014 20:31
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.18)  16 FEB 2014 20:48
 entering extended mode
  %&-line parsing enabled.
 **dokumentaatio.tex
@@ -456,7 +456,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 11.
 
-<sidosryhmakaavio.png, id=15, 712.6625pt x 515.9275pt>
+<sidosryhmakaavio.png, id=23, 712.6625pt x 515.9275pt>
 File: sidosryhmakaavio.png Graphic file (type png)
 
 <use sidosryhmakaavio.png>
@@ -553,7 +553,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--39
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<kayttotapaukset.png, id=24, 659.46375pt x 585.18625pt>
+<kayttotapaukset.png, id=32, 659.46375pt x 585.18625pt>
 File: kayttotapaukset.png Graphic file (type png)
 
 <use kayttotapaukset.png> [2] [3 <./sidosryhmakaavio.png (PNG copy)>]
@@ -594,21 +594,258 @@ Overfull \hbox (19.41797pt too wide) in paragraph at lines 111--114
 lsinki.fi/tsoha/login.php[] 
  []
 
-[5] (./dokumentaatio.aux) ) 
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 117--236
+
+ []
+
+
+Overfull \hbox (7.9292pt too wide) in paragraph at lines 117--236
+\OT1/cmr/m/n/12 Sis[]alt[]a[]a kent[]at sis[]a[]ankirjautumista varten. T[]anne
+ tulee my[]os link-ki k[]aytt[]aj[]aksi
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--236
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--236
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--236
+
+ []
+
+
+Overfull \hbox (12.69443pt too wide) in paragraph at lines 117--236
+\OT1/cmr/m/n/12 Sis[]a[]ankirjautuneen k[]aytt[]aj[]an etu-sivu. Sis[]alt[]a[]a
+ linkin omien lanko-jen tarkastelu-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--236
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--236
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--236
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--236
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--236
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--236
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--236
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--236
+
+ []
+
+
+Overfull \hbox (2.1112pt too wide) in paragraph at lines 117--236
+\OT1/cmr/m/n/12 N[]aytt[]a[]a lis-tan ti-etokan-nas-sa ole-vista valmis-ta-jist
+a. Admin-k[]aytt[]aj[]a voi lis[]at[]a,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--236
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--236
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--236
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--236
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--236
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--236
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--236
+
+ []
+
+
+Overfull \hbox (46.5038pt too wide) in paragraph at lines 117--236
+\OT1/cmr/m/n/12 N[]akym[]a, jo-ka n[]aytt[]a[]a yk-sitt[]aisen om-i-naisu-u-den
+ muokkaus-, poisto- ja lis[]aystoiminnot. 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--236
+
+ []
+
+
+Overfull \hbox (8.44308pt too wide) in paragraph at lines 117--236
+\OT1/cmr/m/n/12 N[]aytt[]a[]a lis-tan k[]aytt[]aj[]an omista lan-go-ista ja n[]
+aiden gram-mam[]a[]arist[]a. K[]aytt[]aj[]a
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--236
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--236
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--236
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--236
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--236
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--236
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--236
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--236
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--236
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--236
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--236
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--236
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--236
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--236
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--236
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--236
+
+ []
+
+
+Overfull \hbox (27.24706pt too wide) in paragraph at lines 117--236
+\OT1/cmr/m/n/12 N[]akym[]a, jo-ka tu-lostaa pu-do-tus-va-likon lan-go-ista valm
+is-ta-ji-neen lan-gan lis[]a[]amiseksi
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--236
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--236
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--236
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--236
+
+ []
+
+[6] [7] [8] [9] [10] (./dokumentaatio.aux) ) 
 Here is how much of TeX's memory you used:
- 4723 strings out of 495061
- 66863 string characters out of 1182621
- 142270 words of memory out of 3000000
- 7831 multiletter control sequences out of 15000+50000
+ 4733 strings out of 495061
+ 66952 string characters out of 1182621
+ 148270 words of memory out of 3000000
+ 7834 multiletter control sequences out of 15000+50000
  8501 words of font info for 30 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  38i,7n,36p,848b,335s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf-texlive/fonts/type1/public/amsfont
-s/cm/cmbx12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.
-pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on dokumentaatio.pdf (5 pages, 137386 bytes).
+</usr/share/texmf-texlive/fonts/typ
+e1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-texlive/fonts/type1/public/a
+msfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/c
+mr17.pfb>
+Output written on dokumentaatio.pdf (10 pages, 148790 bytes).
 PDF statistics:
- 59 PDF objects out of 1000 (max. 8388607)
- 11 named destinations out of 1000 (max. 500000)
- 35 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 90 PDF objects out of 1000 (max. 8388607)
+ 18 named destinations out of 1000 (max. 500000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -114,6 +114,127 @@ Kirjautumista ja toimintoja voi kokeilla käyttäjätunnuksella ja salasanalla: 
 \section{Järjestelmän yleisrakenne}
 Tietokantasovellusta tehdessä on noudatettu MVC-mallia. Kontrollerit ovat juurikansiossa. Näkymät ja malliluokat ovat kansioissa views ja lib. Apukirjastot löytyvät myös kansiosta lib. Asetukset ovat tiedostossa settings.php. Ylläpidon sivuista vastaavissa tiedostoissa on admin-etuliite. Kaikki tiedostonimet on kirjoitettu pienellä. 
 \section{Järjestelmän komponentit}
+index.php\\
+Siirtää käyttäjän sovelluksen sisäänkirjautumissivulle.\\
+\ \\
+login.php\\
+Sisältää kentät sisäänkirjautumista varten. Tänne tulee myös linkki käyttäjäksi rekisteröitymistä varten.\\
+\ \\
+views/login.php\\
+Sisältää Kirjautumissivun näkymän.\\
+\ \\
+logout.php\\
+Kirjaa käyttäjän ulos.\\
+\ \\
+home.php\\
+Sisäänkirjautuneen käyttäjän etusivu. Sisältää linkin omien lankojen tarkasteluun. Admin-käyttäjälle näkyy myös linkki hallinnointisivulle.\\
+\ \\
+views/home.php\\
+Sisältää kirjautuneen käyttäjän etusivun näkymän.\\
+\ \\
+admin\_home.php\\
+Hallinnointisivu, joka sisältää linkit lankojen, valmistajien ja ominaisuuksien lisäämiseen, muokkaamiseen ja poistamiseen.\\
+\ \\
+views/admin\_home.php\\
+Hallintosivun näkymä.\\ 
+\ \\
+admin\_list\_yarns.php\\
+Näyttää listan tietokannassa olevista langoista. Admin-käyttäjä voi lisätä, muokata ja poistaa lankoja.\\
+\ \\
+views/admin\_list\_yarn.php\\
+Näkymä, joka listaa tietokannassa olevat langat ja linkit niiden hallinnointiin.\\
+\ \\
+admin\_yarn.php\\
+Sivu, jolla admin-käyttäjä voi lisätä tietokantaan langan, muokata sen ominaisuuksia tai poistaa sen.\\
+\ \\
+views/admin\_yarn.php\\
+Näkymä, joka näyttää yksittäisen langan ominaisuudet ja muokkaus-, poisto- ja lisäystoiminnot.\\
+\ \\
+admin\_list\_manus.php\\
+Näyttää listan tietokannassa olevista valmistajista. Admin-käyttäjä voi lisätä, muokata ja poistaa valmistajia.\\
+\ \\
+views/admin\_list\_manus.php\\
+Näkymä, joka listaa tietokannassa olevat valmistajat.\\
+\ \\
+admin\_manu.php\\
+Sivu, jolla admin-käyttäjä voi lisätä tietokantaan valmistajan, muokata sitä tai poistaa sen.\\
+\ \\
+views/admin\_manu.php\\
+Näkymä, joka näyttää yksittäisen valmistajan muokkaus- lisäys tai poistotoiminnot.\\
+\ \\
+admin\_list\_attrs.php\\
+Näyttää listan langoilla mahdollisesti olevista eri ominaisuuksista. Sisältää linkit ominaiuuden muokkaamiseen, poistamiseen tai uuden ominaisuuden lisäämiseen.\\
+\ \\
+views/admin\_list\_attrs.php\\
+Näkymä, joka näyttää listan tietokannassa olevista eri lankojen ominaisuuksista.\\
+\ \\
+admin\_attr.php\\
+Sivu, jolla admin-käyttäjä voi muokata ominaisuutta, poistaa sen tai lisätä uusia ominaisuuksia.\\
+\ \\
+views/admin\_attr.php\\
+Näkymä, joka näyttää yksittäisen ominaisuuden muokkaus-, poisto- ja lisäystoiminnot.\\
+\ \\
+user\_list\_owns.php\\
+Näyttää listan käyttäjän omista langoista ja näiden grammamääristä. Käyttäjä voi lisätä kokoelmaansa langan, muokata sen määrää tai poistaa sen kokoelmastaan.\\
+\ \\
+views/user\_list\_owns.php\\
+Näkymä, joka listaa käyttäjän omistamat langat ja näiden määrät.\\
+\ \\
+user\_yarn.php\\
+Sivu, jolla käyttäjä voi muokata kokoelmassaan olevan langan määrää tai lisätä langan kokoelmaansa.\\
+\ \\
+views/user\_yarn.php\\
+Näkymä, joka näyttää yksittäisen langan ominaisuudet, langan poisto- sekä määrän muokkaustoiminnot.\\
+\ \\
+lib/class\_attr.php\\
+Sisältää luokan Attr määrittelyn ja getterit sekä funktiot addAttr, listAttrs, updateAttr, getAttrbyId ja deleAttr.\\
+\ \\
+lib/class\_manu.php\\
+Sisältää luokan Manu määrittelyn, getterit ja funktiot addManu, listManus, updateManu, addManu, deleteManu, getManubyId.\\
+\ \\
+lib/class\_yarn.php\\
+Sisältää luokan Yarn määrittelyn, getterit ja funktiot getYarnByid, setAttributes, listAttributes, listYarns, listYarnsWithManus, addYarn, updateYarn, deleteYarn.\\
+\ \\
+lib/class\_owns.php\\
+Sisältää luokan Owns määrittelyn ja getterit.\\
+\ \\
+lib/class\_user.php\\
+Sisältää luokan User määrittelyn, getterit, ja funktiot isAdmin, owns, insertOwns, updateOwns, deleteOwns, getOwned, amount, getUserByUsername.\\
+\ \\
+lib/classes.php\\
+Lataa kaikki luokat.\\
+\ \\
+lib/connection.php\\
+Ottaa yhteyden tietokantaan.\\
+\ \\
+lib/lib.php\\
+Sisältää erilaisia apufunktioita, joita tarvitaan esimerkiksi eri yhteyksissä, mutta jotka eivät varsinaisesti liity minkään yhden tietyn luokan toimintaan.\\
+\ \\
+lib/settings.php\\
+Sisältää tietokantaan yhdistämiseen tarvittavat asetukset.\\
+\ \\
+views/template.php\\
+Jokaisen sivun näkymän runko.\\
+\ \\
+views/manufield.php\\
+Näkymä joka tulostaa pudotusvalikon eri valmistajista.\\
+\ \\
+views/nsrfield\\ 
+Näkymä, joka tulostaa pudostusvalikot puikkosuosituksista pienimmästä suurimpaan.\\
+\ \\
+views/yarnfield.php\\
+Näkymä, joka tulostaa pudotusvalikon langoista valmistajineen langan lisäämiseksi omaan kokoelmaan.\\
+\ \\
+views/user\_yarn\_add.php\\
+Langan lisäämisessä omaan kokoelmaan käytettävä näkymä.\\
+\ \\
+views/question.php\\
+Näkymä, joka näyttää käyttäjälle kysymyksen ja painikkeita, joilla kysymyksiin voi vastata.\\
+\ \\
+views/navbar.php\\
+Ohjauspalkki, josta käyttäjä pääsee etusivulle, omiin lankoihinsa tai kirjautumaan ulos. Admin-käyttäjä pääsee myös hallintosivulle.\\
+
+
 
 
 \end{document}
