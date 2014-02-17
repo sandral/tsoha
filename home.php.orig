@@ -1,0 +1,24 @@
+<?php
+
+require_once 'lib/lib.php';
+
+<<<<<<< HEAD
+if (logged()){
+  $loggedUser = loggedUser();
+
+  $yarnlist = Yarn::listYarnsWithManus();
+
+  showView('views/home.php', array('user' => $loggedUser->getUsername(), 'yarnlist' => $yarnlist), 'Tervetuloa, '.trim($loggedUser->getUsername()).'!');
+
+} else {
+  redirect('login.php');
+}
+=======
+checkLogged();
+
+$loggedUser = loggedUser();
+
+$yarnlist = Yarn::listYarnsWithManus();
+
+showView('views/home.php', array('user' => $loggedUser->getUsername(), 'yarnlist' => $yarnlist), 'Tervetuloa, '.trim($loggedUser->getUsername()).'!');
+>>>>>>> d0e34331c884f04d304d28afcc4a0a49e13d8b99

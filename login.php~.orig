@@ -1,0 +1,38 @@
+<?php
+
+require_once 'lib/lib.php';
+
+if (logged()){
+  header('Location: home.php');
+  exit();
+}
+
+if (empty($_POST['user']) && empty($_POST['pwd'])) {
+   showView("views/login.php", array(), 'Kirjaudu sisään');
+   exit();
+}
+
+$user = $_POST['user'];
+$pwd = $_POST['pwd'];
+
+$objUser = User::getUserByUsername($user, $pwd);
+
+if (!is_null($objUser)) {
+   login($objUser);
+<<<<<<< HEAD
+   header('Location: home.php');
+   exit();
+=======
+   redirect('home.php');
+>>>>>>> d0e34331c884f04d304d28afcc4a0a49e13d8b99
+} else {
+   showView("views/login.php", array(
+      'user' => $user,
+      'error' => 'Väärä salasana ja/tai käyttäjätunnus.'
+      ),
+      'Kirjaudu sisään');
+<<<<<<< HEAD
+exit();
+=======
+>>>>>>> d0e34331c884f04d304d28afcc4a0a49e13d8b99
+}

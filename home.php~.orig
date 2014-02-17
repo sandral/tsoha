@@ -1,0 +1,18 @@
+<<<<<<< HEAD
+<?php
+=======
+<?php
+
+require_once 'lib/lib.php';
+
+if (logged()){
+  $loggedUser = loggedUser();
+
+  $yarnlist = Yarn::listYarnsWithManus();
+
+  showView('views/home.php', array('user' => $loggedUser->getUsername(), 'yarnlist' => $yarnlist), 'Tervetuloa, '.trim($loggedUser->getUsername()).'!');
+
+} else {
+  redirect('login.php');
+}
+>>>>>>> d0e34331c884f04d304d28afcc4a0a49e13d8b99

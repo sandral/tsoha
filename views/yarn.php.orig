@@ -1,0 +1,82 @@
+<<<<<<< HEAD
+<form action="yarn.php?yarn_id=<?php echo $data->yarn->getId(); ?>" method="POST" id="updateform">
+<input type="hidden" name="action" value="update">
+<input type="hidden" name="yarn_id" value="<?php echo $data->yarn->getId(); ?>">
+<table>
+<tr><td>Nimi:</td><td>          <input type="text" name="yarnname" value="<?php echo htmlspecialchars($data->yarn->getYarnname());?>"></td></tr>
+<tr><td>Valmistaja:</td><td>
+<?php showManufield('yarnmanu',$data->manu->getId());?>
+</td></tr>
+<tr><td>Puikkosuositus:</td><td><?php showNsrfield('nsrmin',$data->yarn->getNsrmin());?> - <?php showNsrfield('nsrmax', $data->yarn->getNsrmax());?></td></tr>
+<tr><td>Pituus (100g):</td><td> <input type="text" name="lpg" value="<?php echo $data->yarn->getLpg();?>"></td></tr>
+<tr><td>Kuvaus:</td><td>        <input type="text" name="description" value="<?php echo $data->yarn->getDescription();?>"></td></tr>
+</table></form>
+<br>
+<a href="#" onclick="document.getElementById('updateform').submit();" class="btn btn-default">Muokkaa</a>
+=======
+<form action="yarn.php<?php
+if ($data->action == 'modify') {
+  echo '?action=modify&yarn_id='.$data->yarn->getId();
+}
+if ($data->action == 'insert') {
+  echo '?action=insert';
+}
+
+?>" method="POST" id="yarnform">
+<input type="hidden" name="filled" value="1">
+<?php
+if ($data->action == 'modify') {
+  echo '<input type="hidden" name="yarn_id" value="'.$data->yarn->getId().'">';
+}
+?>
+<table>
+<tr><td>Nimi:</td><td>          <input type="text" name="yarnname" value="<?php
+if (isset($data->yarn)){
+  echo htmlspecialchars($data->yarn->getYarnname());
+}
+?>"></td></tr>
+<tr><td>Valmistaja:</td><td>
+<?php
+if (isset($data->manu)) {
+  showManufield('yarnmanu',$data->manu->getId());
+} else {
+  showManufield('yarnmanu');
+}
+?>
+</td></tr>
+<tr><td>Puikkosuositus:</td><td><?php
+if (isset($data->yarn)) {
+  showNsrfield('nsrmin',$data->yarn->getNsrmin());
+} else {
+  showNsrfield('nsrmin');
+}
+?> - <?php
+if (isset($data->yarn)) {
+  showNsrfield('nsrmax', $data->yarn->getNsrmax());
+} else {
+  showNsrfield('nsrmax');
+}
+?></td></tr>
+<tr><td>Pituus (100g):</td><td> <input type="text" name="lpg" value="<?php
+if (isset($data->yarn)) {
+  echo $data->yarn->getLpg();
+}
+?>"></td></tr>
+<tr><td>Kuvaus:</td><td><input type="text" name="description" value="<?php
+if (isset($data->yarn)) {
+  echo $data->yarn->getDescription();
+}
+?>"></td></tr>
+</table></form>
+<br>
+<a href="#" onclick="document.getElementById('yarnform').submit();" class="btn btn-default">
+<?php
+if ($data->action == 'modify') {
+  echo 'Muokkaa';
+} else {
+  echo 'Lisää lanka';
+}
+?>
+</a>
+>>>>>>> d0e34331c884f04d304d28afcc4a0a49e13d8b99
+<a href="home.php" class="btn btn-default">Takaisin</a>
