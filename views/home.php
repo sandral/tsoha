@@ -1,6 +1,3 @@
-ASDFASDFASDF
-
-
 <?php
 /*
 <table class="table">
