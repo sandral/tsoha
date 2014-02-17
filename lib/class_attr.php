@@ -13,7 +13,7 @@ class Attr {
   public function getAttrname() { return $this->attrname; }
 
   public static function listAttrs() {
-    $sql = 'SELECT * FROM attr';
+    $sql = 'SELECT * FROM attr ORDER BY attrname ASC';
     $query = getTietokantayhteys()->prepare($sql);
     $query->execute(array());
 
