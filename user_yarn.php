@@ -32,7 +32,7 @@ if ($_GET['action'] == 'insert') {
 } else if ($_GET['action'] == 'modify' && isset($_GET['yarn_id'])) {
   
   $yarn_id = (int)$_GET['yarn_id'];
-  if (!loggedUser()->owns($yarn_id)){ redirect('user_list_owns.php'); }
+  
   $yarn = Yarn::getYarnById($yarn_id);
   $yarnmanu = $yarn->getYarnmanu() == null ? -1 : $yarn->getYarnmanu();
 
@@ -72,6 +72,11 @@ if ($_GET['action'] == 'insert') {
     redirect('user_list_owns.php');
   } else {
 
+    if (loggedUser()->owns($yarn_id)) {
+      $amount = loggedUser()->amount($yarn_id);
+    } else {
+      $amount = 0;
+    }
     showView('views/user_yarn.php', array(
       'action' => 'modify',
       'yarn_id' => $yarn_id,
@@ -81,7 +86,7 @@ if ($_GET['action'] == 'insert') {
       'nsrmax' => $yarn->getNsrmax(),
       'lpg' => $yarn->getLpg(),
       'description' => $yarn->getDescription(),
-      'amount' => loggedUser()->amount($yarn_id),
+      'amount' => $amount,
       'attrs' => $yarn->listAttributes()
       ), 'Langan tiedot');
   }

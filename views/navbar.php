@@ -15,6 +15,7 @@ if (logged()){
 <?php
 if (logged()){
   echo '<li><a href="user_list_owns.php">Omat langat</a></li>';
+  echo '<li><a href="user_search.php">Hae lankaa</a></li>';
 }
 ?>
       </ul>

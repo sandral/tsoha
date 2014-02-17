@@ -23,7 +23,7 @@ if (isset($data->yarnname)){
   <label class="col-sm-4 control-label">Valmistaja</label>
   <div class="col-sm-8">
     <p class="form-control-static"><?php
-if (isset($data->yarnmanu)){
+if (isset($data->yarnmanu) && $data->yarnmanu != -1){
   echo htmlspecialchars(Manu::getManuById($data->yarnmanu)->getManuname());
 }
 ?></p>

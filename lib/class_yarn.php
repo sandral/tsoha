@@ -28,6 +28,21 @@ class Yarn {
   public function getDescription() { return $this->description; }
   public function getYarnmanu() { return $this->yarnmanu; }
 
+  public static function search($search) {
+    $sql ='SELECT * FROM yarn WHERE LOWER(yarnname) LIKE LOWER(?)';
+    $query = getTietokantayhteys()->prepare($sql);
+    $query->execute(array('%'.$search.'%'));
+
+    $ret = array();
+    foreach($query->fetchAll(PDO::FETCH_OBJ) as $res) {
+      $yarn = new Yarn($res->yarn_id, $res->yarnname, $res->yarnmanu, $res->nsrmin, $res->nsrmax, $res->description, $res->lpg);
+      $ret[] = $yarn;
+    }
+
+    return $ret;
+  }
+
+
   public static function getYarnById($id) {
     $sql = "SELECT * FROM yarn WHERE yarn_id = ? LIMIT 1";
     $query = getTietokantayhteys()->prepare($sql);
