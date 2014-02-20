@@ -19,8 +19,8 @@ if (!is_null($objUser)) {
    login($objUser);
    redirect('home.php');
 } else {
+   showError('Väärä salasana ja/tai käyttäjätunnus.');
    showView("views/login.php", array(
-      'user' => $user,
-      'error' => 'Väärä salasana ja/tai käyttäjätunnus.'),
+      'user' => $user),
       'Kirjaudu sisään');
 }

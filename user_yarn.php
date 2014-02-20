@@ -52,7 +52,12 @@ if ($_GET['action'] == 'insert') {
       showError('Määrän tulee olla positiivinen luku.');
     }
   
-    if ($error) {  
+    if ($error) {
+      if (loggedUser()->owns($yarn_id)) {
+        $amount = loggedUser()->amount($yarn_id);
+      } else {
+        $amount = -1;
+      }
       showView('views/user_yarn.php', array(
         'action' => 'modify',
         'yarn_id' => $yarn_id,
@@ -62,21 +67,27 @@ if ($_GET['action'] == 'insert') {
         'nsrmax' => $yarn->getNsrmax(),
         'lpg' => $yarn->getLpg(),
         'description' => $yarn->getDescription(),
-        'amount' => loggedUser()->amount($yarn_id),
+        'amount' => $amount,
         'attrs' => $yarn->listAttributes()
         ), 'Langan tiedot');
     }
-  
-    loggedUser()->updateOwns($yarn_id, $amount);
-    showMessage('Määrä päivitetty.');
+
+    if (loggedUser()->owns($yarn_id)) {
+      loggedUser()->updateOwns($yarn_id, $amount);
+      showMessage('Määrä päivitetty.');
+    } else {
+      loggedUser()->insertOwns($yarn_id, $amount);
+      showMessage('Lanka lisätty kokoelmaan.');
+    }
     redirect('user_list_owns.php');
   } else {
 
     if (loggedUser()->owns($yarn_id)) {
       $amount = loggedUser()->amount($yarn_id);
     } else {
-      $amount = 0;
+      $amount = -1;
     }
+
     showView('views/user_yarn.php', array(
       'action' => 'modify',
       'yarn_id' => $yarn_id,

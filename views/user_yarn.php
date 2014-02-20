@@ -87,8 +87,12 @@ if (isset($data->description)){
     <div class="col-sm-9">
     <div class="input-group">
       <input type="text" name="amount" class="form-control" id="amount" value="<?php
-echo $data->amount;
-?>">
+      if ($data->amount == -1) {
+      echo $data->amount+1;
+      } else {
+	     echo $data->amount;
+	     }
+	     ?>">
     <span class="input-group-addon">g</span>
     </div>
     </div>
@@ -97,7 +101,13 @@ echo $data->amount;
   <div class="form-group">
     <div class="col-sm-3"></div>
     <div class="col-sm-9">
-<input type="submit" value="Päivitä määrä" class="btn btn-default">
+<input type="submit" value="<?php 
+       if ($data->amount == -1) {
+       	  echo ('Lisää lanka'); 
+       } else {
+              echo ('Päivitä määrä'); 
+	      }
+	?>" class="btn btn-default">
     </div>
   </div>
 

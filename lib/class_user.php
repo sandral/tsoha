@@ -22,6 +22,12 @@ class User {
     return $this->admin;
   }
 
+  public static function addUser($username, $password, $isadmin) {
+    $sql = "INSERT INTO users (username, password, isadmin) VALUES (?, ?, ?)";
+    $query = getTietokantayhteys()->prepare($sql);
+    $query->execute(array(trim($username), hash('sha256', $password), (int) isadmin));
+    }
+
   public function owns($yarn_id) {
     $sql = 'SELECT count(*) as rows FROM owns WHERE yarn = ? AND owner = ?';
     $query = getTietokantayhteys()->prepare($sql);
@@ -86,7 +92,7 @@ class User {
   public static function getUserByUsername($user, $password) {
     $sql = 'SELECT user_id, username, password, isadmin FROM users WHERE username = ? AND password = ? LIMIT 1';
     $query = getTietokantayhteys()->prepare($sql);
-    $query->execute(array($user, $password));
+    $query->execute(array($user, hash('sha256', $password)));
 
     $result = $query->fetchObject();
     if ($result == null) {
