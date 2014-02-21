@@ -22,6 +22,7 @@
 </td></tr>
 <tr><td>
 <input type="submit" class="btn btn-default" value="Kirjaudu sisään">
+<a href="reg.php" class="btn btn-default">Rekisteröidy käyttäjäksi</a>
 </td></tr>
 </table>
 
