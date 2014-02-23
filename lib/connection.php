@@ -4,7 +4,9 @@ function getTietokantayhteys() {
   static $yhteys = null;
 
   if ($yhteys === null) {
+
     require 'lib/settings.php';
+
     if (isset($username)) {
       $yhteys = new PDO($dsn, $username, $password);
     } else {
