@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.18)  16 FEB 2014 20:48
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.8.29)  23 FEB 2014 21:29
 entering extended mode
  %&-line parsing enabled.
 **dokumentaatio.tex
 (./dokumentaatio.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
-yphenation, loaded.
+yphenation, finnish, loaded.
 (/usr/share/texmf-texlive/tex/latex/base/article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/share/texmf-texlive/tex/latex/base/size12.clo
@@ -251,14 +251,9 @@ File: babel.def 2008/07/06 v3.8l Babel common definitions
 \babel@savecnt=\count87
 \U@D=\dimen103
 )
-
-Package babel Warning: No hyphenation patterns were loaded for
-(babel)                the language `Finnish'
-(babel)                I will use the patterns loaded for \language=0 instead.
-
-\l@finnish = a dialect from \language0
 Package babel Info: Making " an active character on input line 89.
-)) (/usr/share/texmf-texlive/tex/latex/graphics/graphicx.sty
+))
+(/usr/share/texmf-texlive/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texmf-texlive/tex/latex/graphics/keyval.sty
@@ -456,16 +451,10 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 11.
 
-<sidosryhmakaavio.png, id=23, 712.6625pt x 515.9275pt>
+<sidosryhmakaavio.png, id=11, 712.6625pt x 515.9275pt>
 File: sidosryhmakaavio.png Graphic file (type png)
 
 <use sidosryhmakaavio.png>
-Overfull \hbox (0.32234pt too wide) in paragraph at lines 12--39
-\OT1/cmr/m/n/12 taa lan-gan, tai p[]aivitt[]a[]a sen m[]a[]ar[]an k[]aytetty[]a
-[]an jo-takin lankaa. J[]arjestelm[]an
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 12--39
 
  []
@@ -473,13 +462,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--39
 
 Overfull \hbox (35.95949pt too wide) in paragraph at lines 12--39
 \OT1/cmr/m/n/12 J[]arjestelm[]a k[]aytt[]a[]a PostgreSQL-tietokantaa, se to-teu
-tetaan php-ohjelmointikielell[]a,
+-te-taan php-ohjelmointikielell[]a,
  []
 
 
 Overfull \hbox (28.42204pt too wide) in paragraph at lines 12--39
-\OT1/cmr/m/n/12 ja se py[]orii Ti-eto-jenk[]asittelytieteen laitok-sen users-pa
-lvelimella Apache-palvelimen
+\OT1/cmr/m/n/12 ja se py[]orii Tie-to-jenk[]asittelytieteen lai-tok-sen users-p
+alvelimella Apache-palvelimen
  []
 
 
@@ -495,7 +484,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--39
 
 Overfull \hbox (62.85364pt too wide) in paragraph at lines 12--39
 \OT1/cmr/m/n/12 Rekister[]oityminen: K[]aytt[]aj[]a luo en-simm[]aisell[]a k[]a
-ytt[]okerralla it-selleen k[]aytt[]aj[]atunnuksen
+ytt[]okerralla it-sel-leen k[]aytt[]aj[]atunnuksen
  []
 
 
@@ -510,8 +499,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--39
 
 
 Overfull \hbox (13.43887pt too wide) in paragraph at lines 12--39
-\OT1/cmr/m/n/12 Langan pois-tami-nen: K[]aytt[]aj[]a pois-taa ti-etokan-nas-ta 
-lan-gan, jon-ka on k[]aytt[]anyt
+\OT1/cmr/m/n/12 Langan pois-ta-mi-nen: K[]aytt[]aj[]a pois-taa tie-to-kan-nas-t
+a lan-gan, jon-ka on k[]aytt[]anyt
  []
 
 
@@ -553,7 +542,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--39
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<kayttotapaukset.png, id=32, 659.46375pt x 585.18625pt>
+<kayttotapaukset.png, id=20, 659.46375pt x 585.18625pt>
 File: kayttotapaukset.png Graphic file (type png)
 
 <use kayttotapaukset.png> [2] [3 <./sidosryhmakaavio.png (PNG copy)>]
@@ -564,8 +553,9 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 47.
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--110
-
+Overfull \hbox (9.06947pt too wide) in paragraph at lines 46--110
+\OT1/cmr/m/n/12 mink[]a ko-koi-sil-la pui-koil-la sit[]a kan-nat-taa neu-loa. P
+uik-ko-suo-si-tuk-sel-la on yleens[]a
  []
 
 
@@ -589,263 +579,274 @@ Underfull \hbox (badness 10000) in paragraph at lines 46--110
  []
 
 [4 <./kayttotapaukset.png (PNG copy)>]
-Overfull \hbox (19.41797pt too wide) in paragraph at lines 111--114
-\OT1/cmr/m/n/12 Tietokanta l[]oytyy os-oit-teesta []http://aluhtani.users.cs.he
+Overfull \hbox (19.41797pt too wide) in paragraph at lines 113--116
+\OT1/cmr/m/n/12 Tietokanta l[]oytyy osoit-tees-ta []http://aluhtani.users.cs.he
 lsinki.fi/tsoha/login.php[] 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 117--236
+Underfull \hbox (badness 10000) in paragraph at lines 119--238
 
  []
 
 
-Overfull \hbox (7.9292pt too wide) in paragraph at lines 117--236
-\OT1/cmr/m/n/12 Sis[]alt[]a[]a kent[]at sis[]a[]ankirjautumista varten. T[]anne
- tulee my[]os link-ki k[]aytt[]aj[]aksi
+Overfull \hbox (7.9292pt too wide) in paragraph at lines 119--238
+\OT1/cmr/m/n/12 Sis[]alt[]a[]a kent[]at sis[]a[]ankirjautumista var-ten. T[]ann
+e tu-lee my[]os link-ki k[]aytt[]aj[]aksi
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--236
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 117--236
+Underfull \hbox (badness 10000) in paragraph at lines 119--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--236
+Underfull \hbox (badness 10000) in paragraph at lines 119--238
 
  []
 
 
-Overfull \hbox (12.69443pt too wide) in paragraph at lines 117--236
-\OT1/cmr/m/n/12 Sis[]a[]ankirjautuneen k[]aytt[]aj[]an etu-sivu. Sis[]alt[]a[]a
- linkin omien lanko-jen tarkastelu-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 117--236
+Underfull \hbox (badness 10000) in paragraph at lines 119--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--236
+Underfull \hbox (badness 10000) in paragraph at lines 119--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--236
+Underfull \hbox (badness 10000) in paragraph at lines 119--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--236
+Underfull \hbox (badness 10000) in paragraph at lines 119--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--236
+Underfull \hbox (badness 10000) in paragraph at lines 119--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--236
+Underfull \hbox (badness 10000) in paragraph at lines 119--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--236
+Underfull \hbox (badness 10000) in paragraph at lines 119--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--236
+Underfull \hbox (badness 10000) in paragraph at lines 119--238
 
  []
 
 
-Overfull \hbox (2.1112pt too wide) in paragraph at lines 117--236
-\OT1/cmr/m/n/12 N[]aytt[]a[]a lis-tan ti-etokan-nas-sa ole-vista valmis-ta-jist
-a. Admin-k[]aytt[]aj[]a voi lis[]at[]a,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 117--236
+Underfull \hbox (badness 10000) in paragraph at lines 119--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--236
+Overfull \hbox (2.1112pt too wide) in paragraph at lines 119--238
+\OT1/cmr/m/n/12 N[]aytt[]a[]a lis-tan tie-to-kan-nas-sa ole-vis-ta val-mis-ta-j
+is-ta. Admin-k[]aytt[]aj[]a voi lis[]at[]a,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--236
+Underfull \hbox (badness 10000) in paragraph at lines 119--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--236
+Underfull \hbox (badness 10000) in paragraph at lines 119--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--236
+Underfull \hbox (badness 10000) in paragraph at lines 119--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--236
+Underfull \hbox (badness 10000) in paragraph at lines 119--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--236
+Underfull \hbox (badness 10000) in paragraph at lines 119--238
 
  []
 
 
-Overfull \hbox (46.5038pt too wide) in paragraph at lines 117--236
-\OT1/cmr/m/n/12 N[]akym[]a, jo-ka n[]aytt[]a[]a yk-sitt[]aisen om-i-naisu-u-den
- muokkaus-, poisto- ja lis[]aystoiminnot. 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 117--236
+Underfull \hbox (badness 10000) in paragraph at lines 119--238
 
  []
 
 
-Overfull \hbox (8.44308pt too wide) in paragraph at lines 117--236
-\OT1/cmr/m/n/12 N[]aytt[]a[]a lis-tan k[]aytt[]aj[]an omista lan-go-ista ja n[]
-aiden gram-mam[]a[]arist[]a. K[]aytt[]aj[]a
+Overfull \hbox (46.5038pt too wide) in paragraph at lines 119--238
+\OT1/cmr/m/n/12 N[]akym[]a, jo-ka n[]aytt[]a[]a yk-sitt[]aisen omi-nai-suu-den 
+muokkaus-, poisto- ja lis[]aystoiminnot. 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--236
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 117--236
+Underfull \hbox (badness 10000) in paragraph at lines 119--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--236
+Overfull \hbox (8.44308pt too wide) in paragraph at lines 119--238
+\OT1/cmr/m/n/12 N[]aytt[]a[]a lis-tan k[]aytt[]aj[]an omis-ta lan-gois-ta ja n[
+]aiden gram-mam[]a[]arist[]a. K[]aytt[]aj[]a
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--236
+Underfull \hbox (badness 10000) in paragraph at lines 119--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--236
+Underfull \hbox (badness 10000) in paragraph at lines 119--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--236
+Underfull \hbox (badness 10000) in paragraph at lines 119--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--236
+Underfull \hbox (badness 10000) in paragraph at lines 119--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--236
+Underfull \hbox (badness 10000) in paragraph at lines 119--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--236
+Underfull \hbox (badness 10000) in paragraph at lines 119--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--236
+Underfull \hbox (badness 10000) in paragraph at lines 119--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--236
+Underfull \hbox (badness 10000) in paragraph at lines 119--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--236
+Underfull \hbox (badness 10000) in paragraph at lines 119--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--236
+Underfull \hbox (badness 10000) in paragraph at lines 119--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--236
+Underfull \hbox (badness 10000) in paragraph at lines 119--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--236
+Underfull \hbox (badness 10000) in paragraph at lines 119--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--236
+Underfull \hbox (badness 10000) in paragraph at lines 119--238
 
  []
 
 
-Overfull \hbox (27.24706pt too wide) in paragraph at lines 117--236
-\OT1/cmr/m/n/12 N[]akym[]a, jo-ka tu-lostaa pu-do-tus-va-likon lan-go-ista valm
-is-ta-ji-neen lan-gan lis[]a[]amiseksi
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 117--236
+Underfull \hbox (badness 10000) in paragraph at lines 119--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--236
+Overfull \hbox (0.28761pt too wide) in paragraph at lines 119--238
+\OT1/cmr/m/n/12 N[]akym[]a, jo-ka tu-los-taa pu-dos-tus-va-li-kot puik-ko-suo-s
+i-tuk-sis-ta pie-nimm[]ast[]a suu-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--236
+Overfull \hbox (27.24706pt too wide) in paragraph at lines 119--238
+\OT1/cmr/m/n/12 N[]akym[]a, jo-ka tu-los-taa pu-do-tus-va-li-kon lan-gois-ta va
+l-mis-ta-ji-neen lan-gan lis[]a[]amiseksi
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--236
+Underfull \hbox (badness 10000) in paragraph at lines 119--238
 
  []
 
-[6] [7] [8] [9] [10] (./dokumentaatio.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--238
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--238
+
+ []
+
+[6] [7] [8] [9] [10]
+Overfull \hbox (4.55702pt too wide) in paragraph at lines 247--248
+\OT1/cmr/m/n/12 Tietokantasovelluksen te-ke-mi-sess[]a help-poa oli ai-noas-taa
+n HTML-demosivujen
+ []
+
+
+Overfull \hbox (11.24527pt too wide) in paragraph at lines 249--250
+\OT1/cmr/m/n/12 melt[]a sql. Tie-dos-to sql/create[]tables.sql sis[]alt[]a[]a t
+ie-to-kan-ta-tau-lu-jen m[]a[]arittelyt. 
+ []
+
+[11] (./dokumentaatio.aux) ) 
 Here is how much of TeX's memory you used:
- 4733 strings out of 495061
- 66952 string characters out of 1182621
- 148270 words of memory out of 3000000
- 7834 multiletter control sequences out of 15000+50000
+ 4734 strings out of 495046
+ 66953 string characters out of 1181966
+ 149270 words of memory out of 3000000
+ 7833 multiletter control sequences out of 15000+50000
  8501 words of font info for 30 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 38i,7n,36p,848b,335s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf-texlive/fonts/typ
-e1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-texlive/fonts/type1/public/a
-msfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/c
-mr17.pfb>
-Output written on dokumentaatio.pdf (10 pages, 148790 bytes).
+ 38i,7n,36p,960b,335s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texmf-texlive/fonts/type1/public/amsfon
+ts/cm/cmbx12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12
+.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on dokumentaatio.pdf (11 pages, 154650 bytes).
 PDF statistics:
  90 PDF objects out of 1000 (max. 8388607)
- 18 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 23 named destinations out of 1000 (max. 500000)
+ 27 words of extra memory for PDF output out of 10000 (max. 10000000)
 

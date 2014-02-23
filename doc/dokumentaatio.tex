@@ -108,7 +108,7 @@ amount & kokonaisluku & Kayttajan omistama määrä kyseistä lankaa\\
 \\
 Tietokanta voi sisältää monia eri lankoja, mutta käyttäjällä ei välttämättä ole näitä kaikkia tai eri käyttäjillä on lankoja eri määrä. 
 \section{Asennusohje}
-Tiedostot kopioidaan paikkaan, missä niitä halutaan säilyttää. Tiedostoon lib/settings.php laitetaan asetukset, jolla voidaan muodostaa yhteys tietokantaan. Tietokantaan luodaan taulut ajamalla tiedosto sql/create_tables.sql ja käyttäjä ajamalla tiedosto sql/init_admin.sql. 
+Tiedostot kopioidaan paikkaan, missä niitä halutaan säilyttää. Tiedostoon lib/settings.php laitetaan asetukset, jolla voidaan muodostaa yhteys tietokantaan. Tietokantaan luodaan taulut ajamalla tiedosto sql/create\_tables.sql ja käyttäjä ajamalla tiedosto sql/init\_admin.sql. 
 \section{Käynnistys- ja käyttöohje}
 Tietokanta löytyy osoitteesta \href{http://aluhtani.users.cs.helsinki.fi/tsoha/login.php}{http://aluhtani.users.cs.helsinki.fi/tsoha/login.php}
 \\
@@ -235,8 +235,16 @@ Näkymä, joka näyttää käyttäjälle kysymyksen ja painikkeita, joilla kysym
 \ \\
 views/navbar.php\\
 Ohjauspalkki, josta käyttäjä pääsee etusivulle, omiin lankoihinsa tai kirjautumaan ulos. Admin-käyttäjä pääsee myös hallintosivulle.\\
+\section{Testaus, tunnetut bugit, puutteet ja jatkokehitysideat}
+Järjestelmää on testattu syöttämällä kenttiin virheellisiä syötteitä, ja varmistettu, että niitä ei hyväksytä, ja että käyttäjä saa siitä virheilmoituksen. Esimerkiksi käyttäjätunnusta luodessa ei voi antaa tyhjää merkkijonoa käyttäjätunnukseksi. HTML:n kirjoittaminen kenttiin on pyritty estämään.
 
+Tunnettuja bugin tapaisia on, että jos langan määräksi laittaa luvun, jonka pituus on suurempi 10, järjestelmä ei osaa käsitellä sitä. En kuitenkaan pitänyt tarpeellisena tehdä asialle mitään, sillä kenelläkään tuskin on niin paljon lankaa. 
 
+Jälkikäteen ajatellen järjestelmä olisi kannattanut toteuttaa hiukan toisella tavalla. Olisi ollut parempi, jos kommenttien lisääminen langalle olisi käyttäjäkohtainen ominaisuus, ja siis liittyisi langan omistukseen kuten määräkin. Tällöin käyttäjä voisi vaikka kirjoittaa itselleen muistiin, mihin oli suunnitellut käyttävänsä langan, tai jos hänellä on jokin keskeneräinen työ kyseisestä langasta.
 
-
+Yksi jatkokehitysidea voisi olla, että lankoihin voisi liittää myös kiinnostavia neuleohjeita, jotka on mahdollista toteuttaa sillä langalla. Hyödyllinen lisätoiminto voisi olla myös jonkinlainen langanmenekin laskuri, jolla voisi muuntaa jossakin ohjeessa jollekin langalle mainitun menekin jollekin toiselle langalle sopivaksi. Menekki ilmoitetaan aina grammoina, ja se riippuu langan juoksevuudesta, eli siitä kuinka monta metriä sitä on sadassa grammassa. 
+\section{Omat kokemukset}
+Tietokantasovelluksen tekemisessä helppoa oli ainoastaan HTML-demosivujen tekeminen. Tietokantataulujen suunnittelu ja sql oli myös helpohkoa, kaikki muu olikin vaikeaa. Haasteita tuotti esimerkiksi se, että olin ainoastaan hieman tutustunut php:hen aiemmin. Haastavaa oli myös MVC-mallin mukainen työskentely. Aluksi oli vaikea hahmottaa, mihin tiedostoon tulee mitäkin, ja mitä tiedostoa tulee muokata, jos haluaa vaikuttaa esimerkiksi ulkoasuun, ja mitä silloin kun haluaa vaikuttaa toimintoihin. Nyt olen kuitenkin sitä mieltä, että se oli varsin järkevä rakenne järjestelmän toteuttamiselle. Olen kuitenkin melko tyytyväinen lopputulokseen, ja erityisen iloinen siitä, että sain tällaisen tietokannan käyttööni. Tämä aihe on ollut minulla mielessä jo puolitoista vuotta. Päätin jo TiKaPe:a käydessäni, että tsohan aiheeni tulee olemaan lankatietokanta. Tuntuu hienolta, että se todella toteutui. 
+\section{Vaadituista liitteistä}
+Tietokannan määrittelevät tiedostot löytyvät git-repositoriosta kansiosta nimeltä sql. Tiedosto sql/create\_tables.sql sisältää tietokantataulujen määrittelyt. 
 \end{document}
