@@ -14,12 +14,21 @@ class User {
     $this->admin = $admin;
   }
 
+  public function passwordis($pwd) {
+    return hash('sha256',$pwd) == $this->password;
+  }
+
   public function getUsername() {
     return $this->username;
   }
 
   public function isAdmin() {
     return $this->admin;
+  }
+  public function changePwd($password) {
+    $sql = 'UPDATE users SET password = ? WHERE user_id = ?';
+    $query = getTietokantayhteys()->prepare($sql);
+    $query->execute(array(hash('sha256', $password), $this->user_id));   
   }
 
   public static function addUser($username, $password, $isadmin) {

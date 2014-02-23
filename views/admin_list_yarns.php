@@ -1,7 +1,11 @@
-<a href="admin_yarn.php?action=insert" class="btn btn-default">Lisää lanka</a><br><br>
-<table class="table">
-<tr><th>Nimi</th><th>Valmistaja</th><th>Puikkosuositus</th><th>Pituus/100g</th><th>Kuvaus</th><td></td><td></td></tr>
 <?php
+echo '<a href="admin_yarn.php?action=insert" class="btn btn-default">Lisää lanka</a><br><br>';
+if (count($data->yarnlist) == 0) {
+echo 'Ei lankoja tällä hetkellä.';
+} else {
+echo '<table class="table">';
+echo '<tr><th>Nimi</th><th>Valmistaja</th><th>Puikkosuositus</th><th>Pituus/100g</th><th>Kuvaus</th><td></td><td></td></tr>';
+
 foreach ($data->yarnlist as $own) {
 echo '<tr>';
 echo '<td>'.htmlspecialchars($own['yarn']->getYarnname()).'</td>';
@@ -23,6 +27,7 @@ echo '<td><a href="admin_yarn.php?action=modify&yarn_id='.$own['yarn']->getId().
 echo '<td><a href="admin_yarn.php?action=delete&yarn_id='.$own['yarn']->getId().'">Poista</a></td>';
 echo '</tr>
 ';
+      }
  }
 ?>
 </table>

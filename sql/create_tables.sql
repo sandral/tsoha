@@ -36,7 +36,7 @@ create table yarn (
        description char(200),
        lpg int,
        primary key(yarn_id),
-       foreign key(yarnmanu) references manu(manu_id) on delete cascade
+       foreign key(yarnmanu) references manu(manu_id) on delete set null
        );
 
 create table yarnattr (

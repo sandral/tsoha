@@ -16,6 +16,7 @@ if (logged()){
 if (logged()){
   echo '<li><a href="user_list_owns.php">Omat langat</a></li>';
   echo '<li><a href="user_search.php">Hae lankaa</a></li>';
+  echo '<li><a href="user_change_pwd.php">Vaihda salasana</a></li>';
 }
 ?>
       </ul>
